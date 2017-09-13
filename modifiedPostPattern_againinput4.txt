@@ -1,0 +1,5 @@
+<P><FONT style="BACKGROUND-COLOR: #ffff99">----------------------------------搬家声明--------------------------------------</FONT></P>
+<P><FONT style="BACKGROUND-COLOR: #ffff99">本博客已搬家至个人网站 </FONT><A href="http://www.crifan.com/" target=_blank><FONT style="BACKGROUND-COLOR: #ffff99" color=#ff0000><STRONG>在路上 - On the way</STRONG></FONT></A><FONT style="BACKGROUND-COLOR: #ffff99"> 下面的 </FONT><A href="http://www.crifan.com/category/work_and_job/" target=_blank><FONT style="BACKGROUND-COLOR: #ffff99" color=#ff0000><STRONG>技术</STRONG></FONT></A><FONT style="BACKGROUND-COLOR: #ffff99"> 分类。</FONT></P>
+<P><FONT style="BACKGROUND-COLOR: #ffff99">你可以通过点击 更新帖子 </FONT><A href="http://www.crifan.com/?s=${quotedTitle}&amp;submit=Search" target=_blank><FONT style="BACKGROUND-COLOR: #ffff99" color=#ff0000><STRONG>${originalTitle}</STRONG></FONT></A><FONT style="BACKGROUND-COLOR: #ffff99"> 找到当前帖子的新地址。</FONT></P>
+<P><FONT style="BACKGROUND-COLOR: #ffff99">----------------------------------搬家声明--------------------------------------</FONT></P>
+${originBlogContent}

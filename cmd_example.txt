@@ -1,0 +1,1343 @@
+
+BlogsToWordpress.py -s http://yangzaitime.blog.163.com -g no
+./BlogsToWordpress.py -s http://yangzaitime.blog.163.com -g no
+python BlogsToWordpress.py -s http://yangzaitime.blog.163.com -g no
+python BlogsToWordpress.py -f http://yangzaitime.blog.163.com/blog/static/40958653200842984421963/ -g no -o no
+
+python BlogsToWordpress.py -f http://yangzaitime.blog.163.com/blog/static/40958653200842984421963/ -g no -b no
+
+
+BlogToWordpress_v2012-03-19-office.py -s http://againinput4.blog.163.com/ -v privateOnly -u againinput4@163.com -p xxx
+
+BlogToWordpress_v2012-03-19-office.py -f http://againinput4.blog.163.com/blog/static/17279949120120911251168/ -v privateOnly -u againinput4@163.com -p xxx
+
+BlogToWordpress_v2012-03-20-office.py -f http://againinput4.blog.163.com/blog/static/17279949120120911251168/ -v privateOnly -u againinput4@163.com -p xxx
+BlogToWordpress_v2012-03-20-office.py -s http://againinput4.blog.163.com/ -v privateOnly -u againinput4@163.com -p xxx
+
+BlogToWordpress_v2012-03-20-office.py -s http://againinput4.blog.163.com/ -z modifyPost -d modifiedPostPattern_againinput4.txt -u againinput4@163.com -p xxx
+
+private post test私人日志:
+BlogToWordpress_v2012-03-20-office.py -f http://againinput4.blog.163.com/blog/static/17279949120122154414518/ -z modifyPost -d modifiedPostPattern_againinput4.txt -u againinput4@163.com -p xxx
+
+Title = intro:
+BlogToWordpress_v2012-03-20-office.py -f http://againinput4.blog.163.com/blog/static/172799491201091514814256/ -z modifyPost -d modifiedPostPattern_againinput4.txt -u againinput4@163.com -p xxx
+
+
+BlogToWordpress_v2012-03-21-office.py -s http://againinput4.blog.163.com/ -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/againinput4 -u againinput4@163.com -p xxx
+
+BlogToWordpress_v2012-03-21-office.py -f http://againinput4.blog.163.com/blog/static/172799491201091514814256/ -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/againinput4 -u againinput4@163.com -l 5 -p xxx
+
+【已解决】WordPress更改固定链接后，导致文章帖子出现HTTP 404错误，无法显示:
+BlogToWordpress_v2012-03-21-office.py -f http://againinput4.blog.163.com/blog/static/17279949120111120111836133/ -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/againinput4 -u againinput4@163.com -l 5 -p xxx
+
+[部分解决]您的web浏览器已经阻止此站点以不安全的方式使用Activex控件，因此，此页可能显示不正确 :
+BlogToWordpress_v2012-03-21-office.py -f http://againinput4.blog.163.com/blog/static/1727994912010113181332279/ -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/againinput4 -u againinput4@163.com -l 10 -p xxx
+
+non-login:
+[部分解决]您的web浏览器已经阻止此站点以不安全的方式使用Activex控件，因此，此页可能显示不正确 :
+BlogToWordpress_v2012-03-21-office.py -f http://againinput4.blog.163.com/blog/static/1727994912010113181332279/ -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/againinput4 -l 10
+
+BlogToWordpress_v2012-03-21-office.py -s http://againinput4.blog.163.com/ -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/againinput4 -l 10
+
+BlogToWordpress_v2012-03-21-office.py -s http://hi.baidu.com/recommend_music/ -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/recommend_music -l 10
+
+
+BlogsToWordpress_v2012-03-22-office.py -s http://hi.baidu.com/recommend_music/ -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/recommend_music -l 10
+
+BlogsToWordpress_v2012-03-22-office.py -s http://hi.baidu.com/motionhouse/ -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/motionhouse  -l 10 -u 心情栖息地 -p xxx
+
+this is private post:
+BlogsToWordpress_v2012-03-22-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/wwwhaseecom -f http://hi.baidu.com/wwwhaseecom/blog/item/df37c6dc7c5518becd11661b.html -l 5 -u againinput2 -p xxx
+
+
+测试两种获得原先blog content的方法：
+BlogsToWordpress_v2012-03-22-office.py -f http://hi.baidu.com/fish770/blog/item/2947418996bed1af0e2444f2.html -l 5
+--->> same
+
+BlogsToWordpress_v2012-03-22-office.py -f http://hi.baidu.com/mousetiti/blog/item/79135459fd72753f2834f0cb.html -l 5
+--->> same
+
+测试图片下载是否全部OK：
+BlogsToWordpress_v2012-03-22-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/xwxw56 -f http://xwxw56.blog.163.com/blog/static/13639343201222114553434/ -l 20
+
+BlogsToWordpress_v2012-03-22-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/xwxw56 -f http://xwxw56.blog.163.com/blog/static/13639343201203001353619/ -l 20
+
+BlogsToWordpress_v2012-03-22-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/yuanst -f http://yuanst.blog.163.com/blog/static/186229043201222110265161/ -l 20
+
+BlogsToWordpress_v2012-03-22-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/yuanst -f http://yuanst.blog.163.com/blog/static/18622904320121714457591/ -l 20
+
+BlogsToWordpress_v2012-03-22-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/ratpetty -f http://ratpetty.blog.163.com/blog/static/692969112012219105647697/ -l 20
+
+测试修改帖子：
+BlogsToWordpress_v2012-03-22-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/wwwhaseecom -f http://hi.baidu.com/wwwhaseecom/blog/item/d3198e7eaab0f6270cd7da3e.html -z modifyPost -d modifiedPostPattern_wwwhaseecom.txt -l 1 -u againinput2 -p xxx
+
+BlogsToWordpress_v2012-03-23-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/wwwhaseecom -f http://hi.baidu.com/wwwhaseecom/blog/item/d3198e7eaab0f6270cd7da3e.html -z modifyPost -d modifiedPostPattern_wwwhaseecom.txt -l 1 -u againinput2 -p xxx
+
+
+测试全部是否都正常了：
+BlogsToWordpress_v2012-03-23-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/godfun -s http://hi.baidu.com/godfun/blog/ -u againinput -p xxx
+BlogsToWordpress_v2012-03-23-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/wwwhaseecom -s http://hi.baidu.com/wwwhaseecom/ -u againinput2 -p xxx
+BlogsToWordpress_v2012-03-23-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/goodword -s http://hi.baidu.com/goodword/ -u againinput3 -p xxx
+
+BlogsToWordpress_v2012-03-23-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/serial_story -s http://hi.baidu.com/serial_story/ -u againinput4 -p xxx
+BlogsToWordpress_v2012-03-23-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/serial_story -f http://hi.baidu.com/serial_story/blog/item/f73ca3821a74a8ba6d811970.html -l 1 -u againinput4 -p xxx
+
+BlogsToWordpress_v2012-03-23-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/notebookrelated -s http://hi.baidu.com/notebookrelated/ -u againinput5 -p xxx
+BlogsToWordpress_v2012-03-23-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/recommend_music -s http://hi.baidu.com/recommend_music/ -u againinput6 -p xxx
+BlogsToWordpress_v2012-03-23-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/philosophy_story_life -s http://hi.baidu.com/philosophy_story_life/ -u againinput7 -p xxx
+
+BlogsToWordpress_v2012-03-23-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/love_marriage_family -s http://hi.baidu.com/love_marriage_family/ -u againinput8 -p xxx
+
+
+测试163的：
+BlogsToWordpress_v2012-03-26-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/againinput4 -s http://againinput4.blog.163.com/ -u againinput4@163.com -p xxx
+
+BlogsToWordpress_v2012-03-26-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/againinput4_yeah -s http://blog.163.com/againinput4@yeah/ -u againinput4@yeah.net -p xxx
+
+BlogsToWordpress_v2012-03-26-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/green_waste -s http://green-waste.blog.163.com/blog/ -u green-waste@163.com -p xxx
+
+BlogsToWordpress_v2012-03-26-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/green_waste -f http://green-waste.blog.163.com/blog/static/32677678200879111913911/ -l 1 -u green-waste@163.com -p
+
+BlogsToWordpress_v2012-03-26-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/fgsink -s http://fgsink.blog.163.com/blog/
+
+BlogsToWordpress_v2012-03-26-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/fgsink -f http://fgsink.blog.163.com/blog/static/167169970201061484723671/ -l 1
+
+BlogsToWordpress_v2012-03-26-office.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/fgsink -f http://fgsink.blog.163.com/blog/static/167169970201061484723671/
+
+测试脚本版本信息输出：
+BlogsToWordpress.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/fgsink -f http://fgsink.blog.163.com/blog/static/167169970201061484723671/ -l 1
+
+测试登陆：
+BlogsToWordpress.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/green_waste -s http://green-waste.blog.163.com/blog/ -u green-waste@163.com -p xxx
+BlogsToWordpress.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/green_waste -s http://green-waste.blog.163.com/blog/ -u againinput4@yeah.net -p xxx
+BlogsToWordpress.py -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/againinput4_yeah -s http://blog.163.com/againinput4@yeah/ -u green-waste@163.com -p xxx
+
+BlogsToWordpress.py -s http://hi.baidu.com/serial_story -v privateAndPublic -u againinput4 -p xxx
+
+BlogsToWordpress.py –s http://hi.baidu.com/serial_story -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/serial_story -v privateAndPublic -u againinput4 -p xxx
+
+BlogsToWordpress.py -s http://hi.baidu.com/serial_story -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/serial_story -v privateOnly -u againinput4 -p xxx
+
+BlogsToWordpress.py -s http://hi.baidu.com/serial_story -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/serial_story
+
+bug调试：评论作者名包括控制字符：
+
+BlogsToWordpress.py -f http://aa377308693.blog.163.com/blog/static/135836250201121792742339/ -l 1
+
+
+
+
+
+
+
+===================================================
+===Sina Blog===
+BlogsToWordpress.py -s http://blog.sina.com.cn/crifan2008
+BlogsToWordpress.py -s http://blog.sina.com.cn/crifan2008/
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_3d55a9b70100nyl8.html
+
+
+女作家六六微博斗小三不是笨招是高招:
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_56c89b680102dyoy.html -l 1
+
+美丽的英属哥伦比亚（UBC）大学:
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0102dvru.html -l 1
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a01009w42.html -l 1
+测试标题的处理noUniNum
+
+http://blog.sina.com.cn/fwx0312
+http://blog.sina.com.cn/u/2671017827
+http://blog.sina.com.cn/limanblog
+
+测试评论：
+爱卖弄文采的10大女星：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_56c89b680102dynu.html -l 1
+
+想要测试更多评论，可以去：
+李曼的BLOG
+http://blog.sina.com.cn/limanblog
+
+继续测试评论：
+“ 小妞妞 小星星  ”有32个评论：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0100i9x9.html -l 1
+
+“那些我想留下的  ” 有221个评论：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0100ig74.html -l 1
+
+217 comments:
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0100hvum.html -l 1
+
+BlogsToWordpress.py -s http://blog.sina.com.cn/joyphotography
+
+在这个帖子：
+http://blog.sina.com.cn/s/blog_5058502a0100ex7p.html
+停止了。
+
+后来解决了，是 博主关闭评论所导致的，然后继续：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0100ex7p.html -l 1
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0100ex7p.html
+
+提取blog content出错：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a01017j3j.html -l 1
+
+试试其他的帖子：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0100ex7p.html -l 1
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a01017j0v.html -l 1
+
+后来终于对该帖子特殊处理，删除了一些font相关字符，就可以正常处理了。
+所以，继续：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a01017j3j.html
+
+都可以导出了。有待以后本地wordpress搭建好后再测试导入。
+
+继续测试，1434个评论：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_65746cb60100z4qr.html -l 1
+
+测试其整个博客：
+BlogsToWordpress.py -s http://blog.sina.com.cn/zongma1213
+
+测试图片处理：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0102e37v.html -l 1
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0102e3qi.html -l 1
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a010184ic.html
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0102dqzl.html
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0102ds7j.html
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0102dsgf.html
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0102dtbr.html
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0102duhx.html
+
+看看改的程序 是否影响到之前的程序：
+BlogsToWordpress.py -s http://againinput4.blog.163.com/
+
+BlogsToWordpress.py -f http://againinput4.blog.163.com/blog/static/1727994912010111010240285/
+
+BlogsToWordpress.py -s http://hi.baidu.com/recommend_music/ -l 30
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5ed55f980100legf.html?tj=1
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_6e631c370100mr0r.html
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_6e631c370100n4tp.html
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_48ace28301010qzq.html?tj=1
+
+BlogsToWordpress.py -s http://blog.sina.com.cn/lcfok -l 10
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_48ace2830100aucb.html -l 10
+
+测试这种图片：http://s4.sinaimg.cn/bmiddle/48ace283t5925f0b45813 的下载：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_48ace2830100aucb.html -l 1
+
+回来测试原先图片的处理：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0102e3qi.html -l 1
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5e81a6f90102e2el.html -l 10
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_6f75ca110102dzws.html
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_48ace2830100ndpu.html -l 2
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_49e7fd870100z5vb.html?tj=1 -l 4
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_49e7fd870100xkgm.html?tj=2 -l 5
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_46a0d8310102dxux.html?tj=1
+BlogsToWordpress.py -s http://blog.sina.com.cn/mengdai112 -l 4
+
+BlogsToWordpress.py -s http://blog.sina.com.cn/freeasthewind -l 10
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_4a156fa10100d6i0.html
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_4a156fa10100d6i0.html?tj=1
+
+
+QQ空间：
+BlogsToWordpress.py -s http://84483423.qzone.qq.com/
+
+BlogsToWordpress.py -s http://user.qzone.qq.com/1030631644
+
+BlogsToWordpress.py -s http://user.qzone.qq.com/645704404
+
+BlogsToWordpress.py -s http://1083902439.qzone.qq.com/
+
+测试tag：
+BlogsToWordpress.py -f http://user.qzone.qq.com/84483423/blog/1317911753
+
+测试评论：
+BlogsToWordpress.py -f http://user.qzone.qq.com/1083902439/blog/1321609592
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/84483423/blog/1317915494
+
+测试提取blogUser：
+BlogsToWordpress.py -s http://user.qzone.qq.com/84483423/blog/
+
+
+QQ空间图片测试：
+【电影推荐】夹边沟 -> 三年饥荒的一个缩影:
+BlogsToWordpress.py -f http://user.qzone.qq.com/84483423/blog/1317885084 -l 1
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/84483423/blog/1309873770 -l 1
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/84483423/blog/1309614373 -l 1
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/84483423/blog/1308931724 -l 1
+
+这个帖子无法获取content：
+BlogsToWordpress.py -f http://user.qzone.qq.com/84483423/blog/1261567150 -l 1
+-> 网络原因
+
+继续测试其他：
+BlogsToWordpress.py -s http://user.qzone.qq.com/622007179/blog
+BlogsToWordpress.py -f http://user.qzone.qq.com/622007179/blog/1193481027 -l 1
+
+可以从这里：
+http://blog.qq.com/
+找到更多的测试的QQ空间。
+
+
+BlogsToWordpress.py -f http://blog.qq.com/qzone/622007179/1333268691.htm -l 1
+
+测试replynum是多少：
+BlogsToWordpress.py -f http://user.qzone.qq.com/84483423/blog/1317915494 -l 1
+
+测试68个评论：
+BlogsToWordpress.py -f http://user.qzone.qq.com/622007179/blog/1193481027 -l 1
+670评论：
+BlogsToWordpress.py -f http://user.qzone.qq.com/622002735/blog/1333264552 -l 1
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/622002735/blog/1329363126
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/622007179/blog/1333268691 -l 1
+
+BlogsToWordpress.py -s http://blog.qq.com/qzone/622007179/
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/622007179/blog/1218912726 -l 1
+
+测试添加了refer后图片下载是否快一些：
+BlogsToWordpress.py -f http://user.qzone.qq.com/622007179/blog/1227743001 -l 1
+
+包含b84.photo.store.qq.com/psb类的图片地址：
+BlogsToWordpress.py -f http://user.qzone.qq.com/622002735/blog/1331890909 -l 1
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/622002735/blog/1304648605
+BlogsToWordpress.py -f http://user.qzone.qq.com/622002735/blog/1304648639
+BlogsToWordpress.py -f http://user.qzone.qq.com/622002735/blog/1304648621
+
+BlogsToWordpress.py -s http://user.qzone.qq.com/14332891
+BlogsToWordpress.py -f http://user.qzone.qq.com/14332891/blog/1318216677
+
+BlogsToWordpress.py -s http://user.qzone.qq.com/622000169/blog
+
+测试comments中的replylist包含无法解析的字符decode和json.loads导致出错：
+BlogsToWordpress.py -f http://user.qzone.qq.com/622000169/blog/1236072174 -l 1
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/622000169/blog/1252395085 -l 1
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/622000169/blog/1252031013 -l 1
+
+
+继续测试支持各种图片：
+BlogsToWordpress.py -f http://user.qzone.qq.com/622002735/blog/1331890909 -l 1
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/84483423/blog/1309873770 -l 1
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/622002735/blog/1331890909 -l 1
+
+BlogsToWordpress.py -f http://blog.qq.com/qzone/57542962/1332960840.htm -l 1
+
+BlogsToWordpress.py -f http://blog.qq.com/qzone/444503967/1332125975.htm -l 1
+
+BlogsToWordpress.py -l 1 -f http://blog.qq.com/qzone/386964246/1332942066.htm
+
+BlogsToWordpress.py -l 1 -f http://blog.qq.com/qzone/622001433/1297730921.htm
+
+BlogsToWordpress.py -l 1 -f http://user.qzone.qq.com/622001433/blog/1303049286
+
+BlogsToWordpress.py -l 1 -f http://blog.qq.com/qzone/94371314/1333558347.htm
+
+BlogsToWordpress.py -l 1 -f http://blog.qq.com/qzone/757466138/1333172264.htm
+
+BlogsToWordpress.py -l 1 -f http://user.qzone.qq.com/417846901/blog/1332944095
+
+BlogsToWordpress.py -l 1 -f http://blog.qq.com/qzone/362002786/1263385941.htm
+
+BlogsToWordpress.py -f http://blog.qq.com/qzone/27866617/1265345051.htm
+
+BlogsToWordpress.py -l 1 -f http://user.qzone.qq.com/27866617/blog/1266892359
+
+BlogsToWordpress.py -f http://blog.qq.com/qzone/1157971596/1308849523.htm
+
+BlogsToWordpress.py -l 1 -f http://user.qzone.qq.com/815920900/blog/1307491670#!app=2&pos=1307491670
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/984817619/blog/1331615905
+
+处理最后一个图片fail：
+BlogsToWordpress.py -l 1 -f http://user.qzone.qq.com/984817619/blog/1332499692
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/984817619/blog/1332499692
+
+BlogsToWordpress.py -s http://ninaying.qzone.qq.com/
+
+现在连title都获取不了：
+BlogsToWordpress.py -f http://user.qzone.qq.com/984817619/blog/1332499692
+是因为为了支持上门的http://ninaying.qzone.qq.com/，提取处理错误的blogUser为user而不是ninaying
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/17473070/blog/1245132834
+
+评论数据，部分出错了：
+BlogsToWordpress.py -f http://user.qzone.qq.com/17473070/blog/1249955474
+
+
+BlogsToWordpress.py -f http://blog.qq.com/qzone/549001870/1333537179.htm
+BlogsToWordpress.py -s http://blog.qq.com/qzone/549001870/
+
+BlogsToWordpress.py -s http://emma1008.qzone.qq.com/
+
+BlogsToWordpress.py -f http://blog.qq.com/qzone/4940592/1333473930.htm
+BlogsToWordpress.py -s http://4940592.qzone.qq.com/
+
+BlogsToWordpress.py -s http://hans.qzone.qq.com/
+
+BlogsToWordpress.py -s http://user.qzone.qq.com/622000414/blog
+
+BlogsToWordpress.py -f http://blog.qq.com/qzone/1827836967/1332689491.htm
+
+BlogsToWordpress.py -f http://blog.qq.com/qzone/858153456/1332431265.htm
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/858153456/blog/1332779954
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/858153456/blog/1332427999#!app=2&pos=1332085614
+
+
+BlogsToWordpress.py -s http://user.qzone.qq.com/1874789931/blog#!app=2&pos=catalog_list
+
+BlogsToWordpress.py -f http://blog.qq.com/qzone/622007185/1265055479.htm
+
+BlogsToWordpress.py -f http://blog.qq.com/qzone/622000190/1262222195.htm
+
+BlogsToWordpress.py -l 1 -f http://user.qzone.qq.com/622000190/blog/1279817429
+
+BlogsToWordpress.py -f http://user.qzone.qq.com/622000190/blog/1279817429
+
+BlogsToWordpress.py -s http://user.qzone.qq.com/84483423/blog/
+
+BlogsToWordpress.py -s http://yetan.qzone.qq.com/
+
+BlogsToWordpress.py -l 1 -f http://user.qzone.qq.com/622004674/blog/1197564828
+
+BlogsToWordpress.py -s http://1074832144.qzone.qq.com/
+
+BlogsToWordpress.py -f http://blog.qq.com/qzone/184266149/1333169808.htm
+BlogsToWordpress.py -f http://user.qzone.qq.com/184266149/blog/1268107260
+
+测试新浪博客，韩寒的，评论达2w多个的 + 输出20M限制
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_4701280b0101854o.html -l 1 -x 20971520
+3w多评论的+ 输出40M 限制
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_4701280b0102e0p3.html -l 1 -x 41943040
+
+继续测试sina博客：
+BlogsToWordpress.py -s http://blog.sina.com.cn/jsmedia
+
+
+python BlogsToWordpress.py -s http://331694532.qzone.qq.com
+BlogsToWordpress.py -s http://331694532.qzone.qq.com
+
+测试gzip：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_730793bf010144j7.html
+
+尝试163的验证码解析：
+公开 帖子 测试 ：
+BlogsToWordpress.py -f http://againinput4.blog.163.com/blog/static/17279949120122154435420/ -t modifyPost -d modifiedPostPattern_Netease_againinput4.txt -l 1 -u againinput4@163.com -p xxx
+
+----------------------------------------------------------------------------------------------------
+人人网：
+BlogsToWordpress.py -s http://www.renren.com/229351756
+http://www.renren.com/229351756#//blog/blog/0/
+http://www.renren.com/229351756/blog/
+
+BlogsToWordpress.py -s http://www.renren.com/229351756 -l 1 -u green-waste@163.com -p xxx
+BlogsToWordpress.py -s http://www.renren.com/229351756 -l 3 -u green-waste@163.com -p xxx
+
+BlogsToWordpress.py -f http://blog.renren.com/blog/229351756/262929661 -l 1 -u green-waste@163.com -p xxx
+
+http://blog.renren.com/blog/bp/Q7p2tyL-QF
+
+测试图片：
+BlogsToWordpress.py -f http://blog.renren.com/blog/229351756/796486456 -l 1 -u green-waste@163.com -p xxx
+
+BlogsToWordpress.py -f http://blog.renren.com/blog/229351756/262929661?from=fanyeNew -l 1 -u green-waste@163.com -p xxx
+
+豆丁文档:
+http://page.renren.com/699092813/note
+音悦Tai:
+http://page.renren.com/yinyuetaiice/note
+
+试试自己的：
+http://page.renren.com/229351756/note
+->无效
+
+BlogsToWordpress.py -s http://page.renren.com/699092813/note -l 1
+
+BlogsToWordpress.py -l 1 -f http://page.renren.com/699092813/note/817982159
+
+测试超过100的评论的：
+BlogsToWordpress.py -l 1 -f http://page.renren.com/699092813/note/468827150
+BlogsToWordpress.py -f http://page.renren.com/699092813/note/468827150 -l 5
+
+评论0个的：
+BlogsToWordpress.py -f http://page.renren.com/699092813/note/468980324 -l 1
+
+BlogsToWordpress.py -f http://page.renren.com/699092813/note/468980324
+BlogsToWordpress.py -f http://page.renren.com/699092813/note/478306901
+BlogsToWordpress.py -f http://page.renren.com/699092813/note/481069116
+
+有空继续测试：
+BlogsToWordpress.py -f http://page.renren.com/699092813/note/493696826
+
+先试试：
+BlogsToWordpress.py -l 1 -s http://page.renren.com/yinyuetaiice/note
+BlogsToWordpress.py -s http://page.renren.com/yinyuetaiice/note -l 5
+
+BlogsToWordpress.py -f http://page.renren.com/600429402/note/499131292 -l 4
+
+BlogsToWordpress.py -f http://page.renren.com/yinyuetaiice/note/500128656 -l 2
+
+BlogsToWordpress.py -f http://page.renren.com/yinyuetaiice/note/500128656
+
+有空继续测：
+BlogsToWordpress.py -f http://page.renren.com/600429402/note/711448806
+
+
+登陆自己的，再查看朋友的：
+http://blog.renren.com/blog/253362819/friends?curpage=0&year=0&month=0&selitem=
+
+BlogsToWordpress.py -s http://blog.renren.com/blog/253362819/friends -l 1 -u green-waste@163.com -p xxx
+
+BlogsToWordpress.py -s http://blog.renren.com/blog/253362819/friends -u green-waste@163.com -p xxx
+
+乱码了：
+BlogsToWordpress.py -f http://blog.renren.com/blog/253362819/819181942 -l 1 -u green-waste@163.com -p xxx
+
+BlogsToWordpress.py -f http://blog.renren.com/blog/253362819/786201206 -l 1 -u green-waste@163.com -p xxx
+BlogsToWordpress.py -f http://blog.renren.com/blog/253362819/786201206 -u green-waste@163.com -p x
+
+BlogsToWordpress.py -s http://blog.renren.com/blog/239262292/friends?gal=buh -u green-waste@163.com -p xxx
+BlogsToWordpress.py -s http://blog.renren.com/blog/258676311/friends?gal=buh -u green-waste@163.com -p xxx
+BlogsToWordpress.py -s http://blog.renren.com/blog/305978789/friends?gal=buh -u green-waste@163.com -p xxx
+BlogsToWordpress.py -s http://blog.renren.com/blog/238377531/friends?gal=buh -u green-waste@163.com -p xxx
+BlogsToWordpress.py -s http://blog.renren.com/blog/230971234/friends?gal=buh -u green-waste@163.com -p xxx
+在这个帖子时死掉了：
+BlogsToWordpress.py -f http://blog.renren.com/blog/230971234/236237042 -u green-waste@163.com -p xxx
+
+下载图片失败：
+BlogsToWordpress.py -f http://blog.renren.com/blog/230971234/385071616 -u green-waste@163.com -p xxx
+
+----------------------------------------------------------------------------------------------------
+CSDN博客
+
+BlogsToWordpress.py -l 1 -s http://blog.csdn.net/v_JULY_v
+
+BlogsToWordpress.py -l 1 -f http://blog.csdn.net/v_july_v/article/details/6543438
+
+BlogsToWordpress.py -l 1 -f http://blog.csdn.net/morewindows/article/details/7392749
+
+BlogsToWordpress.py -l 1 -f http://blog.csdn.net/hfahe/article/details/7443276
+
+BlogsToWordpress.py -f http://blog.csdn.net/v_july_v/article/details/6543438
+
+测试图片：
+BlogsToWordpress.py -l 1 -f http://blog.csdn.net/v_JULY_v/article/details/6530142
+
+BlogsToWordpress.py -l 1 -f http://blog.csdn.net/hfahe/article/details/7443276
+
+BlogsToWordpress.py -f http://blog.csdn.net/hfahe/article/details/7443276
+
+标题乱码：
+BlogsToWordpress.py -l 1 -f http://blog.csdn.net/hfahe/article/details/5494895
+
+BlogsToWordpress.py -l 1 -f http://blog.csdn.net/v_july_v/article/details/6543438
+BlogsToWordpress.py -l 1 -f http://blog.csdn.net/v_july_v/article/details/5934051
+
+BlogsToWordpress.py -l 1 -f http://blog.csdn.net/hfahe/article/details/5494895
+
+BlogsToWordpress.py -f http://blog.csdn.net/hfahe/article/details/5494895
+
+防止重复处理url：
+BlogsToWordpress.py -f http://blog.csdn.net/v_july_v/article/details/7307301
+
+BlogsToWordpress.py -f http://blog.csdn.net/beijiguangyong/article/details/7439352
+
+BlogsToWordpress.py -f http://blog.csdn.net/yi_zz/article/details/7448561
+
+BlogsToWordpress.py -f http://blog.csdn.net/justjavac/article/details/7464644
+
+BlogsToWordpress.py -f http://blog.csdn.net/taody/article/details/7464810
+
+继续测试：
+BlogsToWordpress.py -s http://blog.csdn.net/taody/
+BlogsToWordpress.py -s http://blog.csdn.net/csh624366188
+BlogsToWordpress.py -s http://blog.csdn.net/aomandeshangxiao
+
+有些帖子的nextLink的id也是old：
+BlogsToWordpress.py -f http://blog.csdn.net/aomandeshangxiao/article/details/6659346
+
+BlogsToWordpress.py -s http://blog.csdn.net/aomandeshangxiao
+BlogsToWordpress.py -f http://blog.csdn.net/aomandeshangxiao/article/details/7298840
+
+BlogsToWordpress.py -s http://blog.csdn.net/tianlesoftware
+
+BlogsToWordpress.py -f http://blog.csdn.net/tianlesoftware/article/details/4677378 -l 5
+BlogsToWordpress.py -f http://blog.csdn.net/tianlesoftware/article/details/4678335 -l 5
+
+----------------------------------------------------------------------------------------------------
+搜狐博客
+BlogsToWordpress.py -s http://caochongweiyu.blog.sohu.com/ -l 1
+
+BlogsToWordpress.py -l 1 -f http://caochongweiyu.blog.sohu.com/206655492.html
+
+分类：
+BlogsToWordpress.py -l 1 -f http://tyjzlcl.blog.sohu.com/197745682.html
+标签为空：
+BlogsToWordpress.py -l 1 -f http://musangdaozhang.blog.sohu.com/210925051.html
+BlogsToWordpress.py -l 1 -f http://caochongweiyu.blog.sohu.com/206655492.html
+
+回头测试QQ空间的字符串sub是否正常：
+BlogsToWordpress.py -l 1 -f http://user.qzone.qq.com/622000169/blog/1252395085
+BlogsToWordpress.py -l 1 -f http://user.qzone.qq.com/622007179/blog/1218912726
+
+
+去除content中其他内容：
+BlogsToWordpress.py -l 1 -f http://musangdaozhang.blog.sohu.com/206594401.html
+BlogsToWordpress.py -l 1 -f http://tyjzlcl.blog.sohu.com/197745682.html
+BlogsToWordpress.py -l 1 -f http://tyjzlcl.blog.sohu.com/202352114.html
+
+图片：
+BlogsToWordpress.py -l 1 -f http://musangdaozhang.blog.sohu.com/206594401.html
+
+评论：
+BlogsToWordpress.py -l 1 -f http://caochongweiyu.blog.sohu.com/206655492.html
+
+继续测试：
+BlogsToWordpress.py -f http://caochongweiyu.blog.sohu.com/206655492.html
+
+content太少：
+BlogsToWordpress.py -l 1 -f http://caochongweiyu.blog.sohu.com/206661995.html
+
+继续测试：
+BlogsToWordpress.py -f http://caochongweiyu.blog.sohu.com/206661995.html
+
+next perma link为空：
+BlogsToWordpress.py -l 1 -f http://caochongweiyu.blog.sohu.com/211617693.html
+
+继续测试：
+BlogsToWordpress.py -f http://musangdaozhang.blog.sohu.com/206594401.html
+
+处理最后一个帖子之前，总是会打印错误：
+BlogsToWordpress.py -f http://musangdaozhang.blog.sohu.com/211538341.html
+
+继续测试：
+BlogsToWordpress.py -s http://maoyushi.blog.sohu.com/
+
+遇到“此文章已被外星人劫持或被博主隐藏！”：
+http://maoyushi.blog.sohu.com/35083506.html
+http://maoyushi.blog.sohu.com/88076663.html
+
+BlogsToWordpress.py -f http://maoyushi.blog.sohu.com/33825654.html
+
+BlogsToWordpress.py -f http://maoyushi.blog.sohu.com/86790907.html
+
+
+博客标题和描述：
+BlogsToWordpress.py -l 1 -f http://maoyushi.blog.sohu.com/86790907.html
+
+entry开始：
+BlogsToWordpress.py -s http://maomaochong0102.blog.sohu.com/entry/
+
+BlogsToWordpress.py -s http://yetanyetan.blog.sohu.com/
+
+BlogsToWordpress.py -f http://yetanyetan.blog.sohu.com/25098101.html -l 20
+
+BlogsToWordpress.py -s http://cosbaby.blog.sohu.com/ -l 100
+
+三个“我的相关日志”：
+BlogsToWordpress.py -l 1 -f http://cosbaby.blog.sohu.com/160929933.html
+
+删除 "更多文章推荐阅读"：
+BlogsToWordpress.py -l 1 -f http://cosbaby.blog.sohu.com/160978962.html
+BlogsToWordpress.py -l 1 -f http://cosbaby.blog.sohu.com/160979881.html
+BlogsToWordpress.py -l 1 -f http://cosbaby.blog.sohu.com/160980222.html
+
+继续测试：
+BlogsToWordpress>BlogsToWordpress.py -f http://cosbaby.blog.sohu.com/160980222.html
+
+BlogsToWordpress.py -f http://cosbaby.blog.sohu.com/161044616.html -l 20
+
+BlogsToWordpress.py -f http://w2china1980.blog.sohu.com/211265082.html -l 4
+
+BlogsToWordpress.py -s http://xieguozhong.blog.sohu.com/ -l 20
+
+BlogsToWordpress.py -s http://av56.blog.sohu.com/ -l 30
+
+评论包含控制字符：
+BlogsToWordpress.py -l 1 -f http://av56.blog.sohu.com/85839362.html
+
+================================================================================
+解决QQ空间的bug：
+
+BlogsToWordpress.py -l 1 -f http://hi.baidu.com/xieguang133/blog/item/98a44ed351d36d0c3bf3cf06.html
+
+BlogsToWordpress.py -s http://hi.baidu.com/xieguang133
+
+QQ空间的 模板日志：
+BlogsToWordpress.py -l 1 -f http://user.qzone.qq.com/1919008415/blog/1335271336
+
+================================================================================
+添加支持Sina博客中其他网站的图片地址的支持：
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_696e50390100ntoi.html -l 1
+
+BlogsToWordpress.py -s http://blog.sina.com.cn/leedsblog
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_696e50390100ntp4.html -l 1
+
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_696e50390100ntxs.html -l 1
+
+================================================================================
+BlogsToWordpress.py -s http://hi.baidu.com/recommend_music/ -l 10
+
+
+================================================================================
+尝试手动输入验证码去修改163的帖子：
+
+BlogsToWordpress.py -s http://againinput4.blog.163.com/ -a http://www.crifan.com/?p= -w http://www.crifan.com/files/pic/againinput4 -u againinput4@163.com -p xxx
+
+BlogsToWordpress.py -f http://againinput4.blog.163.com/blog/static/17279949120122154435420/ -t modifyPost -d modifiedPostPattern_Netease_againinput4.txt -l 1 -u againinput4@163.com -p xxx
+
+BlogsToWordpress.py -f http://againinput4.blog.163.com/blog/static/172799491201221810529232/ -t modifyPost -d modifiedPostPattern_Netease_againinput4.txt -l 1 -u againinput4@163.com -p xxx
+
+BlogsToWordpress.py -f http://againinput4.blog.163.com/blog/static/17279949120120911251168/ -t modifyPost -d modifiedPostPattern_Netease_againinput4.txt -l 1 -u againinput4@163.com -p xxx
+
+BlogsToWordpress.py -f http://againinput4.blog.163.com/blog/static/172799491201209112318963/ -t modifyPost -d modifiedPostPattern_Netease_againinput4.txt -l 1 -u againinput4@163.com -p xxx
+
+BlogsToWordpress.py -f http://againinput4.blog.163.com/blog/static/1727994912012091389514/ -t modifyPost -d modifiedPostPattern_Netease_againinput4.txt -l 1 -u againinput4@163.com -p xxx
+
+BlogsToWordpress.py -f http://againinput4.blog.163.com/blog/static/17279949120120711818436/ -t modifyPost -d modifiedPostPattern_Netease_againinput4.txt -l 1 -u againinput4@163.com -p xxx
+
+BlogsToWordpress.py -f http://againinput4.blog.163.com/blog/static/17279949120120602332325/ -t modifyPost -d modifiedPostPattern_Netease_againinput4.txt -l 1 -u againinput4@163.com -p xxx
+
+BlogsToWordpress.py -s http://againinput4.blog.163.com/blog -t modifyPost -d modifiedPostPattern_Netease_againinput4.txt -u againinput4@163.com -p xxx
+
+----------------------------------------------------------------------------------------------------
+Blogbus:
+BlogsToWordpress.py -s http://littlebasin.blogbus.com -l 1
+
+BlogsToWordpress.py -f http://kenleung.blogbus.com/logs/219268309.html -l 1
+
+评论超过1页：
+BlogsToWordpress.py -f http://littlebasin.blogbus.com/logs/171413104.html -l 1
+评论只有一页的：
+BlogsToWordpress.py -f http://littlebasin.blogbus.com/logs/1379808.html -l 1
+
+特殊的帖子（没有发布时间，没有分类）：
+BlogsToWordpress.py -f http://kenleung.blogbus.com/logs/219268309.html -l 1
+BlogsToWordpress.py -f http://kenleung.blogbus.com/logs/219268309.html -l 5
+
+BlogsToWordpress.py -f http://kenleung.blogbus.com/logs/219506522.html -l 2
+
+图片处理：
+BlogsToWordpress.py -f http://uk916.blogbus.com/logs/163734653.html -l 1
+
+图片处理，发布时间特殊：
+BlogsToWordpress.py -f http://gogodoll.blogbus.com/logs/210877066.html -l 1
+
+图片处理：
+BlogsToWordpress.py -f http://naturestudio1.blogbus.com/logs/143670544.html -l 1
+BlogsToWordpress.py -f http://naturestudio1.blogbus.com/logs/143670544.html
+
+测试整体是否有bug：
+BlogsToWordpress.py -s http://gogodoll.blogbus.com/
+
+图片处理失败:
+BlogsToWordpress.py -f http://gogodoll.blogbus.com/logs/74365790.html -l 1
+
+BlogsToWordpress.py -f http://gogodoll.blogbus.com/logs/97548898.html
+BlogsToWordpress.py -f http://gogodoll.blogbus.com/logs/99583121.html
+
+BlogsToWordpress.py -f http://gogodoll.blogbus.com/logs/103006780.html
+
+BlogsToWordpress.py -f http://gogodoll.blogbus.com/logs/103931392.html
+
+BlogsToWordpress.py -f http://janexyy.blogbus.com/logs/105359907.html
+
+BlogsToWordpress.py -f http://lynnchon.blogbus.com/logs/106189839.html
+BlogsToWordpress.py -f http://lynnchon.blogbus.com/logs/106589756.html
+
+BlogsToWordpress.py -f http://kdinsky.blogbus.com/logs/131080138.html
+
+BlogsToWordpress.py -l 1 -f http://kdinsky.blogbus.com/logs/132011462.html
+
+测试整体功能：
+BlogsToWordpress.py -s http://milk-on-the-way.blogbus.com/
+
+BlogsToWordpress.py -s http://fsj.blogbus.com/
+标题变成日期了：
+BlogsToWordpress.py -f http://fsj.blogbus.com/logs/46697205.html -l 1
+继续测试：
+BlogsToWordpress.py -f http://sweetmelody.blogbus.com/logs/200842078.html -l 1
+BlogsToWordpress.py -f http://sweetmelody.blogbus.com/logs/201621815.html -l 1
+BlogsToWordpress.py -f http://sweetmelody.blogbus.com/logs/204199323.html -l 1
+BlogsToWordpress.py -f http://sweetmelody.blogbus.com/logs/204276193.html -l 1
+BlogsToWordpress.py -f http://sweetmelody.blogbus.com/logs/205931180.html -l 1
+
+BlogsToWordpress.py -s http://guthrun.blogbus.com/
+
+标题解析错误：
+
+BlogsToWordpress.py -f http://fsj.blogbus.com/logs/46697205.html -l 1
+BlogsToWordpress.py -f http://littlebasin.blogbus.com/logs/1379808.html -l 1
+BlogsToWordpress.py -f http://lynnchon.blogbus.com/logs/106189839.html -l 1
+BlogsToWordpress.py -f http://guthrun.blogbus.com/logs/30794012.html -l 1
+BlogsToWordpress.py -f http://gogodoll.blogbus.com/logs/210877066.html -l 1
+BlogsToWordpress.py -f http://janexyy.blogbus.com/logs/105359907.html -l 1
+BlogsToWordpress.py -f http://kenleung.blogbus.com/logs/219268309.html -l 1
+
+继续其他测试：
+BlogsToWordpress.py -f http://guthrun.blogbus.com/logs/32645067.html -l 1
+BlogsToWordpress.py -s http://guthrun.blogbus.com/
+
+BlogsToWordpress.py -f http://dummhund.blogbus.com/logs/89149039.html
+
+BlogsToWordpress.py -s http://tianshizhu.blogbus.com/
+时间解析错误：
+BlogsToWordpress.py -f http://tianshizhu.blogbus.com/logs/10327610.html -l 1
+继续测试：
+BlogsToWordpress.py -f http://tianshizhu.blogbus.com/logs/2587888.html -l 1
+BlogsToWordpress.py -f http://mangobox.blogbus.com/logs/88955088.html -l 1
+BlogsToWordpress.py -f http://mangobox.blogbus.com/logs/99118649.html -l 1
+
+html转soup出错：
+BlogsToWordpress.py -f http://ronghuihou.blogbus.com/logs/89099700.html -l 1
+
+继续测试：
+BlogsToWordpress.py -f http://princessbusy.blogbus.com/logs/165961786.html -l 1
+
+测试time解析：
+BlogsToWordpress.py -f http://littlebasin.blogbus.com/logs/219132195.html -l 1
+BlogsToWordpress.py -f http://gogodoll.blogbus.com/logs/210877066.html -l 1
+BlogsToWordpress.py -f http://kdinsky.blogbus.com/logs/131080138.html -l 1
+BlogsToWordpress.py -f http://princessbusy.blogbus.com/logs/165961786.html
+BlogsToWordpress.py -f http://littlebasin.blogbus.com/logs/1379808.html
+BlogsToWordpress.py -f http://sweetmelody.blogbus.com/logs/200842078.html
+BlogsToWordpress.py -f http://guthrun.blogbus.com/logs/30794012.html
+BlogsToWordpress.py -f http://mangobox.blogbus.com/logs/88955088.html
+BlogsToWordpress.py -f http://janexyy.blogbus.com/logs/105359907.html
+BlogsToWordpress.py -f http://tianshizhu.blogbus.com/logs/10327610.html
+BlogsToWordpress.py -f http://kenleung.blogbus.com/logs/219268309.html
+
+继续测试：
+BlogsToWordpress.py -f http://ajunecat.blogbus.com/logs/190104111.html
+BlogsToWordpress.py -f http://kidonly.blogbus.com/logs/17749041.html
+BlogsToWordpress.py -f http://chaocre.blogbus.com/logs/219508887.html
+BlogsToWordpress.py -f http://donghua.blogbus.com/logs/218155614.html
+BlogsToWordpress.py -f http://show-lee.blogbus.com/logs/220010664.html
+
+BlogsToWordpress.py -f http://donghua.blogbus.com/logs/163971424.html
+
+BlogsToWordpress.py -s http://starrysummernight.blogbus.com
+
+整体测试：
+BlogsToWordpress.py -s http://starrysummernight.blogbus.com
+BlogsToWordpress.py -f http://littlebasin.blogbus.com/logs/219132195.html
+BlogsToWordpress.py -f http://kenleung.blogbus.com/logs/219268309.html
+BlogsToWordpress.py -f http://uk916.blogbus.com/logs/163734653.html
+BlogsToWordpress.py -f http://gogodoll.blogbus.com/logs/210877066.html
+BlogsToWordpress.py -f http://janexyy.blogbus.com/logs/105359907.html
+BlogsToWordpress.py -f http://lynnchon.blogbus.com/logs/106189839.html
+BlogsToWordpress.py -f http://kdinsky.blogbus.com/logs/131080138.html
+BlogsToWordpress.py -s http://milk-on-the-way.blogbus.com/
+BlogsToWordpress.py -s http://fsj.blogbus.com/
+BlogsToWordpress.py -f http://sweetmelody.blogbus.com/logs/200842078.html
+BlogsToWordpress.py -s http://guthrun.blogbus.com/
+BlogsToWordpress.py -f http://dummhund.blogbus.com/logs/89149039.html
+BlogsToWordpress.py -f http://tianshizhu.blogbus.com/logs/10327610.html
+BlogsToWordpress.py -f http://mangobox.blogbus.com/logs/88955088.html
+BlogsToWordpress.py -f http://ronghuihou.blogbus.com/logs/89099700.html
+BlogsToWordpress.py -f http://princessbusy.blogbus.com/logs/165961786.html
+BlogsToWordpress.py -f http://ajunecat.blogbus.com/logs/190104111.html
+BlogsToWordpress.py -f http://kidonly.blogbus.com/logs/17749041.html
+BlogsToWordpress.py -f http://chaocre.blogbus.com/logs/219508887.html
+BlogsToWordpress.py -f http://donghua.blogbus.com/logs/218155614.html
+BlogsToWordpress.py -f http://show-lee.blogbus.com/logs/220010664.html
+
+
+----------------------------------------------------------------------------------------------------
+试试已升级后的百度新空间，是否仍旧支持旧的百度空间：
+BlogsToWordpress.py -f http://hi.baidu.com/serial_story/blog/item/f73ca3821a74a8ba6d811970.html -l 5
+地址是可以自动跳转到：
+http://hi.baidu.com/serial_story/item/38b86a0bc017dbe93599029c
+的，但是html源码则是新的了，所以无法解析了。
+
+看看没有升级到新空间的，原有空间是否可以继续解析：
+BlogsToWordpress.py -f http://hi.baidu.com/recommend_music/blog/item/746617038cda85e009fa937c.html -l 5
+结果证明还是可以的。
+
+
+添加支持新百度空间：
+BlogsToWordpress.py -f http://hi.baidu.com/recommend_music/blog/item/746617038cda85e009fa937c.html -l 5
+BlogsToWordpress.py -s http://hi.baidu.com/new/serial_story
+BlogsToWordpress.py -s http://hi.baidu.com/new/serial_story/
+BlogsToWordpress.py -s http://hi.baidu.com/new/serial_story/blog
+BlogsToWordpress.py -s http://hi.baidu.com/new/serial_story/blog/
+BlogsToWordpress.py -f http://hi.baidu.com/serial_story/item/5625cfbbabf08fa7ebba9319
+BlogsToWordpress.py -f http://hi.baidu.com/serial_story/item/5625cfbbabf08fa7ebba9319/
+
+BlogsToWordpress.py -s http://hi.baidu.com/new/serial_story
+
+很多页的评论：
+BlogsToWordpress.py -f http://hi.baidu.com/hispace/item/c260a3d575252069fb5768ed -l 1
+600多个评论：
+BlogsToWordpress.py -f http://hi.baidu.com/hispace/item/f2fdcddc12f99c6addf9beec -l 5
+
+
+单页评论：
+BlogsToWordpress.py -f http://hi.baidu.com/serial_story/item/5625cfbbabf08fa7ebba9319 -l 1
+
+下一篇 是空的：
+BlogsToWordpress.py -f http://hi.baidu.com/leresa/item/fe29bd1557bdda58f0090e6d
+
+评论：
+BlogsToWordpress.py -f http://hi.baidu.com/hispace/item/cb86aafbeb0833e70dd1c8f7
+BlogsToWordpress.py -f http://hi.baidu.com/hispace/item/cb86aafbeb0833e70dd1c8f7 -l 1
+700多评论：
+BlogsToWordpress.py -f http://hi.baidu.com/nieve_kx/item/56f3c86e76dcc820a1cf0f08
+
+测试评论：
+BlogsToWordpress.py -f http://hi.baidu.com/hispace/item/f7949d120db5a3251894ecf4
+其中：
+2000多个评论：http://hi.baidu.com/hispace/item/8877102b0e1029a1af48f5de
+1000多个评论：http://hi.baidu.com/hispace/item/3054c75f110d9636aaf6d7c3
+
+评论处理出错：
+BlogsToWordpress.py -l 1 -f http://hi.baidu.com/hispace/item/387cff8ebf4fa2edb17154aa
+
+测试图片：
+BlogsToWordpress.py -f http://hi.baidu.com/dannie007zxl/item/8df6bd1e07fd79fc64eabf73
+
+测试所有：
+BlogsToWordpress.py -s http://hi.baidu.com/new/dannie007zxl
+时间出错：
+BlogsToWordpress.py -f http://hi.baidu.com/dannie007zxl/item/d3560b2b85bcc9c7ef10f148 -l 1
+
+BlogsToWordpress.py -s http://hi.baidu.com/new/serial_story
+
+
+模板：时间旅程
+BlogsToWordpress.py -s http://hi.baidu.com/new/tmcsyy123
+BlogsToWordpress.py -f http://hi.baidu.com/tmcsyy123/item/246db636588c5e9fb90c0348
+BlogsToWordpress.py -s http://hi.baidu.com/new/shuisidezhuyi
+BlogsToWordpress.py -s http://hi.baidu.com/new/youya280
+BlogsToWordpress.py -s http://hi.baidu.com/new/yyhkok
+BlogsToWordpress.py -s http://hi.baidu.com/new/372163274
+BlogsToWordpress.py -s http://hi.baidu.com/new/secret
+
+模板：平行线
+BlogsToWordpress.py -s http://hi.baidu.com/new/choklk
+BlogsToWordpress.py -s http://hi.baidu.com/new/xsen1216
+BlogsToWordpress.py -s http://hi.baidu.com/new/yugangsheng
+BlogsToWordpress.py -s http://hi.baidu.com/new/queenasun521
+BlogsToWordpress.py -s http://hi.baidu.com/new/tvxq23
+
+模板：边走边看
+BlogsToWordpress.py -s http://hi.baidu.com/new/datasoldier
+BlogsToWordpress.py -s http://hi.baidu.com/new/1032116096
+BlogsToWordpress.py -s http://hi.baidu.com/new/__seven_
+BlogsToWordpress.py -s http://hi.baidu.com/new/353635147
+BlogsToWordpress.py -s http://hi.baidu.com/new/xiaochouyu
+BlogsToWordpress.py -s http://hi.baidu.com/new/migdig
+BlogsToWordpress.py -s http://hi.baidu.com/new/hyzhhyzhhyzh
+BlogsToWordpress.py -s http://hi.baidu.com/new/1032116096
+BlogsToWordpress.py -s http://hi.baidu.com/new/04041227
+
+模板：窗外风景
+BlogsToWordpress.py -s http://hi.baidu.com/new/serial_story
+
+测试还是否能访问旧版空间：
+BlogsToWordpress.py -s http://hi.baidu.com/serial_story
+不支持了。
+
+支持无标题的，新版的音乐帖子：
+BlogsToWordpress.py -f http://hi.baidu.com/hyzhhyzhhyzh/item/04847eda5cf7933ae2108fd9
+BlogsToWordpress.py -f http://hi.baidu.com/choklk/item/5ef51e23331d77966e2cc329
+BlogsToWordpress.py -f http://hi.baidu.com/tmcsyy123/item/68233ec076948cbd0c0a7b18
+
+普通的模板：
+BlogsToWordpress.py -s http://hi.baidu.com/new/stupidwords
+BlogsToWordpress.py -s http://hi.baidu.com/new/ggbaida
+BlogsToWordpress.py -s http://hi.baidu.com/new/hangzhoutuan
+BlogsToWordpress.py -s http://hi.baidu.com/new/sail2011
+
+测试所有新版百度空间，包括各种模板的：
+
+模板：时间旅程
+BlogsToWordpress.py -s http://hi.baidu.com/new/tmcsyy123 -l 10
+
+模板：平行线
+BlogsToWordpress.py -s http://hi.baidu.com/new/choklk -l 10
+
+模板：边走边看
+BlogsToWordpress.py -s http://hi.baidu.com/new/datasoldier -l 10
+
+模板：窗外风景
+BlogsToWordpress.py -s http://hi.baidu.com/new/serial_story -l 10
+
+普通的模板：
+BlogsToWordpress.py -s http://hi.baidu.com/new/stupidwords -l 10
+BlogsToWordpress.py -s http://hi.baidu.com/new/ggbaida -l 10
+BlogsToWordpress.py -s http://hi.baidu.com/new/hangzhoutuan -l 10
+BlogsToWordpress.py -s http://hi.baidu.com/new/sail2011 -l 10
+BlogsToWordpress.py -f http://hi.baidu.com/dannie007zxl/item/8df6bd1e07fd79fc64eabf73 -l 10
+
+这个博客出错:
+BlogsToWordpress.py -s http://hi.baidu.com/new/iguonan
+
+----------------------------------------------------------------------------------------------------
+给新版百度添加登陆模式：
+BlogsToWordpress.py -s http://hi.baidu.com/new/serial_story -u againinput4 -p
+BlogsToWordpress.py -s http://hi.baidu.com/new/serial_story
+BlogsToWordpress.py -f http://hi.baidu.com/serial_story/item/481d3cdf535df1eb55347faa -l 2 -u againinput4 -p
+
+修改帖子：
+BlogsToWordpress.py -f http://hi.baidu.com/serial_story/item/7ecc2ae29bd5ddabc00d75aa -t modifyPost -d modifiedPostPattern_BaiduNew_serial_story.txt -l 1 -u againinput4 -p
+BlogsToWordpress.py -f http://hi.baidu.com/serial_story/item/064ae0d8336b4d3c49e1dd06 -t modifyPost -d modifiedPostPattern_BaiduNew_serial_story.txt -u againinput4 -p
+BlogsToWordpress.py -f http://hi.baidu.com/serial_story/item/9ffcc5de0d3ddc4ddcf9be02 -t modifyPost -d modifiedPostPattern_BaiduNew_serial_story.txt -l 1 -u againinput4 -p
+
+
+----------------------------------------------------------------------------------------------------
+人人网登陆出现验证码错误：
+BlogsToWordpress.py -s http://www.renren.com/113576918 -u shidong84@googlemail.com -p daochuceshi
+
+
+----------------------------------------------------------------------------------------------------
+清空新版百度空间内容：
+BlogsToWordpress.py -f http://hi.baidu.com/serial_story/item/7ecc2ae29bd5ddabc00d75aa -t modifyPost -d modifiedPostPattern_BaiduNew_serial_story_removeContent.txt -l 1 -u againinput4 -p
+BlogsToWordpress.py -f http://hi.baidu.com/serial_story/item/7ecc2ae29bd5ddabc00d75aa -t modifyPost -d modifiedPostPattern_BaiduNew_serial_story_removeContent_simpleTest.txt -l 1 -u againinput4 -p
+
+BlogsToWordpress.py -s http://hi.baidu.com/new/serial_story/ -t modifyPost -d modifiedPostPattern_BaiduNew_serial_story_removeContent.txt -u againinput4 -l 5 -p
+BlogsToWordpress.py -f http://hi.baidu.com/serial_story/item/008bf54ef5db2be81f19bc2a -t modifyPost -d modifiedPostPattern_BaiduNew_serial_story_removeContent.txt -u againinput4 -l 10 -p
+BlogsToWordpress.py -f http://hi.baidu.com/serial_story/item/31e8a9d52615202b38f6f72a -t modifyPost -d modifiedPostPattern_BaiduNew_serial_story_removeContent.txt -u againinput4 -p
+
+BlogsToWordpress.py -s http://hi.baidu.com/new/godfun -t modifyPost -d modifiedPostPattern_BaiduNew_godfun_removeContent.txt -u againinput -p
+BlogsToWordpress.py -f http://hi.baidu.com/godfun/item/cb34e3f79882440884d278a7 -t modifyPost -d modifiedPostPattern_BaiduNew_godfun_removeContent.txt -u againinput -p
+BlogsToWordpress.py -f http://hi.baidu.com/godfun/item/a3d4480a12fba7123a53eeae -t modifyPost -d modifiedPostPattern_BaiduNew_godfun_removeContent.txt -u againinput -p
+BlogsToWordpress.py -f http://hi.baidu.com/godfun/item/8575c46740be0d167ddeccab -t modifyPost -d modifiedPostPattern_BaiduNew_godfun_removeContent.txt -u againinput -p
+BlogsToWordpress.py -f http://hi.baidu.com/godfun/item/1575f2befceb88a7ebba93e3 -t modifyPost -d modifiedPostPattern_BaiduNew_godfun_removeContent.txt -u againinput -p
+
+BlogsToWordpress.py -s http://hi.baidu.com/new/goodword -t modifyPost -d modifiedPostPattern_BaiduNew_goodword_removeContent.txt -u againinput3 -p
+BlogsToWordpress.py -f http://hi.baidu.com/goodword/item/f8ec401533301f0db88a1ad8 -t modifyPost -d modifiedPostPattern_BaiduNew_goodword_removeContent.txt -u againinput3 -p
+
+BlogsToWordpress.py -s http://hi.baidu.com/new/about_notebook -t modifyPost -d modifiedPostPattern_BaiduNew_notebook_removeContent.txt -u againinput5 -p
+
+BlogsToWordpress.py -s http://hi.baidu.com/new/rec_music -t modifyPost -d modifiedPostPattern_BaiduNew_recMusic_removeContent.txt -u againinput6 -p
+BlogsToWordpress.py -f http://hi.baidu.com/rec_music/item/ffcb758aef271ed75f0ec18d -t modifyPost -d modifiedPostPattern_BaiduNew_recMusic_removeContent.txt -u againinput6 -p
+BlogsToWordpress.py -f http://hi.baidu.com/rec_music/item/91e6bba17fd53b278819d3b2 -t modifyPost -d modifiedPostPattern_BaiduNew_recMusic_removeContent.txt -u againinput6 -p
+BlogsToWordpress.py -f http://hi.baidu.com/rec_music/item/6403e9c4af85362e47d5c0a5 -t modifyPost -d modifiedPostPattern_BaiduNew_recMusic_removeContent.txt -u againinput6 -p
+
+BlogsToWordpress.py -s http://hi.baidu.com/new/philosophy_crl -t modifyPost -d modifiedPostPattern_BaiduNew_philosophyCrl_removeContent.txt -u againinput7 -p
+
+BlogsToWordpress.py -s http://hi.baidu.com/new/marriage_love -t modifyPost -d modifiedPostPattern_BaiduNew_marriageLove_removeContent.txt -u againinput8 -p
+
+
+----------------------------------------------------------------------------------------------------
+http://blog.sina.com.cn/camelzone出错：
+
+BlogsToWordpress.py -s http://blog.sina.com.cn/u/1926484744
+
+================================================================================
+添加 天涯博客 的支持：
+BlogsToWordpress.py -s http://susu7788.blog.tianya.cn
+BlogsToWordpress.py -s http://susu7788.blog.tianya.cn/
+BlogsToWordpress.py -s http://blog.tianya.cn/blogger/blog_main.asp?BlogID=2723898
+BlogsToWordpress.py -s http://blog.tianya.cn/blogger/blog_main.asp?BlogID=2723898/
+
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=2723898^&PostID=23024897
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=2723898^&PostID=23024897/
+
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=2723898^&PostID=24875919
+
+BlogsToWordpress.py -s http://crifan.blog.tianya.cn
+BlogsToWordpress.py -s http://blog.tianya.cn/blogger/blog_main.asp?BlogID=309977
+
+test multi page comments:
+2 comments:
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=2723898^&PostID=23024897
+105 comments:
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=4353581^&PostID=47251890
+235 comments:
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=3210723^&PostID=41963783
+
+test pic:
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=309977^&PostID=47772706
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=4493710^&PostID=47493241
+6 pic:
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=145093^&PostID=47718555
+20+ pic:
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=4338249^&PostID=47749663
+
+blog test:
+BlogsToWordpress.py -s http://yelantingyu.blog.tianya.cn
+BlogsToWordpress.py -s http://nelzelper.blog.tianya.cn
+
+test pic match:
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=2723898^&PostID=24989103 -l 1
+
+
+continue test:
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=2723898^&PostID=24989103
+BlogsToWordpress.py -s http://qixingtaishan.blog.tianya.cn
+BlogsToWordpress.py -s http://yujing1017.blog.tianya.cn
+BlogsToWordpress.py -s http://xinlijian.blog.tianya.cn
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=4338249^&PostID=43105360
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=4338249^&PostID=44492792
+BlogsToWordpress.py -s http://duanhongbin.blog.tianya.cn
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=659306^&PostID=45945908
+BlogsToWordpress.py -s http://xinshiju.blog.tianya.cn
+BlogsToWordpress.py -s http://changchunguomao.blog.tianya.cn
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=1770415^&PostID=46867664
+BlogsToWordpress.py -s http://hyx49.blog.tianya.cn
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=2455453^&PostID=47169292
+BlogsToWordpress.py -s http://zengying.blog.tianya.cn
+BlogsToWordpress.py -f http://blog.tianya.cn/blogger/post_read.asp?BlogID=59698^&PostID=46367576
+
+================================================================================
+添加 点点轻博客 的支持：
+BlogsToWordpress.py -s http://stephenwei.diandian.com
+BlogsToWordpress.py -s http://matchachiharu.diandian.com
+
+BlogsToWordpress.py -f http://stephenwei.diandian.com/post/2012-05-15/17622180
+
+BlogsToWordpress.py -f http://matchachiharu.diandian.com/post/2012-07-02/40029798415
+
+test content:
+BlogsToWordpress.py -f http://stephenwei.diandian.com/post/2012-05-15/17622180 -l 1
+BlogsToWordpress.py -f http://stephenwei.diandian.com/post/2012-05-15/18856917 -l 1
+
+test comments:
+107 comments:
+BlogsToWordpress.py -f http://www.zoushijie.com/post/2012-09-22/40038845472 -l 1
+BlogsToWordpress.py -f http://shuizhixiu.diandian.com/post/2012-10-30/40041936379 -l 1
+
+self domain blog provider:
+BlogsToWordpress.py -s http://www.zoushijie.com
+BlogsToWordpress.py -s http://blog.nuandao.com
+BlogsToWordpress.py -s http://nosta1gie.com
+BlogsToWordpress.py -s http://www.sankin77.com
+
+blog title and desc:
+BlogsToWordpress.py -f http://matchachiharu.diandian.com/post/2012-07-02/40029798415
+BlogsToWordpress.py -f http://stephenwei.diandian.com/post/2012-05-15/17622180
+BlogsToWordpress.py -s http://www.zoushijie.com
+BlogsToWordpress.py -s http://blog.nuandao.com
+not support:
+BlogsToWordpress.py -s http://nosta1gie.com
+BlogsToWordpress.py -s http://www.sankin77.com
+
+test all:
+BlogsToWordpress.py -f http://www.zoushijie.com/post/2012-09-22/40038845472
+
+tag:
+BlogsToWordpress.py -f http://www.zoushijie.com/post/2012-09-25/40038097755
+
+date from perma link:
+BlogsToWordpress.py -f http://www.zoushijie.com/post/2012-09-28/40039054394
+error:
+BlogsToWordpress.py -f http://www.zoushijie.com/post/2012-09-30/40039279540
+
+authorUrl is null:
+BlogsToWordpress.py -f http://www.zoushijie.com/post/2012-09-30/40040622782
+
+next perma link:
+BlogsToWordpress.py -f http://www.zoushijie.com/post/2012-10-12/40040664173
+
+
+韩倩玮:
+BlogsToWordpress.py -s http://hanhan--.diandian.com
+
+content:
+BlogsToWordpress.py -f http://hanhan--.diandian.com/post/2012-05-06/17805652
+content:
+BlogsToWordpress.py -f http://hanhan--.diandian.com/post/2012-05-07/17227064
+
+---for test all---
+continue test:
+BlogsToWordpress.py -s http://hanhan--.diandian.com
+BlogsToWordpress.py -f http://hanhan--.diandian.com/post/2012-06-24/40028970772
+BlogsToWordpress.py -f http://hanhan--.diandian.com/post/2012-10-02/40039706674
+
+走世界:
+BlogsToWordpress.py -s http://www.zoushijie.com/
+BlogsToWordpress.py -f http://www.zoushijie.com/post/2012-10-12/40039560459
+
+Stephen:
+BlogsToWordpress.py -s http://stephenwei.diandian.com
+BlogsToWordpress.py -f http://stephenwei.diandian.com/post/2012-05-23/20225131
+
+千阳:
+BlogsToWordpress.py -s http://matchachiharu.diandian.com
+
+----------------------------------------------------------------------------------------------------
+new baidu bug:
+BlogsToWordpress.py -f http://hi.baidu.com/iqpkeq/item/784c55102e6bed0ed1d66d26
+BlogsToWordpress.py -f http://hi.baidu.com/iqpkeq/item/954dd8427491f017886d1037
+均正常。
+
+http://hi.baidu.com/iqpkeq/item/89191e95e895bfbccc80e53e
+本身无法打开：
+啊~哦~ 您要查看的页面不存在或已删除！
+
+----------------------------------------------------------------------------------------------------
+fix csdn bug:
+BlogsToWordpress.py -s http://blog.csdn.net/v_JULY_v
+BlogsToWordpress.py -s http://blog.csdn.net/yhc13429826359
+BlogsToWordpress.py -f http://blog.csdn.net/v_july_v/article/details/6126406 -l 10
+BlogsToWordpress.py -f http://blog.csdn.net/tianxiaode/article/details/7613912 -l 20
+BlogsToWordpress.py -s http://blog.csdn.net/zhmxy555 -l 20
+BlogsToWordpress.py -s http://blog.csdn.net/qq1059458376 -l 20
+BlogsToWordpress.py -s http://blog.csdn.net/lfsfxy9 -l 20
+BlogsToWordpress.py -f http://blog.csdn.net/weizengxun/article/details/6727781 -l 10
+
+----------------------------------------------------------------------------------------------------
+qq空间无法提取标题：
+BlogsToWordpress.py -s http://84896189.qzone.qq.com
+BlogsToWordpress.py -f http://user.qzone.qq.com/84896189/blog/0
+BlogsToWordpress.py -f http://user.qzone.qq.com/84896189/blog/1
+BlogsToWordpress.py -f http://user.qzone.qq.com/84896189/blog/3
+BlogsToWordpress.py -f http://user.qzone.qq.com/84896189/blog/1201791673
+
+----------------------------------------------------------------------------------------------------
+BlogsToWordpress.py -s http://hi.baidu.com/rec_music
+BlogsToWordpress.py -f http://hi.baidu.com/rec_music/item/e1c214c3b824037ecfd4f8aa
+BlogsToWordpress.py -s http://hi.baidu.com/changfenghuli -l 20
+BlogsToWordpress.py -s http://hi.baidu.com/songmochushang -l 20
+
+----------------------------------------------------------------------------------------------------
+to executable:
+[Windows]
+pyinstaller.py -F -p D:\tmp\tmp_dev_root\wordpress\to_wp\BlogsToWordpress\BlogsToWordpress\libs;D:\tmp\tmp_dev_root\wordpress\to_wp\BlogsToWordpress\BlogsToWordpress\libs\crifan;D:\tmp\tmp_dev_root\wordpress\to_wp\BlogsToWordpress\BlogsToWordpress\libs\crifan\blogModules;D:\tmp\tmp_dev_root\wordpress\to_wp\BlogsToWordpress\BlogsToWordpress\libs\thirdparty;D:\tmp\tmp_dev_root\wordpress\to_wp\BlogsToWordpress\BlogsToWordpress\libs\thirdparty\chardet; -i D:\tmp\tmp_dev_root\wordpress\to_wp\BlogsToWordpress\BlogsToWordpress\materials\BlogsToWordpress.ico D:\tmp\tmp_dev_root\wordpress\to_wp\BlogsToWordpress\BlogsToWordpress\BlogsToWordpress.py
+
+BlogsToWordpress.exe -s http://hi.baidu.com/songmochushang -l 20
+
+
+----------------------------------------------------------------------------------------------------
+[2013-04-03]
+BlogsToWordpress.py -s http://78391997.qzone.qq.com/
+
+----------------------------------------------------------------------------------------------------
+[2013-04-12]
+BlogsToWordpress_v16.9_2013-03-11_noGUI_windows.exe -s http://hi.baidu.com/jiantuzhi -g no -c no -v privateAndPublic -u qlc663 -p qq123789qq -w http://www.zhugetu.com/wp-content/uploads/pic -a http://www.zhugetu.com/?p=
+
+BlogsToWordpress.py -s http://hi.baidu.com/jiantuzhi -g no -c no -w http://www.zhugetu.com/wp-content/uploads/pic -a http://www.zhugetu.com/?p=
+
+BlogsToWordpress.py -s http://hi.baidu.com/jiantuzhi -g no -c no -v privateAndPublic -u qlc663 -p qq123789qq -w http://www.zhugetu.com/wp-content/uploads/pic -a http://www.zhugetu.com/?p=
+----------------------------------------------------------------------------------------------------
+[2013-04-15]
+网易：无法获取第一个链接：
+BlogsToWordpress.py -s http://blog.163.com/ni_chen
+
+----------------------------------------------------------------------------------------------------
+[2013-08-26]
+添加网易的 心情随笔
+BlogsToWordpress.py -f http://blog.163.com/ni_chen/blog/static/18654139520134174326756/
+BlogsToWordpress.py -f http://green-waste.blog.163.com/blog/static/32677678201221621130475/
+
+BlogsToWordpress.py -f http://green-waste.blog.163.com/blog/#m=1
+BlogsToWordpress.py -f http://blog.163.com/ni_chen/blog/#m=1
+
+
+BlogsToWordpress.py -s http://green-waste.blog.163.com/blog/
+BlogsToWordpress.py -s http://blog.163.com/ni_chen/blog/
+----------------------------------------------------------------------------------------------------
+[2013-08-27]
+BlogsToWordpress.py -s http://googleyixia.diandian.com
+出现：
+LINE 871  : INFO     [0001] http://googleyixia.diandian.com/node/727
+LINE 947  : INFO       Title = “Google一下”成立
+LINE 816  : ERROR    Can not found content soup
+LINE 960  : ERROR    Can not extract post content for http://googleyixia.diandian.com/node/727 !
+
+after change code, now ok, but should use:
+BlogsToWordpress.py -s http://googleyixia.com/
+
+----------------------------------------------------------------------------------------------------
+[2013-9-10]
+BlogsToWordpress.py -s http://remixmusic.diandian.com
+
+special title
+http://remixmusic.diandian.com/?p=669
+           <article class="hentry writing">
+                <header>
+                    <a class="entry-hide open" href="#" title="Close this Card"></a>
+                    <h1 class="entry-title">
+
+
+
+
+                           文字
+
+
+                    </h1>
+
+http://remixmusic.diandian.com/?p=316
+           <article class="hentry writing">
+                <header>
+                    <a class="entry-hide open" href="#" title="Close this Card"></a>
+                    <h1 class="entry-title">
+
+
+
+
+                           文字
+
+
+                    </h1>
+但是标题都是相同的话，貌似wordpress中导入时会出现问题？
+
+test title:
+BlogsToWordpress.py -f http://remixmusic.diandian.com/?p=669 -l 1
+BlogsToWordpress.py -f http://remixmusic.diandian.com/?p=316 -l 1
+BlogsToWordpress.py -f http://remixmusic.diandian.com/?p=18117 -l 1
+BlogsToWordpress.py -f http://remixmusic.diandian.com/post/2013-05-13/40051897352 -l 1
+
+test post content:
+BlogsToWordpress.py -f http://remixmusic.diandian.com/post/2013-05-13/40051897352 -l 1
+
+continue extract:
+BlogsToWordpress.py -f http://remixmusic.diandian.com/?p=18117
+
+----------------------------------------------------------------------------------------------------
+[2014-05-20]
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_67aa18870101dd7i.html -l 1
+BlogsToWordpress.py -s http://blog.sina.com.cn/u/1739200647
+
+----------------------------------------------------------------------------------------------------
+测试各博客的图片处理：
+
+BlogsToWordpress.py -s http://hi.baidu.com/recommend_music/ -l 5
+BlogsToWordpress.py -f http://hi.baidu.com/dannie007zxl/item/8df6bd1e07fd79fc64eabf73 -l 3
+BlogsToWordpress.py -f http://blog.csdn.net/v_JULY_v/article/details/6530142 -l 3
+BlogsToWordpress.py -f http://xwxw56.blog.163.com/blog/static/13639343201222114553434/ -l 3
+BlogsToWordpress.py -f http://blog.qq.com/qzone/622001433/1297730921.htm -l 3
+BlogsToWordpress.py -f http://blog.renren.com/blog/229351756/796486456 -l 3 -u green-waste@163.com -p xxx
+BlogsToWordpress.py -f http://blog.sina.com.cn/s/blog_5058502a0102e37v.html -l 3
+BlogsToWordpress.py -f http://musangdaozhang.blog.sohu.com/206594401.html -l 3
+
+----------------------------------------------------------------------------------------------------
+BlogsToWordpress.py -l 1 -f
+BlogsToWordpress.py -f
+BlogsToWordpress.py -s

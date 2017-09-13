@@ -1,0 +1,315 @@
+some debug code for invalid charset comments for:
+
+http://user.qzone.qq.com/622000169/blog/1252395085
+
+    
+    
+    # testJsonStr = """{"data":{
+# "blogid":1252395085,
+# "voteids":0,
+# "pubtime":1252395085,
+# "replynum":40,
+# "category":"推荐阅读",
+# "tag":"嫁人|魅力|浪子|浪漫|激情",
+# "title":"五类男人可嫁性分析报告",
+# "effect":136315393,
+# "effect2":6,
+# "exblogtype":0,
+# "sus_flag":false,
+# "friendrelation":[],
+# "lp_type":0,
+# "lp_id":0,
+# "lp_style":0,
+# "lp_flag":0,
+# "orguin":622000169,
+# "orgblogid":1252395085,
+# "ip":3415476546,
+# "mention_uins":[ ],
+# "attach":[],
+# "replylist":[{"replyid":1,
+# "replytime":1252408437,
+# "replyeffect":0,
+# "replyautograph":"",
+# "replycontent":"呵呵加那么多连接啊这个标准还是不错的给大家推荐一个更多的信息平台www.hfei4c.cn ",
+# "ismyreply":0,
+# "capacity":4913,
+# "replyuin":327896798,
+# "replynick":"浪琴海 ",
+# "responsecontent":[ ]},
+# {"replyid":2,
+# "replytime":1252414985,
+# "replyeffect":16,
+# "replyautograph":"",
+# "replycontent":"[em]e151[/em]好消息！ 好消息！好消息！再也不要为贷款没有门路而发愁了！详情查看：www点blog.sina.com.cn/u/1501275817适用对象包括企业，公司，个人，大学生为了你的创业，你的美好生活找到一个好的出路马上行动，从现在开始还不晚！ ",
+# "ismyreply":0,
+# "capacity":4774,
+# "replyuin":24768941,
+# "replynick":"Qzone用户 ",
+# "responsecontent":[ ]},
+# {"replyid":4,
+# "replytime":1252455137,
+# "replyeffect":4194304,
+# "replyautograph":"",
+# "replycontent":"[em]e160[/em] ",
+# "ismyreply":0,
+# "capacity":4983,
+# "replyuin":358015646,
+# "replynick":"Colorful day ",
+# "responsecontent":[ ]},
+# {"replyid":5,
+# "replytime":1252458070,
+# "replyeffect":1024,
+# "replyautograph":"",
+# "replycontent":"抢位置！喔哈哈！ ",
+# "ismyreply":0,
+# "capacity":4981,
+# "replyuin":690181354,
+# "replynick":"／。 离╮ ",
+# "responsecontent":[ ]},
+# {"replyid":9,
+# "replytime":1252470852,
+# "replyeffect":0,
+# "replyautograph":"",
+#"replycontent":"喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!``喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!``喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1224083034 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` sdfsdfds ",
+# "ismyreply":0,
+# "capacity":602,
+# "replyuin":1004484566,
+# "replynick":". ",
+# "responsecontent":[ ]},
+# {"replyid":13,
+# "replytime":1252484972,
+# "replyeffect":0,
+# "replyautograph":"",
+#"replycontent":"喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` 喜欢进游戏厅的朋友 [em]e100[/em]┴┬┴加我Q1055606525 ┬┴▏█◤ 我要帮 你翻本赢钱 ◢玩赢一 切游戏机 █打保单的 四种车型三种颜色连线的 八个压分键 的..等!!`` dfawdwa ",
+# "ismyreply":0,
+# "capacity":1223,
+# "replyuin":1020683706,
+# "replynick":"zuobiba91 ",
+# "responsecontent":[ ]},
+# {"replyid":14,
+# "replytime":1252502797,
+# "replyeffect":0,
+# "replyautograph":"",
+# "replycontent":"感觉 很好,去铭人网,裸体男女混合径赛,享受视觉的快乐. ",
+# "ismyreply":0,
+# "capacity":4949,
+# "replyuin":626213595,
+# "replynick":"铭仁仙乐 ",
+# "responsecontent":[ ]},
+# {"replyid":15,
+# "replytime":1252505850,
+# "replyeffect":0,
+# "replyautograph":"",
+# "replycontent":"呵呵，挺实用！ ",
+# "ismyreply":0,
+# "capacity":4986,
+# "replyuin":58133970,
+# "replynick":"蔓草寒烟 ",
+# "responsecontent":[ ]},
+# {"replyid":16,
+# "replytime":1252542325,
+# "replyeffect":0,
+# "replyautograph":"",
+# "replycontent":"我中派，还是没女人 ",
+# "ismyreply":0,
+# "capacity":4982,
+# "replyuin":285836345,
+# "replynick":"霜月吴钩 ",
+# "responsecontent":[ ]},
+# {"replyid":17,
+# "replytime":1252546612,
+# "replyeffect":4194304,
+# "replyautograph":"",
+# "replycontent":"[em]e179[/em] ",
+# "ismyreply":0,
+# "capacity":4987,
+# "replyuin":974216795,
+# "replynick":"赌机破解 ",
+# "responsecontent":[ ]},
+# {"replyid":20,
+# "replytime":1252563502,
+# "replyeffect":0,
+# "replyautograph":"",
+# "replycontent":"每个男人都有可取之处，但必有可恨之处 ",
+# "ismyreply":0,
+# "capacity":4963,
+# "replyuin":54612650,
+# "replynick":" 海天一色 ",
+# "responsecontent":[ ]},
+# {"replyid":21,
+# "replytime":1252563942,
+# "replyeffect":0,
+# "replyautograph":"",
+# "replycontent":"[em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em]  [em]e166[/em][em]e166[/em]我是万人迷！！！很喜欢你博客呀，我支持你，[em]e163[/em]加油！我的评论：我一直支持你! [em]e166[/em][em]e166[/em]8台连线 —-‐单积—-‐—-┈苹果┈橘子┈芒果┈铃铛┈西瓜┈双星┈双7 〇◎ ｀Q／＼ .466943810｀˙★· [em]e166[/em][em]e166[/em]水惈机═苯 弛〇 寶 玛等~!   ┈--┈- 絔 家 樂 ￣ 伍惺 宏辉︺咙虎积打葆单机型等！▔ 五 星红 辉   [em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em][em]e166[/em] adwa ",
+# "ismyreply":0,
+# "capacity":4164,
+# "replyuin":1249025806,
+# "replynick":"新威电子 ",
+# "responsecontent":[ ]},
+# {"replyid":24,
+# "replytime":1252584213,
+# "replyeffect":0,
+# "replyautograph":"",
+# "replycontent":"总结得相当不错，看来我选择的竟然是个“优”等男[em]e120[/em] ",
+# "ismyreply":0,
+# "capacity":4945,
+# "replyuin":171662008,
+# "replynick":"子规 ",
+# "responsecontent":[ ]},
+# {"replyid":25,
+# "replytime":1252596328,
+# "replyeffect":1024,
+# "replyautograph":"",
+# "replycontent":"没有最好的,只有最多的,越多越好,好耍就好! ",
+# "ismyreply":0,
+# "capacity":4956,
+# "replyuin":541862977,
+# "replynick":"緗萫〃々開芯 ",
+# "responsecontent":[ ]},
+# {"replyid":26,
+# "replytime":1252599457,
+# "replyeffect":0,
+# "replyautograph":"",
+#"replycontent":"[ft=,2,]道理也许是对的，因为这些职业是很容易接触到富豪，但同时，我个人认为，过于向往奢侈的生活，期望自己能嫁入豪门，也未必是能等来的幸福，这更像是一场赌博，女人与女人、女人与男人之间的赌博，光有靓丽的外表和身材是不足以留住男人的心，总有一天盛开的玫瑰总会有枯萎的那天，而在玫瑰花瓣凋谢的那天，也就是另一些玫瑰种子发芽的季节，别失去作为女人的尊严和勇气，那么任何女人都能嫁到所爱的男人，过于强调吸引富豪的注目，自身没有优势，即使满足了自私的心态，也得不到男人的欣赏，而嫁给富豪，女人本身是不会在镁光灯下成为亮点人物的，也不会有自己的地位，抢尽风头的总是男人，其实，无论是富豪还是有地位的人，或是平凡男人都喜欢值得他们欣赏的女人，女人太勉强自己是不行的，这样做，只会适得其反！[/ft] ",
+# "ismyreply":0,
+# "capacity":4327,
+# "replyuin":932150105,
+# "replynick":"jane ",
+# "responsecontent":[ ]}]
+# }}""";
+    
+    # testCharset = crifanLib.getStrPossibleCharset(testJsonStr);
+    # print "testCharset=",testCharset;
+    # testJsonStrUni = testJsonStr.decode("UTF-8");
+    # print "testJsonStrUni OK";
+    # #testJsonStrUni = crifanLib.removeCtlChr(testJsonStrUni);
+    # #print "testJsonStrUni removeCtlChr";
+    # #testDict = json.loads(testJsonStrUni, encoding="UTF-8");
+    # testDict = json.loads(testJsonStrUni);
+    # print "testDict=",testDict;
+    
+    # # test result is:
+    # # if jsonStr contain '\n', then json.loads will fail !!!
+    
+    # lllllllllllllllll
+
+
+    
+    # "replylist":[{xxx},{xxx}]
+# }};
+
+    #logging.debug("input data json decode, dataJsonStr=%s", dataJsonStr);
+    
+    #print "before re.sub";
+    
+    #replylistP = r'"replylist":(?P<replylist>\[?.+\])\s*\}\}$';
+    
+    #replacedString = '"replylist":[ ]}}';
+    
+    # 0. -> can found: foundReplylist= <_sre.SRE_Match object at 0x02E384F0>
+    #foundReplylist = re.search(replylistP, dataJsonStr, re.S);
+    #print "foundReplylist=",foundReplylist;
+    
+    # 1. -> not work
+    #dataJsonStr = re.sub(replylistP, replacedString, dataJsonStr, re.S);
+    
+    # 2. -> not work    
+    #dataJsonStr = re.compile(replylistP).sub(replacedString, dataJsonStr, re.S);
+    
+    # 3. -> work
+    #subP = re.compile(replylistP, re.S);
+    #dataJsonStr = subP.sub(replacedString, dataJsonStr);
+    
+    #logging.debug("found replylist=%s", foundReplylist.group(0));
+    #print "after re.sub";
+
+    # # eval dataJsonStr
+    # print "before dataJsonStr eval";
+    # dataDict = eval(dataJsonStr); # will fail !!!
+    # print "dataJsonStr eval OK";
+    # logging.debug("After dataJsonStr eval, dict: %s", dataJsonStr);
+        
+    # ppppppppp
+
+    
+    # # extract replylist json string
+    # foundReplylist = re.search(replylistP, dataJsonStr, re.S);
+    # print "foundReplylist=",foundReplylist;
+    # if(foundReplylist) :
+        # replylistJsonStr = foundReplylist.group("replylist");
+        # logging.debug("extract out the replylist json string:\n%s", replylistJsonStr);
+        
+        # replylistCharset = crifanLib.getStrPossibleCharset(replylistJsonStr);
+        # print "replylistCharset=",replylistCharset;
+        
+        # replylistCharset = "GB18030";
+        # #replylistJsonStrUni = replylistJsonStr.decode(replylistCharset);
+        # #print "%s decode replylist OK"%(replylistCharset);
+        
+        # replylistList = eval(replylistJsonStr);
+        # print "replylist eval OK";
+        # print "len(replylistList)=",len(replylistList);
+        # logging.debug("After eval, replylist dict: %s", replylistList);
+        
+        # # for eachCmtDict in replylistList:
+            # # for eachKey in eachCmtDict :
+                # # keyCharset = crifanLib.getStrPossibleCharset(replylistJsonStr);
+        
+        # # replylistListUni = replylistList.decode("GB18030");
+        # # print "replylistList decode OK";
+        
+        # # replylistListUni = unicode(replylistList); # here still got GB18030 format string
+        # # print "convert replylistList to unicode OK";
+        # # logging.debug("After convert replylistList to unicode, replylist dict: %s", replylistList);
+        
+        
+        # replylistList = json.loads(replylistJsonStr, encoding=replylistCharset);
+        # print "replylist json.loads OK";
+
+        
+        
+#print "type(dataJsonStr)=",type(dataJsonStr);
+
+#logging.debug("before json decode, dataJsonStr=%s", dataJsonStr);
+#dataJsonStr = dataJsonStr.replace("\\n", "");
+
+# #starChar = u"★".decode("UTF-8").encode("GB2312");
+# starChar = .decode("UTF-8").encode("GB2312");
+# dataJsonStr = dataJsonStr.replace(starChar, "");
+# print "dataJsonStr replace starChar done";
+
+
+# specialCharList = ["█", "★", "◤", "◎", "〇", "┈", "｀", "·", "‐", "◢", "▏", "┴", "┬", "╮", "。", "`", "寶", "惈",
+    # "々", "緗", "萫", "〃", "開", "芯", "[/em]", "[em]", "／"];
+# for specialChar in specialCharList:
+    # gb18030Char = specialChar.decode("UTF-8").encode("GB18030");
+    # dataJsonStr = dataJsonStr.replace(gb18030Char, "");
+    # print "dataJsonStr replace %s done"%(gb18030Char);
+    
+# specialChar = .decode("UTF-8").encode("GB2312");
+# dataJsonStr = dataJsonStr.replace(specialChar, "");
+
+        
+        
+        
+        
+
+# dataJsonStr = dataJsonStr.replace(, "");
+# dataJsonStr = dataJsonStr.replace(, "");
+# dataJsonStr = dataJsonStr.replace(, "");
+# #dataJsonStr = dataJsonStr.replace(, "");
+#print "dataJsonStr replace done";
+
+#logging.debug("after replace, dataJsonStr=%s", dataJsonStr);
+
+        
+#dataJsonStrUni = dataJsonStrUni.replace("\n", "");
+#dataJsonStrUni = dataJsonStrUni.replace("\r", "");
+#logging.debug("after replace CRLF, dataJsonStrUni=%s", dataJsonStrUni);
+
+#http://user.qzone.qq.com/622000169/blog/1252395085 will fail here
+#dataDict = json.loads(dataJsonStrUni, encoding=validCharset);
+#dataDict = json.loads(dataJsonStr, encoding=validCharset);
+#dataDict = json.loads(dataJsonStrUni);
+#infoDict = dataDict['data'];
+#print "infoDict=",infoDict;

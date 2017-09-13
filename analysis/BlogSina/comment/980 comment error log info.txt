@@ -1,0 +1,14 @@
+LINE 489   DEBUG    -------- detailed single comment info --------
+LINE 490   DEBUG    SG_revert=<p><span class="SG_revert_Tit" id="nick_cmt_5448973"><a href="http://blog.sina.com.cn/u/2152739873" target="_blank"></a></span><span class="SG_revert_Time"><em class="SG_txtc">2011-06-25 02:08:31</em>&nbsp;<a id="4701280b0101854o_5448973" onclick="comment_report('4701280b0101854o_5448973')" href="javascript:;">[\u4e3e\u62a5]</a></span></p>
+LINE 491   DEBUG    SG_revert_Tit=<span class="SG_revert_Tit" id="nick_cmt_5448973"><a href="http://blog.sina.com.cn/u/2152739873" target="_blank"></a></span>
+LINE 492   DEBUG    cmtTitleUrl=http://blog.sina.com.cn/u/2152739873
+LINE 493   DEBUG    decoedCmtTitle=
+LINE 494   DEBUG    SG_revert_Time=None
+LINE 495   DEBUG    datetimeStr=
+LINE 496   DEBUG    parsedLocalTime=None
+LINE 497   DEBUG    gmtTime=None
+LINE 498   DEBUG    SG_txtb=None
+LINE 499   DEBUG    mappedContents=None
+LINE 500   DEBUG    cmtContent=
+LINE 501   DEBUG    decodedCmtContent=
+LINE 502   DEBUG    -------- detailed single comment info --------

@@ -1,0 +1,51 @@
+--------------------------------------------------------------------------------
+url:
+http://hi.baidu.com/pub/submit/modifytext
+---------------------------------
+req header:
+Key	Value
+Request	POST /pub/submit/modifytext HTTP/1.1
+Accept	*/*
+Accept-Language	en-us
+Referer	http://hi.baidu.com/pub/show/modifytext?qbid=7ecc2ae29bd5ddabc00d75aa
+x-requested-with	XMLHttpRequest
+Content-Type	application/x-www-form-urlencoded
+Accept-Encoding	gzip, deflate
+User-Agent	Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E)
+Host	hi.baidu.com
+Content-Length	428
+Connection	Keep-Alive
+Cache-Control	no-cache
+Cookie	BDSP=5982b2b7d1a30cf43bbaecce5f2b0434acaf2edd8aee33db8d1001e93901213fb80e7bec54e736d12f2eb9389b504fc2d5628535e5dde71190ef76c6a7efce1b9d16fdfaaf51f3deb48f8c5494eef01f3a292df5e0fe9925bc315c6034a85edf8db138ce; Hm_lpvt_8c869b543955d43e496c2efee5b55823=1345429727580; Hm_lpvt_e8043a1430ea88a1f832d078750c0c92=1345427236926; BDSTAT=8ff1f8a3ef5a606d2b0c74be3d0cbd663ac6ab8b9f264f4a34a446230df71f9b; BDLFONT=0; Hm_lvt_4d16ad3b9adade3b562e5f64c3a01c5d=1345168038971; Hm_lvt_8bad32deb84d9f90588c9d7a4549b561=1345168039248; Hm_lvt_8c869b543955d43e496c2efee5b55823=1345168325171,1345184852192,1345426526223,1345428958374; Hm_lvt_e8043a1430ea88a1f832d078750c0c92=1344821347227,1344851058256,1345167948760,1345427236926; asdf193f616761696e696e707574334802=yes; PSPTOKEN=beb980358b983102cc79284da5a4f96f2bf643b3e001e7be345da616df96d1eb24072ea2eaf5; USERID=22ec977e6a158778d992562f31c044; MCITY=-%3A; BDUT=568u946F2D104498A9D2EE4B28E54176D19A13725e5c30c0; BAIDUID=C20A33E78F20A52B033E4AA1DC9116EA:FG=1; BAIDU_WISE_UID=wiaui_1295188466_6292; BDREFER=%7Burl%3A%22http%3A//news.baidu.com/%22%2Cword%3A%22%22%7D; BDUSS=M2T2lEUTMwMFZ2cjk1dkMya3dSLTNFVDg4bGZrbzdDRW1rYXBESDdwOVhNaHRSQVFBQUFBJCQAAAAAAAAAAAoqyQ0pIk8CYWdhaW5pbnB1dDQAAAAAAAAAAAAAAAAAAAAAAAAAAACAYIArMAAAAOAK5n0AAAAAmWdCAAAAAAAxMC4yNi4yMlfkLVBX5C1QRD
+---------------------------------
+post data:
+title=测试公开日志&content=<p>这个是公开的日志<%2Fp><p>发帖时，设置为“所有人可见”的那种。<%2Fp><p>111%26nbsp;测试更改内容<%2Fp>&private=0&imgnum=0&bdstoken=bba5a5f57809453aab94d7eab8e344cb&qbid=7ecc2ae29bd5ddabc00d75aa&refer=http:%2F%2Fhi.baidu.com%2Fserial_story%2Fitem%2F7ecc2ae29bd5ddabc00d75aa&multimedia[]=undefined%23undefined%23undefined%23undefined&private1=0&qing_request_source=
+-----------------
+title=测试公开日志&
+content=<p>这个是公开的日志<%2Fp><p>发帖时，设置为“所有人可见”的那种。<%2Fp><p>111%26nbsp;测试更改内容<%2Fp>&
+private=0&
+imgnum=0&
+bdstoken=bba5a5f57809453aab94d7eab8e344cb&
+qbid=7ecc2ae29bd5ddabc00d75aa&
+refer=http:%2F%2Fhi.baidu.com%2Fserial_story%2Fitem%2F7ecc2ae29bd5ddabc00d75aa&
+multimedia[]=undefined%23undefined%23undefined%23undefined&
+private1=0&
+qing_request_source=
+
+---------------------------------
+resp header:
+Key	Value
+Response	HTTP/1.1 200 OK
+Via	1.1 SC-SZ-06
+Connection	Keep-Alive
+Proxy-Connection	Keep-Alive
+Transfer-Encoding	chunked
+Date	Mon, 20 Aug 2012 02:29:40 GMT
+Content-type	text/html
+Server	lighttpd
+Set-Cookie	BDSP=912397dda045ad34539591a9f98043f631adcbef5f2b0434acaf2edda3cc7cd98d1001e93901213fb80e7bec54e736d12f2eb9389b504fc2d5628535e5dde71190ef76c6a7efce1b9d16fdfaaf51f3deb48f8c5494eef01f3a292df5e0fe9925bc310433; path=/; domain=.hi.baidu.com
+Set-Cookie	BDSTAT=248d62c8fdf1047acbc73d685322136f3a2c7b8e437aca8071380cd795236d9b; expires=Tue, 17-Aug-2027 02:29:40 GMT; path=/; domain=.hi.baidu.com
+---------------------------------
+resp data:
+{"errorNo" : "0","errorMsg" : "","data": [  ]}
+--------------------------------------------------------------------------------

@@ -1,0 +1,130 @@
+def processPhotos(blogContent):
+    global gVal
+    global gCfg
+    global gConst
+
+    if gCfg['processPic'] == 'yes' :
+        try :
+            calcTimeStart("process_all_picture")
+            logging.debug("Begin to process all pictures")
+
+            # possible own site pic link:
+            # http://hiphotos.baidu.com/againinput_tmp/pic/item/069e0d89033b5bb53d07e9b536d3d539b400bce2.jpg
+            # http://hiphotos.baidu.com/recommend_music/pic/item/221ebedfa1a34d224954039e.jpg
+            # http://hiphotos.baidu.com/recommend_music/abpic/item/df5cf5ce3ff2b12bb600c88e.jpg
+            # http://hiphotos.baidu.com/recommend%5Fmusic/pic/item/59743562b26681cfe6113a78.jpg
+            # http://hiphotos.baidu.com/recommend%5Fmusic/abpic/item/df5cf5ce3ff2b12bb600c88e.jpg
+            # http://hiphotos.baidu.com/recommend%5Fmusic/pic/item/6d7dea46b215a62a6b63e580.jpe
+            # http://hiphotos.baidu.com/recommend%5Fmusic/mpic/item/6d7dea46b215a62a6b63e580.jpg
+
+            # possible othersite pic url:
+            # http://images.dsqq.cn/news/2010-09-10/20100910134306672.jpg
+            # http://www.yunhepan.com/uploads/allimg/100909/1305253345-0.jpg
+            # http://www.dg163.cn/tupian/adminfiles/2011-5/21/9342g9ij68de3i6haj.jpg
+            # http://images.china.cn/attachement/jpg/site1000/20110408/000d87ad444e0f089c8d15.jpg
+            # http://bbs.wangluodan.net/attachment/Mon_1007/3_35499_40623c813e04d94.jpg
+            # http://beauty.pba.cn/uploads/allimg/c110111/1294G0I9200Z-2b3F.jpg
+            # http://house.hangzhou.com.cn/lsxw/ylxw/images/attachement/jpg/site2/20100823/0023aea5a8210ddc161d36.jpg
+            # http://photo.bababian.com/20061125/C90C3EDF9AC2E2E79D50F865FB4EB3B8_500.jpg
+            # http://img.blog.163.com/photo/NT166ikVSUCOVvSLJfOrNQ==/3734609990997279604.jpg
+            # http://a1.phobos.apple.com/r10/Music/y2005/m02/d24/h13/s05.lvnxldzq.170x170-75.jpg
+
+            # here only extract last pic name contain: char,digit,-,_
+            urlPattern = r'http://\w{1,20}\.\w{1,20}\.\w{1,10}[\.]?\w*/[\w%\-=]{0,50}[/]?[\w%\-/=]*/[\w\-\.]{1,100}\.[' + gVal['picSufStr'] +']{3,4}'
+
+            # if matched, result for findall() is a list when no () in pattern
+            matchedList = re.findall(urlPattern, blogContent)
+            if matchedList :
+                nonOverlapList = uniqueList(matchedList) # remove processed
+                # remove processed and got ones that has been processed
+                (filteredPicList, existedList) = filterList(nonOverlapList, gVal['processedUrlList'])
+                if filteredPicList :
+                    logging.debug("Filtered url list to process:\n%s", filteredPicList)
+                    for curUrl in filteredPicList :
+                        # to check is similar, only when need check and the list it not empty
+                        if ((gCfg['omitSimErrUrl'] == 'yes') and gVal['errorUrlList']):
+                            (isSimilar, simSrcUrl) = findSimilarUrl(curUrl, gVal['errorUrlList'])
+                            if isSimilar :
+                                logging.warning("  Omit process %s for similar with previous error url", curUrl)
+                                logging.warning("               %s", simSrcUrl)
+                                continue
+                        # no matter:(1) it is pic or not, (2) follow search fail or not
+                        # (3) latter fail to fetch pic or not -> still means this url is processed
+                        gVal['processedUrlList'].append(curUrl)
+
+                        # process this url
+                        #                   1=field1    2=field2                   3=field3/blogUser              4=fileName                       5=suffix
+                        pattern = r'http://(\w{1,20})\.(\w{1,20})\.\w{1,10}[\.]?\w*/([\w%\-=]{0,50})[/]?[\w\-/%=]*/([\w\-\.]{1,100})\.([' + gVal['picSufStr'] + r']{3,4})'
+                        searched = re.search(pattern, curUrl)
+                        if searched :
+                            origin_url = searched.group(0)
+                            fd1     = searched.group(1)
+                            fd2     = searched.group(2)
+                            fd3     = searched.group(3) # for baidu pic, is blogUser
+                            fileName= searched.group(4)
+                            suffix  = searched.group(5)
+                            #print "origin_url=",origin_url
+                            #print '1=',fd1,'2=',fd2,'3=',fd3,'4=',fileName,'5=',suffix
+                            if suffix.lower() in gConst['validPicSufList'] :
+                                # indeed is pic, process it
+                                (picIsValid, errReason) = isFileValid(curUrl)
+                                if picIsValid :
+                                    # 1. prepare info
+                                    nameWithSuf = fileName + '.' + suffix
+                                    curPath = os.getcwd()
+                                    dstPathOwnPic = curPath + '\\' + gVal['blogUser'] + '\\pic'
+                                    # 2. create dir for save pic
+                                    if (os.path.isdir(dstPathOwnPic) == False) :
+                                        os.makedirs(dstPathOwnPic) # create dir recursively
+                                        logging.info("Create dir %s for save downloaded pictures of own site", dstPathOwnPic)
+                                    if gCfg['processOtherPic'] == 'yes' :
+                                        dstPathOtherPic = dstPathOwnPic + '\\' + gConst['othersiteDirName']
+                                        if (os.path.isdir(dstPathOtherPic) == False) :
+                                            os.makedirs(dstPathOtherPic) # create dir recursively
+                                            logging.info("Create dir %s for save downloaded pictures of other site", dstPathOtherPic)
+                                    # 3. prepare info for follow download and save
+                                    if (fd1=='hiphotos') and (fd2=='baidu') and ((fd3==gVal['blogUser'])or(fd3==doForceQuote(gVal['blogUser']))) :
+                                        # is baidu pic
+                                        # from http://hiphotos.baidu.com/AAA/BBB/item/CCC.DDD
+                                        # AAA=recommend_music/recommend%5Fmusic, BBB=pic/abpic/mpic, CCC=59743562b26681cfe6113a78/069e0d89033b5bb53d07e9b536d3d539b400bce2, DDD=jpg/jpe/...
+                                        # to   gCfg['picPathInWP']/CCC.DDD
+                                        newPicUrl = gCfg['picPathInWP'] + '/' + nameWithSuf
+                                        dstPicFile = dstPathOwnPic + '\\' + nameWithSuf
+                                    else :
+                                        # is othersite pic
+                                        if gCfg['processOtherPic'] == 'yes' :
+                                            newNameWithSuf = fd1 + '_' + fd2 + "_" + nameWithSuf
+                                            newPicUrl = gCfg['otherPicPathInWP'] + '/' + newNameWithSuf
+                                            dstPicFile = dstPathOtherPic + '\\' + newNameWithSuf
+                                        else :
+                                            dstPicFile = '' # for next not download
+                                            #newPicUrl = curUrl
+                                    # download pic and replace url
+                                    if dstPicFile and downloadFile(curUrl, dstPicFile, False) :
+                                        # replace old url with new url
+                                        blogContent = re.compile(curUrl).sub(newPicUrl, blogContent)
+                                        # record it
+                                        gVal['replacedUrlDict'][curUrl] = newPicUrl
+                                        logging.debug("Replace %s with %s", curUrl, newPicUrl)
+                                        #logging.debug("After replac, new blog content:\n%s", blogContent)
+                                else :
+                                    #if (gCfg['omitSimErrUrl'] == 'yes') and isUrlError(errReason) :
+                                    if (gCfg['omitSimErrUrl'] == 'yes'): # take all error pic into record
+                                        # when this pic occur error, then add to list
+                                        gVal['errorUrlList'].append(curUrl)
+                # for that processed url, only replace the address
+                if existedList :
+                    for processedUrl in existedList:
+                        # some pic url maybe is invalid, so not download and replace,
+                        # so here only processed that downloaded and replaceed ones
+                        if processedUrl in gVal['replacedUrlDict'] :
+                            newPicUrl = gVal['replacedUrlDict'][processedUrl]
+                            blogContent = re.compile(processedUrl).sub(newPicUrl, blogContent)
+                            logging.debug("For processed url %s, not download again, only replace it with %s", processedUrl, newPicUrl)
+            logging.debug("Done for process all pictures")
+            gVal['statInfoDict']['processPicTime'] += calcTimeEnd("process_all_picture")
+            logging.debug("Successfully to process all pictures")
+        except :
+            logging.warning('Process picture failed.')
+
+    return blogContent

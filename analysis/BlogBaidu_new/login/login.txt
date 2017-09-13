@@ -1,0 +1,65 @@
+
+url:
+https://passport.baidu.com/v2/api/?login
+
+post data:
+charset=UTF-8&codestring=&token=841f5a5c3aeced968049d3bfe513aee8&isPhone=false&index=0&u=&safeflag=0&staticpage=http%3A%2F%2Fhi.baidu.com%2Fcom%2Fshow%2Fproxy%3Fparent%3Dparent%26fun%3Dcallback.login.submited&loginType=1&tpl=qing&username=againinput4&password=xxxxxx&verifycode=&mem_pass=on
+
+
+charset=UTF-8&
+codestring=&
+token=841f5a5c3aeced968049d3bfe513aee8&
+isPhone=false&
+index=0&
+u=&
+safeflag=0&
+staticpage=http%3A%2F%2Fhi.baidu.com%2Fcom%2Fshow%2Fproxy%3Fparent%3Dparent%26fun%3Dcallback.login.submited&
+loginType=1&
+tpl=qing&
+username=againinput4&
+password=xxxxxx&
+verifycode=&
+mem_pass=on
+
+
+----------------------------------------------------------------------------------------------------
+https://passport.baidu.com/v2/api/?login
+
+
+charset=UTF-8&codestring=&token=4eb67e297f7061127b93d79a935aa3f9&isPhone=false&index=0&u=&safeflag=0&staticpage=http%3A%2F%2Fhi.baidu.com%2Fcom%2Fshow%2Fproxy%3Fparent%3Dparent%26fun%3Dcallback.login.submited&loginType=1&tpl=qing&username=againinput4&password=xxxxxx&verifycode=&mem_pass=on
+
+
+charset=UTF-8&
+codestring=&
+token=4eb67e297f7061127b93d79a935aa3f9&
+isPhone=false&
+index=0&
+u=&
+safeflag=0&
+staticpage=http%3A%2F%2Fhi.baidu.com%2Fcom%2Fshow%2Fproxy%3Fparent%3Dparent%26fun%3Dcallback.login.submited&
+loginType=1&
+tpl=qing&
+username=againinput4&
+password=xxxxxx&
+verifycode=&
+mem_pass=on
+
+
+resp:
+
+¼ü	Öµ
+ÏìÓ¦	HTTP/1.1 200 OK
+Cache-Control	no-cache
+Pragma	no-cache
+P3P	CP=" OTI DSP COR IVA OUR IND COM "
+Set-Cookie	BDUSS=3M2Tm96Yk5uVlI4LTByN2RiY0wwQk5UWlVQOXN2WElRcUNBR1N1QzJuYlpEQjVSQVFBQUFBJCQAAAAAAAAAAAouTyApIk8CYWdhaW5pbnB1dDQAAAAAAAAAAAAAAAAAAAAAAAAAAACAYIArMAAAAODqpXwAAAAAmWdCAAAAAAAxMC4zNi4xNNm-MFDZvjBQU; expires=Thu, 05-Nov-2020 10:24:25 GMT; path=/; domain=baidu.com
+Set-Cookie	PTOKEN=14679a6c1d421362283d33bd364e5ed0; expires=Thu, 05-Nov-2020 10:24:25 GMT; path=/; domain=passport.baidu.com
+Set-Cookie	STOKEN=7e899b08b3e179786dc5dbb4cb77ea36; expires=Thu, 05-Nov-2020 10:24:25 GMT; path=/; domain=passport.baidu.com
+Set-Cookie	PTOKEN=deleted; expires=Sat, 20-Aug-2011 10:24:24 GMT; path=/; domain=baidu.com
+Set-Cookie	SAVEUSERID=4f7dc64f5ce924a11fdcdf2c7cae4a; expires=Thu, 05-Nov-2020 10:24:25 GMT; path=/; domain=passport.baidu.com
+Content-type	text/html
+Date	Sun, 19 Aug 2012 10:24:25 GMT
+Server	lighttpd
+Transfer-Encoding	chunked
+Connection	close
+

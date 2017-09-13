@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ui-mode="rewrite" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="comScoreAjax" content="pageview_candidate" />
+<link rel="index" href="http://blog.renren.com/blog/0/friendsNews" />
+<link href="http://s.xnimg.cn/a33666/apps/blog/blog-all-min.css" rel="stylesheet" type="text/css" media="all" />
+<title>人人网 - 日志</title>
+<script type="text/javascript">			
+// <![CDATA[
+function confirmDelete(anchor,blogId) {
+XN.DO.confirm({message: '<h3>你确定要删除这篇日志吗？一旦删除将不可恢复。</h3><p id="basicInfoValidateCodeError" style="display:none;padding:4px;margin:6px 0;background-color:#FFEAE3;border:1px solid #FFB4A3;">验证码输入错误，请重试...</p><table style="margin:5px 0;"><tr><td><label for="basicInfoValidateCode"><em>*</em>请输入验证码:</label><br/><input type="text" tabindex="9" maxlength="5" size="5" style="padding:2px;border:1px solid #DDE3ED;width:100px;height:22px;font-size:16px;" class="inputtext validate-code" id="basicInfoValidateCode" name="basicInfoValidateCode"/></td><td><img id="blogVerifyPic" style="cursor:pointer;" src="http://icode.renren.com/getcode.do?t=blogDelInfo'+blogId+'&amp;rnd=1334025833858' + new Date() +'" class="validate-num" onclick="refreshCode();"/></td></tr></table>', callBack:function(value){
+if(value) {
+this.preventHide();
+new XN.NET.xmlhttp({
+url:'http://blog.renren.com/blog/0/'+blogId+'/delete?'+'basicInfoValidateCode='+$("basicInfoValidateCode").value,
+data:'',
+onSuccess:(function(r) {
+if (r.responseText == "true") {
+window.location='http://blog.renren.com';
+} else {
+$("basicInfoValidateCodeError").style.display="block";
+refreshCode();
+}
+})});
+} else {
+this.hide();
+}
+}
+});
+}
+function refreshCode() {
+$('blogVerifyPic').src+="&"+new Date();
+}
+function selectToNewPage(directUrl) {
+window.asyncHTMLManager.open("http://blog.renren.com" + directUrl);
+}
+// ]]>
+</script>
+<script type="text/javascript" src="http://s.xnimg.cn/a27269/jspro/xn.app.pymk.js"></script>
+</head>
+<body ui-layout="home2cols">	
+<div id="content">
+<div class="tabview">
+<h3 class="title">
+<img src="http://a.xnimg.cn/imgpro/v6/icon/blog-hl.png" class="icon" />
+日志
+</h3>
+<div class="tabview-tabs">
+<a href="http://blog.renren.com/blog/0/friendsNews" ui-async="async" onclick="return false;" class="a-tab">好友的日志</a>
+<a stats="V6Blog_myBlog" href="http://blog.renren.com/blog/0/" ui-async="async" onclick="return false;" class="a-tab selected">我的日志</a>
+<a stats="V6Blog_drafts" href="http://blog.renren.com/blog/0/drafts" ui-async="async" onclick="return false;" class="a-tab">草稿箱</a>
+<a stats="V6Blog_myRelatives" href="http://blog.renren.com/blog/0/myRelatives" ui-async="async" onclick="return false;" class="a-tab">与我相关的日志</a>
+</div>
+</div>
+<div class="blog-main">
+<div class="blog-content">
+<div id="oak" class="white-gray clearfix"> 
+<div class="blog-home">
+<div class="toolbar">
+<span class="label">分类查看: </span>
+<select name="categorySelect" id="categorySelect" class="select" onchange="selectToNewPage(this.options[this.options.selectedIndex].value)">
+<option value="/blog/0">全部</option>
+<option value="/blog/0/?categoryId=356039">
+哲理
+</option>
+<option value="/blog/0/?categoryId=7030774">
+有意义
+</option>
+<option value="/blog/0/?categoryId=6941572">
+有趣
+</option>
+<option value="/blog/0/?categoryId=355277">
+爱情
+</option>
+<option value="/blog/0/?categoryId=7633068">
+生活
+</option>
+<option value="/blog/0/?categoryId=355255">
+知道
+</option>
+<option value="/blog/0/?categoryId=222351">
+音乐
+</option>
+<option value="/blog/0/?categoryId=0">
+默认分类
+</option></select>
+<a style="margin-left:10px;" href="http://blog.renren.com/blog/0/categoryList">分类管理</a>
+<a style="margin-left:10px;" href="http://blog.renren.com/blog/0/rss">导入日志</a></div><div class="blog-notice">
+<a href="javascript:;" class="x-to-hide" onclick="$(this.parentNode).remove();">关闭</a>
+<img class="bulb" src="http://a.xnimg.cn/imgpro/icons/bulb.png"/>
+<span>新功能：有篇日志不想给TA看，试试写日志时“自定义黑名单”吧。  <a href="http://page.renren.com/699000002/note/454370687" target="_blank">了解详情</a></span>
+</div>
+<div class="pager-top"><span>当前显示501-448篇/共448篇</span><ol class="pagerpro"> <!--<a href="#">共条45</a>--></ol>
+</div>
+
+<div class="pager-bottom clearfix"><ol class="pagerpro"> <!--<a href="#">共条45</a>--></ol>
+</div></div>
+</div>
+</div>
+<div class="blog-sidebar2">
+<div class="side-item blog-visitor first-item">
+<div class="side-item-header clearfix"><h4>最近看过我的日志的人</h4></div>
+<div id="avatar-table" class="side-item-body">
+<table id="avatar-table-less">
+<tr>
+</tr>
+<tr><td>
+<p>
+<a href="http://www.renren.com/profile.do?id=221231681"><img height="50" width="50" onload="clipImage(this);" src="http://hdn.xnimg.cn/photos/hdn421/20100606/1415/tiny_B08M_54899i019118.jpg" alt="陆芳芳" /></a>
+<span><a href="http://www.renren.com/profile.do?id=221231681">陆芳芳</a></span>
+</p>
+</td><td>
+<p>
+<a href="http://www.renren.com/profile.do?id=224051007"><img height="50" width="50" onload="clipImage(this);" src="http://hdn.xnimg.cn/photos/hdn311/20090402/22/05/tiny_EJDh_34554o204235.jpg" alt="项晓燕" /></a>
+<span><a href="http://www.renren.com/profile.do?id=224051007">项晓燕</a></span>
+</p>
+</td><td>
+<p>
+<a href="http://www.renren.com/profile.do?id=224747668"><img height="50" width="50" onload="clipImage(this);" src="http://hdn.xnimg.cn/photos/hdn121/20111102/1415/tiny_nGkm_171160d019117.jpg" alt="张文娟" /></a>
+<span><a href="http://www.renren.com/profile.do?id=224747668">张文娟</a></span>
+</p>
+</td>
+</tr>
+<tr><td>
+<p>
+<a href="http://www.renren.com/profile.do?id=245054564"><img height="50" width="50" onload="clipImage(this);" src="http://hdn.xnimg.cn/photos/hdn221/20111213/1550/tiny_PJMc_13602k019118.jpg" alt="吴雪娇" /></a>
+<span><a href="http://www.renren.com/profile.do?id=245054564">吴雪娇</a></span>
+</p>
+</td></tr>
+</table>
+</div>
+</div>
+
+<div class="side-item pymk " style="display:none" id="pymk">
+<div class="side-item-header pymk-header clearfix">
+<h4>推荐</h4>
+<div class="option">
+<a href="javascript:;" class="pager-back pager-back-disable" onclick="XN.app.pymk.pagerBack();" title="上一页"></a>
+<a href="javascript:;" class="pager-forward pager-forward-disable" onclick="XN.app.pymk.pagerForward();" title="下一页"></a>
+<a href="http://friend.renren.com/myfriendlistx.do?portal=4#item_1" class="more"></a>
+</div>
+</div>
+<div class="side-item-body pymk-body clearfix">
+<ul class="recognize" id="commonFriends">
+</ul>
+</div>
+</div>
+<div class="Widget">
+<div id="sponsorsWidget"></div>
+</div>
+<div class="side-item blog-archive">
+<div class="side-item-header clearfix">
+<h4>
+日志存档
+</h4>
+</div>
+<div class="side-item-body" id="list-archive">
+<ol>
+<select class="select" id="monthSelect"
+onchange="selectToNewPage(this.options[this.options.selectedIndex].value)"
+tabindex="3" name="monthSelect">
+<option value="/blog/0/">
+全部日期
+</option>
+<option
+value='/blog/229351756/?year=2012&amp;month=03&amp;from=myblog&amp;selitem=2012-03-01'>
+2012年03月
+</option>
+<option
+value='/blog/229351756/?year=2012&amp;month=02&amp;from=myblog&amp;selitem=2012-02-01'>
+2012年02月
+</option>
+<option
+value='/blog/229351756/?year=2012&amp;month=01&amp;from=myblog&amp;selitem=2012-01-01'>
+2012年01月
+</option>
+<option
+value='/blog/229351756/?year=2011&amp;month=12&amp;from=myblog&amp;selitem=2011-12-01'>
+2011年12月
+</option>
+<option
+value='/blog/229351756/?year=2011&amp;month=11&amp;from=myblog&amp;selitem=2011-11-01'>
+2011年11月
+</option>
+<option
+value='/blog/229351756/?year=2011&amp;month=10&amp;from=myblog&amp;selitem=2011-10-01'>
+2011年10月
+</option>
+<option
+value='/blog/229351756/?year=2011&amp;month=09&amp;from=myblog&amp;selitem=2011-09-01'>
+2011年09月
+</option>
+<option
+value='/blog/229351756/?year=2011&amp;month=08&amp;from=myblog&amp;selitem=2011-08-01'>
+2011年08月
+</option>
+<option
+value='/blog/229351756/?year=2011&amp;month=07&amp;from=myblog&amp;selitem=2011-07-01'>
+2011年07月
+</option>
+<option
+value='/blog/229351756/?year=2011&amp;month=06&amp;from=myblog&amp;selitem=2011-06-01'>
+2011年06月
+</option>
+<option
+value='/blog/229351756/?year=2011&amp;month=03&amp;from=myblog&amp;selitem=2011-03-01'>
+2011年03月
+</option>
+<option
+value='/blog/229351756/?year=2011&amp;month=02&amp;from=myblog&amp;selitem=2011-02-01'>
+2011年02月
+</option>
+<option
+value='/blog/229351756/?year=2010&amp;month=10&amp;from=myblog&amp;selitem=2010-10-01'>
+2010年10月
+</option>
+<option
+value='/blog/229351756/?year=2010&amp;month=08&amp;from=myblog&amp;selitem=2010-08-01'>
+2010年08月
+</option>
+<option
+value='/blog/229351756/?year=2010&amp;month=07&amp;from=myblog&amp;selitem=2010-07-01'>
+2010年07月
+</option>
+<option
+value='/blog/229351756/?year=2010&amp;month=06&amp;from=myblog&amp;selitem=2010-06-01'>
+2010年06月
+</option>
+<option
+value='/blog/229351756/?year=2010&amp;month=05&amp;from=myblog&amp;selitem=2010-05-01'>
+2010年05月
+</option>
+<option
+value='/blog/229351756/?year=2010&amp;month=04&amp;from=myblog&amp;selitem=2010-04-01'>
+2010年04月
+</option>
+<option
+value='/blog/229351756/?year=2010&amp;month=01&amp;from=myblog&amp;selitem=2010-01-01'>
+2010年01月
+</option>
+<option
+value='/blog/229351756/?year=2009&amp;month=11&amp;from=myblog&amp;selitem=2009-11-01'>
+2009年11月
+</option>
+<option
+value='/blog/229351756/?year=2009&amp;month=10&amp;from=myblog&amp;selitem=2009-10-01'>
+2009年10月
+</option>
+<option
+value='/blog/229351756/?year=2009&amp;month=05&amp;from=myblog&amp;selitem=2009-05-01'>
+2009年05月
+</option>
+<option
+value='/blog/229351756/?year=2009&amp;month=04&amp;from=myblog&amp;selitem=2009-04-01'>
+2009年04月
+</option>
+<option
+value='/blog/229351756/?year=2009&amp;month=03&amp;from=myblog&amp;selitem=2009-03-01'>
+2009年03月
+</option>
+<option
+value='/blog/229351756/?year=2009&amp;month=02&amp;from=myblog&amp;selitem=2009-02-01'>
+2009年02月
+</option>
+<option
+value='/blog/229351756/?year=2009&amp;month=01&amp;from=myblog&amp;selitem=2009-01-01'>
+2009年01月
+</option>
+<option
+value='/blog/229351756/?year=2008&amp;month=12&amp;from=myblog&amp;selitem=2008-12-01'>
+2008年12月
+</option>
+<option
+value='/blog/229351756/?year=2008&amp;month=11&amp;from=myblog&amp;selitem=2008-11-01'>
+2008年11月
+</option>
+<option
+value='/blog/229351756/?year=2008&amp;month=10&amp;from=myblog&amp;selitem=2008-10-01'>
+2008年10月
+</option>
+<option
+value='/blog/229351756/?year=2008&amp;month=09&amp;from=myblog&amp;selitem=2008-09-01'>
+2008年09月
+</option>
+<option
+value='/blog/229351756/?year=2008&amp;month=08&amp;from=myblog&amp;selitem=2008-08-01'>
+2008年08月
+</option>
+<option
+value='/blog/229351756/?year=2008&amp;month=06&amp;from=myblog&amp;selitem=2008-06-01'>
+2008年06月
+</option>
+<option
+value='/blog/229351756/?year=2008&amp;month=05&amp;from=myblog&amp;selitem=2008-05-01'>
+2008年05月
+</option>
+<option
+value='/blog/229351756/?year=2008&amp;month=04&amp;from=myblog&amp;selitem=2008-04-01'>
+2008年04月
+</option>
+<option
+value='/blog/229351756/?year=2008&amp;month=03&amp;from=myblog&amp;selitem=2008-03-01'>
+2008年03月
+</option>
+<option
+value='/blog/229351756/?year=2008&amp;month=01&amp;from=myblog&amp;selitem=2008-01-01'>
+2008年01月
+</option>
+<option
+value='/blog/229351756/?year=2007&amp;month=10&amp;from=myblog&amp;selitem=2007-10-01'>
+2007年10月
+</option></select>
+</ol>
+</div>
+</div><div class="side-item blog-import">
+<div class="side-item-header clearfix">
+<h4>日志导入</h4>
+</div>
+<div class="side-item-body">
+<p class="rss">
+将你的站外博客导入到人人网日志，你的好友可以通过新鲜事看到它们并进行评论
+</p>
+<p class="rss"><a href="http://blog.renren.com/blog/0/rss" class="button"><span class="blank">立即导入</span></a></p></div>		
+</div>
+</div>
+</div>
+</div>
+<div id="sidebar2"></div><div style="display:none">pageview_candidate</div>
+</body>
+</html>

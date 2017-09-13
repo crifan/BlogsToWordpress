@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>博文_weixue108_新浪博客</title>
+<meta name="keywords" content="博文_weixue108_新浪博客,weixue108" />
+<meta name="description" content="博文_weixue108_新浪博客,weixue108,[转载]在Linux&nbsp;&ndash;&nbsp;Ubuntu&nbsp;环境下Apache&nbsp;以FastCG,PHP&nbsp;String&nbsp;函数,PHP&nbsp;数组函数汇总,[转载]php计算两个数组交集和差集,PHP&nbsp;清除HTML代码、空格、回车换行符的函数,PHP&nbsp;缓冲区相关函数,PHP时间计算方法,Vim&nbsp;常用快捷键,PHP-Filesystem&nbsp;文件系统函数,PHP处理html标签的常用正则表达式,国内常见博客的采集办法(搜狐&nbsp;网易&nbsp;新浪&nbsp;百度空间)，免费写采集规则！" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!–[if lte IE 6]>
+<script type="text/javascript">
+try{
+document.execCommand("BackgroundImageCache", false, true);
+}catch(e){}
+</script>
+<![endif]–>
+<script type="text/javascript">
+window.staticTime=new Date().getTime();
+
+var locInterval = setInterval(function(){
+var tc = document.getElementById('trayContainer');
+if(tc) {
+var isLogin = false;var sup = document.cookie.match(/sup=([^;]+);/gi);if(sup != null){ sup = decodeURIComponent(sup[0]);var uid = sup.match(/uid=([^&]+)/gi); isLogin = (uid != null); } if (isLogin){ tc.innerHTML = '<div class="topbar_loading"><img src="http://simg.sinajs.cn/blog7style/images/common/loading.gif" />加载中…</div>'; } else { tc.innerHTML = '<div class="topbar_menu"><span class="link"><a href="http://blog.sina.com.cn" target="_blank">博客首页</a></span><span class="line_s"></span></div><div class="topbar_login"><a href="#" class="login" id="linkTrayLogin" onclick="return false;">登录</a><a href="http://login.sina.com.cn/signup/signupmail.php?entry=blog&r=&srcuid=&src=blogicp" class="register" target="_blank" id="linkReg">注册</a></div><div class="topbar_ad" id="divPopularize"></div><div id="phprender" ></div>';}
+clearInterval(locInterval);
+locInterval = null;
+}
+},50);
+
+</script>
+<link rel="pingback" href="http://upload.move.blog.sina.com.cn/blog_rebuild/blog/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://upload.move.blog.sina.com.cn/blog_rebuild/blog/xmlrpc.php?rsd" />
+<link href="http://blog.sina.com.cn/blog_rebuild/blog/wlwmanifest.xml" type="application/wlwmanifest+xml" rel="wlwmanifest" />
+<link rel="alternate" type="application/rss+xml" href="http://blog.sina.com.cn/rss/1088730470.xml" title="RSS" />
+<link href="http://simg.sinajs.cn/blog7style/css/conf/blog/articlelist.css" type="text/css" rel="stylesheet" /><style id="tplstyle" type="text/css">@charset "utf-8";@import url("http://simg.sinajs.cn/blog7newtpl/css/8/8_32/t.css");
+</style>
+<style id="positionstyle"  type="text/css">
+.sinabloghead .blogtoparea{ left:125px;top:101.067px;}
+.sinabloghead .blognav{ left:205px;top:215.45px;}
+</style>
+<style id="bgtyle"  type="text/css">
+</style>
+<style id="headtyle"  type="text/css">
+</style>
+<style id="navtyle"  type="text/css">
+</style>
+</head>
+<body>
+<!--$sinatopbar-->
+<div style="z-index:512;" class="sinatopbar">
+			<div class="topbar_main">
+				<a id="login_bar_logo_link_350" href="http://blog.sina.com.cn" target="_blank"><img class="topbar_logo" src="http://simg.sinajs.cn/blog7style/images/common/topbar/topbar_logo.gif" width="100" alt="新浪博客"/></a>
+
+				<div id="trayContainer" style="float:left">
+								</div>
+				<div class="topbar_floatR">
+					<span class="tb_wrtBlog">
+						<a target="_blank" href="http://control.blog.sina.com.cn/admin/article/article_add.php"><img class="SG_icon SG_icon15" src="http://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" width="15" height="15" title="博文" align="absmiddle"/>	发博文</a>
+
+						<span id="arrowAddArticle" class="wrtblog_arrow"></span>
+					</span>
+					<div class="topbar_search">
+						<form action="" target="_blank" method="get" id="loginBarSearchForm">
+							<div class="topbar_input">
+								<input id="loginBarSearchInput" name="k" class="topbar_txt" type="text" value=""/>
+							</div>
+							<div id="searchSelect" class="topbar_list">
+								<div id="loginBarSearchMenuLabel" class="anainp">博文</div>
+
+								<div class="arrow"></div>
+							</div>
+							<input type="submit" class="topbar_searchBtn" value="搜索"/>
+							<input type="hidden" id="ie" value="utf-8" name="ie"/>
+							<input type="hidden" id="loginBarSearchT" value="" name="t"/>
+							<input type="hidden" id="loginBarSearchTS" value="" name="ts"/>
+							<input type="hidden" id="loginBarSearchS" value="" name="s"/>
+							<input type="hidden" id="loginBarSearchType" value="" name="type"/>
+							<input type="hidden" id="loginBarSearchSType" value="" name="stype"/>
+
+							<input type="hidden" id="e" value="utf-8" name="e"/>
+						</form>
+					</div>
+					
+				</div>
+			</div>
+			<div style="position:absolute;left:0;top:0;" id="trayFlashConnetion"></div>
+		</div>
+		
+<!--$end sinatopbar-->
+
+
+<div class="sinabloga" id="sinabloga">
+	<div id="sinablogb" class="sinablogb">
+
+	       
+ <div id="sinablogHead" class="sinabloghead">
+    <div style="display: none;" id="headflash" class="headflash"></div>
+   <div id="headarea" class="headarea">
+      <div id="blogTitle" class="blogtoparea">
+      <h1 id="blogname" class="blogtitle"><a href="http://blog.sina.com.cn/fwx0312"><span id="blognamespan">weixue108的博客</span></a></h1>
+      <div id="bloglink" class="bloglink"><a href="http://blog.sina.com.cn/fwx0312">http://blog.sina.com.cn/fwx0312</a>  <a onclick="return false;" class="CP_a_fuc" href="#" id="SubscribeNewRss">[<cite>订阅</cite>]</a><a class="CP_a_fuc" href="javascript:void(scope.pa_add.add('1088730470'));">[<cite>手机订阅</cite>]</a></div>
+      </div>
+      <div class="blognav" id="blognav">
+      			  <div id="blognavBg" class="blognavBg"></div> <div class="blognavInfo"> 
+		<span><a   href="http://blog.sina.com.cn/fwx0312">首页</a></span>
+      <span><a class="on" href="http://blog.sina.com.cn/s/articlelist_1088730470_0_1.html">博文目录</a></span>
+      <span><a href="http://photo.blog.sina.com.cn/fwx0312">图片</a></span>
+      <span class="last"><a  href="http://blog.sina.com.cn/s/profile_1088730470.html">关于我</a></span></div>
+      </div>
+      		      		 	
+      
+             <div class="autoskin" id="auto_skin">
+       </div>
+
+<div class="adsarea">
+     <a href="#"><div id="template_clone_pic" class="pic"></div></a>
+     <div id="template_clone_link" class="link wdc_HInf"></div>
+     <div id="template_clone_other" class="other"></div>        
+</div>
+    </div>
+    	    	    </div>    
+    <!--主题内容开始 -->
+    <div class="sinablogbody" id="sinablogbody">
+		
+	<!--第一列start-->
+    <div id="column_1" class="SG_colW21 SG_colFirst"><div id="module_7" class="SG_conn">
+  <div class="SG_connHead">
+  <span comp_title="博文" class="title">博文</span>
+  <span class="edit">
+	   </span> 
+  </div>
+  <div class="SG_connBody">
+  			<div class="menuList blog_classList">			
+				<ul><li class="current"><div class="menuCell_main"><span class="SG_dot"><strong>全部博文</strong><em>(111)</em></span></div>         <div class="menuCell_bot"></div> </li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_1_1.html"  >仙剑</a><em>(0)</em></span></div> <div class="menuCell_bot"></div></li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_3_1.html"  >PHP文件系统操作</a><em>(1)</em></span></div> <div class="menuCell_bot"></div></li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_2_1.html"  >操作</a><em>(12)</em></span></div> <div class="menuCell_bot"></div></li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_4_1.html"  >转载</a><em>(6)</em></span></div> <div class="menuCell_bot"></div></li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_5_1.html"  >问题</a><em>(3)</em></span></div> <div class="menuCell_bot"></div></li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_6_1.html"  >数据处理</a><em>(9)</em></span></div> <div class="menuCell_bot"></div></li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_7_1.html"  >IT业界</a><em>(6)</em></span></div> <div class="menuCell_bot"></div></li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_8_1.html"  >PHP应用</a><em>(7)</em></span></div> <div class="menuCell_bot"></div></li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_9_1.html"  >JQuery</a><em>(1)</em></span></div> <div class="menuCell_bot"></div></li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_10_1.html"  >ubuntu</a><em>(1)</em></span></div> <div class="menuCell_bot"></div></li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_11_1.html"  >centos</a><em>(1)</em></span></div> <div class="menuCell_bot"></div></li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_12_1.html"  >wordpress</a><em>(28)</em></span></div> <div class="menuCell_bot"></div></li><li  ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_13_1.html"  >ucenter</a><em>(1)</em></span></div> <div class="menuCell_bot"></div></li></ul>  
+			  
+			  <div class="SG_j_line"></div>
+			  			  <ul>
+			  			<li ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/favourites_1088730470_1.html"  >博文收藏</a><em>(0)</em></span></div> <div class="menuCell_bot"></div></li>			  
+			  </ul>
+			</div>
+	  </div>
+  <div class="SG_connFoot"></div>
+</div>
+              <div class="SG_conn" id="module_800">
+					<div class="SG_connHead"> <span class="title">特色博文</span> <span class="edit"></span> </div>
+					<div class="SG_connBody"> 
+					<div class="menuList blog_classList">
+			<ul>
+
+			  <li ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/article_film_1088730470_1.html" >影评博文</a><em>(0)</em><img class="SG_icon SG_icon11" src="http://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" width="15" height="15" title="新" align="absmiddle" /></span></div> <div class="menuCell_bot"></div></li>	
+
+			</ul>
+						</div>
+                    </div>
+					<div class="SG_connFoot"></div>
+				</div><div id="module_929" class="SG_conn">
+     <div class="SG_connHead">
+            <span comp_title="搜博主文章" class="title">搜博主文章</span>
+            <span class="edit"></span>
+     </div>
+     <div class="SG_connBody">
+        <div class="searchAtc_blk">
+        <form method="get" onsubmit="if(document.getElementById('keyword').value==''){return false;}" action="http://control.blog.sina.com.cn/search/search.php" id="authorSelfSearch">
+			<input type="hidden" value="1088730470" name="uid">
+			<input type="hidden" value="1" name="page">
+			<div>
+			<input type="text" value="" id="keyword" name="keyword" class="SG_input" maxlength="50"><a onclick="if(document.getElementById('keyword').value.replace(/(^[\s　]*)|([\s　]*$)/g, '')!=''){document.getElementById('authorSelfSearch').submit();return false;}" class="SG_aBtn SG_aBtnB" href="javascript:;"><cite>搜索</cite></a>
+			</div>
+		</form>
+		<div class="clearit"></div>
+     	</div>
+      </div>       
+      <div class="SG_connFoot"></div>
+</div><div class="SG_conn" id="module_931">
+            <div class="SG_connHead">
+            <span class="title" comp_title="归档">归档</span>
+            
+            <span class="edit"></span>
+            </div>
+            <div class="SG_connBody">
+            	<div class="menuList blog_classList"><ul id="menuList blog_classList"><div><center>内容读取中…</center></div></ul></div>
+
+            </div>       
+            <div class="SG_connFoot"></div>
+ </div>
+
+</div>
+	<!--第一列end-->
+	
+	<!--第二列start-->
+	<div id="column_2" class="SG_colW73"><div id="module_928" class="SG_conn">
+            <div class="SG_connHead">
+            <span comp_title="全部博文<em>(111)</em>" class="title">全部博文<em>(111)</em></span>
+                        <span class="edit"> </span>
+            </div>
+            <div class="SG_connBody">
+            	<div class="article_blk">
+										<!-- 筛选器 -->
+					<div class="articleTop SG_j_linedot1">
+						<div class="articleNav SG_txtc">		
+							<span><strong><a href="http://blog.sina.com.cn/s/articlelist_1088730470_0_1.html"><em>全部</em></a></strong></span>
+							<span class="border">|</span>
+							<span><a href="http://blog.sina.com.cn/s/article_photo_1088730470_1.html"><img width="15" height="15" align="absmiddle" title="图片" src="http://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" class="SG_icon SG_icon18"><em>含图片</em></a></span>
+							<span class="border">|</span>
+							<span><a href="http://blog.sina.com.cn/s/article_video_1088730470_1.html"><img width="15" height="15" align="absmiddle" title="视频" src="http://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" class="SG_icon SG_icon16"><em>含视频</em></a></span>
+							<span class="border">|</span>
+							<span><a href="http://blog.sina.com.cn/s/article_wap_1088730470_1.html"><img width="18" height="18" align="absmiddle" title="博客彩信" src="http://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" class="SG_icon SG_icon105"><em>手机发表</em></a></span>
+						</div>
+						<div class="clearit"></div>
+					</div>
+					<!-- 筛选器  end-->
+								<div class="articleList">
+			<!-- 列表 START -->
+								<div class="articleCell SG_j_linedot1">
+						<p class="atc_main SG_dot">
+							<span class="atc_ic_f"></span>
+							<span class="atc_title">
+															<a title="[转载]在Linux&nbsp;&ndash;&nbsp;Ubuntu&nbsp;环境下Apache&nbsp;以FastCG" target="_blank" href="http://blog.sina.com.cn/s/blog_40e4b5660100sser.html">[转载]在Linux&nbsp;&ndash;&nbsp;Ubuntu&nbsp;环…</a></span> 
+														<span class="atc_ic_b"></span>
+						</p>
+						<p class="atc_info">
+													<span class="atc_data" id="count_40e4b5660100sser"></span>
+													<span class="atc_tm SG_txtc">2011-08-02 19:16</span>
+							<span class="atc_set">
+							
+												
+																					
+																			</span>
+						</p>
+					</div>
+								<div class="articleCell SG_j_linedot1">
+						<p class="atc_main SG_dot">
+							<span class="atc_ic_f"></span>
+							<span class="atc_title">
+															<a title="PHP&nbsp;String&nbsp;函数" target="_blank" href="http://blog.sina.com.cn/s/blog_40e4b5660100ssen.html">PHP&nbsp;String&nbsp;函数</a></span> 
+														<span class="atc_ic_b"></span>
+						</p>
+						<p class="atc_info">
+													<span class="atc_data" id="count_40e4b5660100ssen"></span>
+													<span class="atc_tm SG_txtc">2011-08-02 19:03</span>
+							<span class="atc_set">
+							
+												
+																					
+																			</span>
+						</p>
+					</div>
+								<div class="articleCell SG_j_linedot1">
+						<p class="atc_main SG_dot">
+							<span class="atc_ic_f"></span>
+							<span class="atc_title">
+															<a title="PHP&nbsp;数组函数汇总" target="_blank" href="http://blog.sina.com.cn/s/blog_40e4b5660100ssel.html">PHP&nbsp;数组函数汇总</a></span> 
+														<span class="atc_ic_b"></span>
+						</p>
+						<p class="atc_info">
+													<span class="atc_data" id="count_40e4b5660100ssel"></span>
+													<span class="atc_tm SG_txtc">2011-08-02 19:02</span>
+							<span class="atc_set">
+							
+												
+																					
+																			</span>
+						</p>
+					</div>
+								<div class="articleCell SG_j_linedot1">
+						<p class="atc_main SG_dot">
+							<span class="atc_ic_f"></span>
+							<span class="atc_title">
+															<a title="[转载]php计算两个数组交集和差集" target="_blank" href="http://blog.sina.com.cn/s/blog_40e4b5660100ssaz.html">[转载]php计算两个数组交集和差集</a></span> 
+														<span class="atc_ic_b"></span>
+						</p>
+						<p class="atc_info">
+													<span class="atc_data" id="count_40e4b5660100ssaz"></span>
+													<span class="atc_tm SG_txtc">2011-08-02 18:17</span>
+							<span class="atc_set">
+							
+												
+																					
+																			</span>
+						</p>
+					</div>
+								<div class="articleCell SG_j_linedot1">
+						<p class="atc_main SG_dot">
+							<span class="atc_ic_f"></span>
+							<span class="atc_title">
+															<a title="PHP&nbsp;清除HTML代码、空格、回车换行符的函数" target="_blank" href="http://blog.sina.com.cn/s/blog_40e4b5660100ss1k.html">PHP&nbsp;清除HTML代码、空格、回车换行…</a></span> 
+														<span class="atc_ic_b"></span>
+						</p>
+						<p class="atc_info">
+													<span class="atc_data" id="count_40e4b5660100ss1k"></span>
+													<span class="atc_tm SG_txtc">2011-08-02 15:06</span>
+							<span class="atc_set">
+							
+												
+																					
+																			</span>
+						</p>
+					</div>
+								<div class="articleCell SG_j_linedot1">
+						<p class="atc_main SG_dot">
+							<span class="atc_ic_f"></span>
+							<span class="atc_title">
+															<a title="PHP&nbsp;缓冲区相关函数" target="_blank" href="http://blog.sina.com.cn/s/blog_40e4b5660100ss13.html">PHP&nbsp;缓冲区相关函数</a></span> 
+														<span class="atc_ic_b"></span>
+						</p>
+						<p class="atc_info">
+													<span class="atc_data" id="count_40e4b5660100ss13"></span>
+													<span class="atc_tm SG_txtc">2011-08-02 14:43</span>
+							<span class="atc_set">
+							
+												
+																					
+																			</span>
+						</p>
+					</div>
+								<div class="articleCell SG_j_linedot1">
+						<p class="atc_main SG_dot">
+							<span class="atc_ic_f"></span>
+							<span class="atc_title">
+															<a title="PHP时间计算方法" target="_blank" href="http://blog.sina.com.cn/s/blog_40e4b5660100spe4.html">PHP时间计算方法</a></span> 
+														<span class="atc_ic_b"></span>
+						</p>
+						<p class="atc_info">
+													<span class="atc_data" id="count_40e4b5660100spe4"></span>
+													<span class="atc_tm SG_txtc">2011-07-29 20:29</span>
+							<span class="atc_set">
+							
+												
+																					
+																			</span>
+						</p>
+					</div>
+								<div class="articleCell SG_j_linedot1">
+						<p class="atc_main SG_dot">
+							<span class="atc_ic_f"></span>
+							<span class="atc_title">
+															<a title="Vim&nbsp;常用快捷键" target="_blank" href="http://blog.sina.com.cn/s/blog_40e4b5660100soof.html">Vim&nbsp;常用快捷键</a></span> 
+														<span class="atc_ic_b"></span>
+						</p>
+						<p class="atc_info">
+													<span class="atc_data" id="count_40e4b5660100soof"></span>
+													<span class="atc_tm SG_txtc">2011-07-28 19:54</span>
+							<span class="atc_set">
+							
+												
+																					
+																			</span>
+						</p>
+					</div>
+								<div class="articleCell SG_j_linedot1">
+						<p class="atc_main SG_dot">
+							<span class="atc_ic_f"></span>
+							<span class="atc_title">
+															<a title="PHP-Filesystem&nbsp;文件系统函数" target="_blank" href="http://blog.sina.com.cn/s/blog_40e4b5660100sooa.html">PHP-Filesystem&nbsp;文件系统函数</a></span> 
+														<span class="atc_ic_b"></span>
+						</p>
+						<p class="atc_info">
+													<span class="atc_data" id="count_40e4b5660100sooa"></span>
+													<span class="atc_tm SG_txtc">2011-07-28 19:39</span>
+							<span class="atc_set">
+							
+												
+																					
+																			</span>
+						</p>
+					</div>
+								<div class="articleCell SG_j_linedot1">
+						<p class="atc_main SG_dot">
+							<span class="atc_ic_f"></span>
+							<span class="atc_title">
+															<a title="PHP处理html标签的常用正则表达式" target="_blank" href="http://blog.sina.com.cn/s/blog_40e4b5660100skbw.html">PHP处理html标签的常用正则表达式</a></span> 
+														<span class="atc_ic_b"></span>
+						</p>
+						<p class="atc_info">
+													<span class="atc_data" id="count_40e4b5660100skbw"></span>
+													<span class="atc_tm SG_txtc">2011-07-22 16:55</span>
+							<span class="atc_set">
+							
+												
+																					
+																			</span>
+						</p>
+					</div>
+								<div class="articleCell SG_j_linedot1">
+						<p class="atc_main SG_dot">
+							<span class="atc_ic_f"></span>
+							<span class="atc_title">
+															<a title="国内常见博客的采集办法(搜狐&nbsp;网易&nbsp;新浪&nbsp;百度空间)，免费写采集规则！" target="_blank" href="http://blog.sina.com.cn/s/blog_40e4b5660100sk8m.html">国内常见博客的采集办法(搜狐&nbsp;网易…</a></span> 
+														<span class="atc_ic_b"></span>
+						</p>
+						<p class="atc_info">
+													<span class="atc_data" id="count_40e4b5660100sk8m"></span>
+													<span class="atc_tm SG_txtc">2011-07-22 15:13</span>
+							<span class="atc_set">
+							
+												
+																					
+																			</span>
+						</p>
+					</div>
+						<!-- 列表END -->
+			</div>
+						<div class="SG_page">
+						<ul class="SG_pages">
+							<li class="SG_pgprev"><a href="http://blog.sina.com.cn/s/articlelist_1088730470_0_2.html" title="跳转至第 2 页">&lt;&nbsp;上一页</a></li><li><a href="http://blog.sina.com.cn/s/articlelist_1088730470_0_1.html" title="跳转至第一页">1</a></li><li><a href="http://blog.sina.com.cn/s/articlelist_1088730470_0_2.html" title="跳转至第 2 页">2</a></li><li class="SG_pgon" title="当前所在页">3</li>&nbsp&nbsp<span style='color:#888888;'>共3页</span>						</ul>
+					</div>
+				</div>
+				<div class="SG_connFoot"></div>
+            </div>       
+            
+          </div></div>
+	<!--第二列start-->
+	
+	<!--第三列start-->
+	<div id="column_3" class="SG_colWnone"><div style="width:0px;height:0.1px;margin:0px;">&nbsp;&nbsp;</div></div>
+	<!--第三列end-->
+
+	
+    </div>
+   <!--主题内容结束 -->
+  
+
+	<div id="diggerFla" style="position:absolute;left:0px;top:0px;width:0px"></div>
+    <div class="sinablogfooter" id="sinablogfooter"  style="position:relative;">
+      
+      <p class="SG_linka"><a href="http://control.blog.sina.com.cn/admin/advice/advice_list.php" target="_blank">新浪BLOG意见反馈留言板</a>　<a href="javascript:;" onclick="window.open ('http://control.blog.sina.com.cn/admin/advice/impeach.php?url=http%3A//blog.sina.com.cn/s/blog_4cf7b4ec0100eudp.html%3Ftj%3D1', '','height=495, width=510, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=n o, status=no');">不良信息反馈</a>　电话：4006900000 提示音后按1键（按当地市话标准计费）　欢迎批评指正</p>
+   
+      <p class="SG_linka"><a href="http://corp.sina.com.cn/chn/" target="_blank">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/" target="_blank">About Sina</a> | <a href="http://emarketing.sina.com.cn/" target="_blank">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html" target="_blank">联系我们</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html" target="_blank">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml" target="_blank">网站律师</a> | <a href="http://english.sina.com" target="_blank">SINA English</a> | <a href="http://members.sina.com.cn/apply/" target="_blank">会员注册</a> | <a href="http://help.sina.com.cn/" target="_blank">产品答疑</a> </p>
+      <p class="copyright SG_linka"> Copyright &copy; 1996 - 2012 SINA Corporation,  All Rights Reserved</p>
+      <p class="SG_linka"> 新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml" target="_blank">版权所有</a></p>
+	  <a href="http://www.bj.cyberpolice.cn/index.jsp"  target="_blank" class="gab_link"></a>
+    </div>
+  </div>
+</div>
+<div id="swfbox"></div>
+<script id="PVCOUNTER_FORIE" type="text/javascript"></script>
+</body>
+<script type="text/javascript">
+var scope = {
+	$setDomain : true,
+	$uid : "1088730470",
+	$PRODUCT_NAME : "blog7",		//blog7photo,blog7icp
+	$pageid : "articlelist",
+	$key :  "fb56a7621dce958023055a607e451b52",
+	$uhost : "fwx0312",
+	$private: {"pageset":0,"tj":0,"adver":0,"sms":0,"ad":0,"blogsize":0,"cms":0,"hidecms":0,"top":0,"invitationset":0,"p4p":0,"spamcms":1,"init7":0,"quote":0,"foot":0,"isprivate":0,"t_sina":1088730470,"oauth_token":"77f5559e0606b690af9fea57a9b3ada0","oauth_token_secret":"500a20e1904d7730053bca834a3cd5f8","uname":"\u536b\u96ea2011","p_push_t":"1","p_get_t":"1","daRenState":"2"},
+	$blogArticleArchiveSelected : "",
+							  $blogArticleSortSelected : "",
+							  $blogArticleSortArticleids : ["40e4b5660100sser","40e4b5660100ssen","40e4b5660100ssel","40e4b5660100ssaz","40e4b5660100ss1k","40e4b5660100ss13","40e4b5660100spe4","40e4b5660100soof","40e4b5660100sooa","40e4b5660100skbw","40e4b5660100sk8m"],
+							  $blogArticleCategoryids : ["2","2","2","2","0","0","2","2","3","2","0"],
+							  $page : "100000",
+							 	component_lists:{"2":{"size":730,"list":[928]},"1":{"size":210,"list":[7,800,929,931]}},
+	formatInfo:1,
+	UserPic:[{"pid":"","repeat":"repeat-x","align-h":"center","align-v":"top","apply":""},{"pid":"","repeat":"repeat-x","align-h":"center","align-v":"top","apply":""},{"pid":"","repeat":"repeat-x","align-h":"center","align-v":"top","apply":""}],
+	UserBabyPic:{"photoX":null,"photoY":null,"photoURL":null,"angle":null,"zoom":null,"maskX":null,"maskY":null,"maskURL":null,"frameURL":null},
+	UserColor:1,
+	backgroundcolor:"rgb(126, 163, 84)",
+	tpl:"8_32"};
+var	$encrypt_code = "8b9860def20d3f6ba2074f1b97444bad";
+</script>
+
+<script type="text/javascript" src="http://sjs.sinajs.cn/blog7common/js/boot.js"></script>
+<script type="text/javascript">__load_js();</script>
+<script type="text/javascript">__render_page();</script>
+
+
+
+</html>

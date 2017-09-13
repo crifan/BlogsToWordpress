@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+
+<meta equiv="X-UA-Compatible" content="IE=EmulateIE7" /> 
+
+<title>搜狐博客</title>
+
+<style type="text/css">
+
+.ts_b {
+
+	width:700px;
+
+	height:400px;
+
+	padding:0px;
+
+	border:1px solid #e8e6e6;
+
+	margin:60px auto;
+
+	background:url(http://js1.pp.sohu.com.cn/ppp/blog/styles_ppp/images/ts_bg.gif) bottom repeat-x;
+
+}
+
+
+
+.ts_img {
+
+	width:377px;
+
+	height:185px;
+
+	margin:40px auto;
+
+	background:url(http://js1.pp.sohu.com.cn/ppp/blog/styles_ppp/images/toptu.gif) no-repeat;
+
+}
+
+
+
+.ts_txt {
+
+	margin-top:30px;
+
+	font-size:14px;
+
+	color:#ff0066;
+
+	text-align:center;
+
+	font-weight:bold;
+
+}
+
+
+
+.ts_txt a{color:#104d6c; text-decoration:underline;;}
+
+.ts_txt a:hover{color:#f63;text-decoration:underline;}
+
+
+
+.ts_foot {
+
+	margin-top:50px;
+
+	margin-left:60px;
+
+	width:700px;
+
+	color:#666666;
+
+	text-align:center;
+
+}
+
+
+
+.ts_foot a{color:#104d6c; text-decoration:underline;;}
+
+.ts_foot a:hover{color:#f63;text-decoration:underline;}
+
+
+
+.ts_l {
+
+	float:left;
+
+	width:255px;
+
+	height:14px;
+
+	padding-top:12px;
+
+	font-size:12px;
+
+	color:#666666;
+
+	text-align:center;
+
+	overflow:hidden;
+
+	display:block;
+
+}
+
+.ts_s {
+
+	float:left;
+
+	width:34px;
+
+	height:35px;
+
+	margin:0 10px;
+
+	background:url(http://js1.pp.sohu.com.cn/ppp/blog/styles_ppp/images/key.gif) no-repeat;
+
+}
+
+</style>
+
+
+
+
+
+
+
+</head>
+
+<body >
+
+
+
+
+
+<div class="ts_b">
+
+	<div class="ts_img"></div>
+
+	<div class="ts_txt">此文章已被外星人劫持或被博主隐藏！</div>
+
+	<div class="ts_foot">
+
+	<div class="ts_l">上一篇：<a href="http://maoyushi.blog.sohu.com/43359413.html">转制国家对企业家存有偏见</a></div>
+
+	<div class="ts_s"></div>
+
+	<div class="ts_l">下一篇：<a href="http://maoyushi.blog.sohu.com/33825654.html">从财富创造和财富分配看中国经济</a></div>
+
+</div>
+
+	</div>
+
+
+
+
+
+<script type="text/javascript">document.write('<scr'+'ipt type="text/javascript" src="http://js.sohu.com/mail/pv/pv_v201.js" type="text/javascript"></scr'+'ipt>');</script>
+
+
+
+</body>
+
+</html>

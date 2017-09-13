@@ -1,0 +1,408 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<meta http-equiv="Content-Language" content="zh-cn" />
+	<meta name="robots" content="all" />
+	<meta name="author" content="Tencent-ISRD" />
+	<meta name="Copyright" content="Tencent" />
+	<meta name="Description" content="Qzone精彩由您而来" />
+	<meta name="Keywords" content="Qzone,QQ空间,Blog,博客,网络日志,播客,腾讯,QQ,Tencent" />
+	<title>日志</title>
+	<script type="text/javascript">
+	</script>
+	<base href="http://cnc.qzs.qq.com/"></base>
+	<script type="text/javascript">
+        document.domain="qq.com";
+		if (parent.ua){
+			var htmlClass = "os_win7";
+			if (parent.ua.windows && parent.ua.windows > 6){
+				htmlClass = "os_win7"
+			}else if(parent.ua.windows && parent.ua.windows == 6){
+				htmlClass = "os_vista";
+			}else if(parent.ua.windows){
+				htmlClass = "os_winxp";
+			}else{
+				htmlClass = "os_mac";
+			}
+			document.documentElement.className += htmlClass;
+		}
+		
+		//设置测速起点时间
+		parent.blogSpeedBasePoint = new Date();
+		parent.bcSpeedBasePoint = new Date();
+		
+		parent.bcSpeedBasePoint = new Date().getTime();
+		
+		//第一个测速点，页面拉取完毕，还没开始被渲染 
+		//QZBlog.Util.Statistic.addSpeedPoint(1);
+		window.addFirstSpeedPoint = new Date();
+		
+		//判断是否在朋友
+		var isInPengyou = !!(/pengyou\.com$/.test(location.hostname));
+		document.write(([
+			'<script charset="utf-8" type="text/javascript" src="/ac/qzone/qzfl/qzfl',parent.g_V.qz,'.js"><\/script>',
+			'<script type="text/javascript" charset="utf-8" src="/ac/qzfl/appclientlib.js"><\/script>'
+		]).join(''));
+	</script>
+	<script type="text/javascript">
+		document.write(([
+			'<link rel="stylesheet" rev="stylesheet" href="http://',parent.siDomain,'/qzone_v6/gb/skin/', QZONE.FP.getQzoneConfig().styleId ,'.css" type="text/css" media="screen" />',
+			'<link rel="stylesheet" rev="stylesheet" href="http://',parent.siDomain,'/qzone_v6/blog_app.css" media="screen">'
+		]).join(''));
+	</script>
+	<style type="text/css" id="pagestyle"></style>
+	<script type="text/javascript">
+		//日志信息内容
+		var g_oBlogData =  
+{"data":{
+"blogid":1321000398,
+"voteids":0,
+"pubtime":1321000398,
+"replynum":0,
+"category":"个人日记",
+"tag":"",
+"title":"下页：空间进一次变一次做法",
+"effect":8389120,
+"effect2":524294,
+"exblogtype":0,
+"sus_flag":false,
+"friendrelation":[],
+"lp_type":0,
+"lp_id":26741,
+"lp_style":101057280,
+"lp_flag":0,
+"orguin":1083902439,
+"orgblogid":1321000398,
+"ip":235433486,
+"mention_uins":[ ],
+"attach":[],
+"replylist":[]
+}}
+;
+		g_oBlogData.data.cgiContent = '<div class=\"blog_details_20110920\"><div><font color=\"#00ff00\">&lt;% <br  />randomize <br  />Num=(int(rnd()*6)+1) <br  />Select Case Num <br  />case 1 response.redirect(\"你自己的图片地址\") <br  />case 2 response.redirect(\"你自己的图片地址\") <br  />case 3 response.redirect(\"你自己的图片地址\") <br  />case 4 response.redirect(\"你自己的图片地址\") <br  />case 5 response.redirect(\"你自己的图片地址\")<br  />case else response.redirect(\"你自己的图片地址\") <br  />end select <br  />\'response.write num <br  />%&gt; </font><br  />有什么不懂加<font color=\"#000000\">QQ1083902439</font> </div></div>';
+		//
+		
+		var g_default_no_comment=0;
+		
+		var g_sec_only_title = 0;
+		var g_NonFriendReplyFlag = 0;
+		var g_qSafeLevel = 0;
+		// 音乐日志相关
+		var g_insertSwfNum=0;
+		function swfInit() {
+			g_insertSwfNum++;
+		}
+		//统计用
+		window.blogSpeedBasePoint = new Date();
+		if((/\/blog/i).test(parent.location.href)) {
+			try {
+				parent.QZONE.statistic.stepTime.genTime(12);
+			} catch (e) {}
+		}
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+	/**
+	 * 模板日志解析html
+	 */
+	var isTemplateBlog = (g_oBlogData.data.exblogtype == 2 && QZFL.dom.getSize(document.body)[0] >= 895); //判断是否渲染为模板日志
+	document.write(([
+		isTemplateBlog ? '<script type="text/javascript" charset="utf-8" src="/qzone/app/blog/v6/script/templateblog.blogidadapter.js"><\/script>' : '',
+		isTemplateBlog ? '<link rel="stylesheet" rev="stylesheet" href="http://qzonestyle.gtimg.cn/qzone_v6/blog_module_common.css" media="screen"/>' : ''
+	]).join(''));
+</script>
+<script type="text/javascript">
+	if(isInPengyou){
+		//朋友则给body添加类名
+		document.body.className += "mod_py";
+		//朋友则输出朋友面包屑
+		var html = [
+			'<div style="font-size:14px; line-height:20px; margin:1px 0 7px 25px; position:relative;">',
+				'<a href="http://www.pengyou.com/index.php?mod=profile&u=' + parent.g_iUin + '" class="c_tx" target="_parent">' + parent.QZONE.FP.getNickname() + '</a><span style="margin:0 5px;">-</span><span>日志</span>',
+			'</div>'
+		].join("");
+		document.write(html);
+	}
+	var v6xws = false;
+	try {v6xws = !!QZONE.FP._t.QZONE.dressDataCenter.isOldXWMode();} catch(ex){}
+	if(v6xws){
+		QZFL.css.addClassName(document.body, 'old_xiaowo_mode');	//V6小窝
+	}
+	var jsPath = isInPengyou ? "pengyou/script/" : "v6/script/"; //js路径
+	var templateURL = isTemplateBlog ? ('<script type="text/javascript" charset="utf-8" src="/qzone/app/blog/'+jsPath+'content_templateblog.js"><\/script>') : ""; //模板日志js url
+	if(isTemplateBlog) {
+		var tempId = g_oBlogData.data.tempid = window.TemplateBlogIdAdapter.adapter(g_oBlogData.data.tempid);
+		function _Callback(templateHtml) {
+			var templateHtml = templateHtml;
+			var reg = /<div class="(blog_details_[\d]*?)">[\s|\S]*<\/div>/ig;
+			g_oBlogData.data.cgiContent = g_oBlogData.data.cgiContent.replace(reg,function($0,$1) {
+				return '<div class="' + $1 + ' blog_template">' + TemplateBlogParser.render(templateHtml) + "</div>";
+			});
+		};
+		document.write(([
+			'<script type="text/javascript" charset="utf-8" src="/qzone/app/blog/'+jsPath+'content_templateblog_parser.js"><\/script>',
+			'<link rel="stylesheet" rev="stylesheet" href="http://',parent.imgcacheDomain,'/qzone/space_item/orig/',parseInt(tempId) % 16,'/',tempId,'/blog_module.css" type="text/css" media="screen" />',
+			'<script type="text/javascript" charset="utf-8" src="http://',parent.imgcacheDomain,'/qzone/space_item/orig/',parseInt(tempId) % 16,'/',tempId,'/template.js"><\/script>'
+		]).join(''));
+	}
+</script>
+<div class="bg_mode bg">
+	<div class="box_ml bor">
+		<div class="mode_gb">
+			<script type="text/javascript">
+				//朋友则隐藏标题
+				if(!isInPengyou){
+					var html = [
+						'<div class="mode_gb_title bg2">',
+							'<div class="bg_mode_gb_title">',
+								'<h3>日志</h3>',
+							'</div>',
+						'</div>'
+					].join("");
+					document.write(html);
+				}
+			</script>
+			<div class="mode_gb_cont">
+				<div class="blog_app" id="app_mod">
+				
+				
+					<div class="blog_header">
+						<div class="blog_title">
+							<div id="title" class="blog_tit_cont">
+								<strong>
+									
+										<span >
+											
+											
+																	
+											下页：空间进一次变一次做法 
+										</span>
+									
+									
+								</strong>
+								<span id="pubTime" class="c_tx3">
+								<script type="text/javascript">
+									var pubtime = g_oBlogData.data.pubtime;
+									var pubDate = new Date(pubtime * 1000);
+									document.write(pubDate.getFullYear() + "." + (pubDate.getMonth() + 1) + "." + pubDate.getDate());
+								</script>
+								</span>
+								<span id="readNum" class="c_tx3"> </span>
+								<span id="quoteInfo" class="c_tx3"> </span>
+							</div>
+							<div class="mod_links">
+								<span><a id="navigatorSpan1" href="javascript:void(0)" onclick="return false;" class="c_tx"></a></span>
+								<span><a id="upperReturnListArea" href="javascript:void(0)" onclick="return false;" class="c_tx">返回日志列表</a></span>
+							</div>
+						</div>
+						<!-- 顶部操作栏 -->
+						<div class="mod_interactive"><ul id="upperInteractive"></ul></div>
+					</div>
+					<div id="topHintArea"></div>
+					<script type="text/javascript">
+						if(QZONE.FP.getQzoneConfig().ownerUin == QZONE.FP.getQzoneConfig().loginUin && g_oBlogData.data.exblogtype == 2 && QZFL.dom.getSize(document.body)[0] < 895) {
+							var html = [
+								'<div class="hint"><strong class="icon_hint"><span>提示</span></strong>',
+									'<span>尊敬的QQ空间用户：由于当前版式宽度限制，暂不支持模板日志展现，请在空间主页排版中将版式调到宽版后重试。</span>',
+									'<a onclick="this.parentNode.style.display=\'none\';return false;" class="hint_close" title="关闭提示" href="javascript:;"></a>',
+								'</div>'
+							].join("");
+							document.write(html);
+						}
+					</script>
+					<div class="blog_cont">
+						<!-- 日志正文 -->
+						<!--S 文章(这部分加style只是为了看效果,基本上表现都受编辑器设置控制)-->
+						<div class="blog_cont_details" id="veryContent" style="height:auto!important">
+							<table cellspacing="0" cellpadding="0" id="blogContentTable" style="table-layout:fixed;width:100%;position:relative">
+								<tr>
+									<td valign="top" style="word-wrap:break-word">
+										<div id="blogContainer" style="position:relative; overflow:hidden; height:100%;">
+											<img id="paperPicArea0" style="display:none" src="/ac/b.gif" />
+											<div id="paperTitleArea" align="center">
+												<span id="paperTitle" style="display:block;word-break:break-all;font-weight:bolder">
+												</span>
+											</div>
+											<img id="paperPicArea" style="display:none" src="/ac/b.gif" />
+											<div id="blogDetailDiv" style="font-size:14px;">
+											<script type="text/javascript">
+												document.write(g_oBlogData.data.cgiContent);
+												if(isTemplateBlog) {
+													TemplateBlogParser.start();
+												}
+											</script>
+											</div>
+										</div>
+										<img id="paperPicArea1" style="position:relative;display:none;top:auto;" src="/ac/b.gif" />
+									</td>
+								</tr>
+							</table>
+							<div id="paperBottom" class="clear"></div>
+						</div>
+						<!-- 附件 -->
+						<div id="attachList" class="attachment_list bgr2 none"></div>
+					</div>
+					<div class="blog_footer">
+						<!-- 底部操作栏 -->
+						<div class="mod_interactive"><ul id="footerInteractive"></ul></div>
+						<!-- 日志信息栏 -->
+						<div class="mod_tags c_tx3">
+							<span id="categorySpan" class="none"></span>
+							<span id="rightSettingSpan" class="none"></span>
+							<span id="contentAuthorSpan" class="none"></span>
+							<span id="tagsSpan" class="blog_tags none"></span>
+						</div>
+						<!-- 提到我的 -->
+						<div id="mentionDiv" class="mod_links c_tx3 none"></div>
+						<div class="mod_links c_tx3">
+							<span><a id="navigatorSpan4" href="javascript:void(0)" onclick="return false;" class="c_tx"></a></span>
+							<span><a id="navigatorSpan2" href="javascript:void(0)" onclick="return false;" class="c_tx"></a></span>
+							<span><a id="footerReturnListArea" href="javascript:void(0)" onclick="return false;" class="c_tx">返回日志列表</a></span>
+						</div>
+						<!-- 签名档 -->
+						
+						<div class="mod_signature">
+							<div class="tit">
+								<h4>签名档</h4>
+								<a href="javascript:void(0)" title="" class="c_tx none" onclick="InfoManager.modifySignature();return false;"></a>
+							</div>
+							<!-- ? ? -->
+							<div class="bor3 cont" id="signatureDIV"></div>
+							<!-- ?  -->
+							<!-- ?? ? -->
+							<div class="bor3 cont edit" id="modifySigDiv" style="display:none;">
+								<div class="editor"><!-- ?? --></div>
+								<p class="btn"><button type="button" class="bt_tx2">发表</button> <a href="javascript:void(0)" title="取消" class="c_tx">取消</a></p>
+							</div>
+							<!-- ??  -->
+						</div>
+						
+						<div class="mod_related_info bbor3" id="recentBlogDIV" style="display:none">
+							<div class="mod_title">
+								<h4>
+									
+										主人的热评日志
+									
+								</h4>
+								<span id="ctrl_arr" class="mod_arr" onclick="InfoScheduler.hideShowRecentBlog(this);return false;"></span>
+							</div>
+							<div class="mod_list">
+								<ul id="recentBlogList" style="display:none;">
+								</ul>
+							</div>
+						</div>
+						<!-- 最近访客 -->
+						<div class="mod_visitor" id="visitorArea" style="display:none"></div>
+						<!-- ?-->
+						<div id="commentListContainer"></div>
+					</div>
+					<!-- 分享 下拉框 -->
+					<div id="shareList" class="op_more bg bor2 op_extend none" style="top:0px;left:0px;">
+						<a id="shareListTitle" href="javascript:void(0)" onclick="return false;" class="c_tx drop_list">
+							<span class="icon icon_share"></span><span class="adjust">分享</span><span class="mod_arr"></span>
+						</a>
+						<ul id="shareListContainer">
+							<li id="shareBlogContainer" class="bg6_hover none">
+								<a id="shareBlogBtn" href="javascript:void(0)" onclick="return false;" class="c_tx">分享到空间</a>
+							</li>
+							<li id="tweetBlogContainer" class="bg6_hover none">
+								<a id="tweetBlogBtn" href="javascript:void(0)" onclick="return false;" class="c_tx">转播到微博</a>
+							</li>
+						</ul>
+					</div>
+					<!-- 更多 下拉框 -->
+					<div id="modifyList" class="op_more op_extend op_drop none" style="top:0px;left:0px;">
+						<a id="modifyListTitle" href="javascript:void(0)" onclick="return false;"  class="c_tx bg bor2 drop_list">
+							<span id="ModifyListAreaDesc" class="adjust">更多</span>
+							<span class="mod_arr"></span>
+						</a>
+						<ul class="bg bor2">
+							<li id="editBlogBtnContainer" class="none">
+								<a id="editBlogBtn" href="javascript:void(0)" onclick="return false;" class="c_tx bg6_hover">编辑</a>
+							</li>
+							<li id="deleteBlogBtnContainer" class="none">
+								<a id="deleteBlogBtn" href="javascript:void(0)" onclick="return false;" class="c_tx bg6_hover">删除</a>
+								<hr class="bbor2" />
+							</li>
+							<li id="useLetterPagerBtn" class="none">
+								<a href="javascript:void(0)" onclick="return false;" class="c_tx bg6_hover">选择信纸</a>
+								<hr class="bbor2" />
+							</li>
+							<li id="modSizeBtn" class="">
+								<div class="mod_size">
+									<span class="size_tip">字体：</span>
+									<span id="bigFonts"  onclick="return false;"  class="c_tx2 bg6_hover">大</span>
+									<span id="midFonts"  onclick="return false;"  class="c_tx2 bg6 current">中</span>
+									<span id="smallFonts" onclick="return false;"  class="c_tx2 bg6_hover">小</span>
+								</div>
+								<hr class="bbor2" />
+							</li>
+							<li id="setBlogRightBtnContainer" class="none">
+								<a id="setBlogRightBtn" href="javascript:void(0)" onclick="return false;" class="c_tx bg6_hover">权限设置</a>
+							</li>
+							<li id="setBlogCateBtnContainer" class="none">
+								<a id="setBlogCateBtn" href="javascript:void(0)" onclick="return false;" class="c_tx bg6_hover">修改分类</a>
+							</li>
+							<li id="setRecommendBtnContainer" class="none">
+								<a id="setRecommendBlogBtn" href="javascript:void(0)" onclick="return false;" class="c_tx bg6_hover">推荐日志</a>
+							</li>
+							<li id="setTopBlogBtnContainer" class="none">
+								<a id="setTopBlogBtn" href="javascript:void(0)" onclick="return false;" class="c_tx bg6_hover"></a>
+							</li>
+							<li id="setPrivateBlogBtnContainer" class="none">
+								<a id="setPrivateBlogBtn" href="javascript:void(0)" onclick="return false;" class="c_tx bg6_hover">转为私密日志</a>
+							</li>
+							<li id="complaintBlogBtnContainer" class="none">
+								<a id="complaintBlogBtn" href="javascript:void(0)" onclick="return false;" class="c_tx bg6_hover">举报</a>
+							</li>
+							<li id="appealBlogBtnContainer" class="none">
+								<a id="appealtBlogBtn" href="javascript:void(0)" onclick="return false;" class="c_tx bg6_hover">申述</a>
+							</li>
+						</ul>
+					</div>
+					<!-- 日志复制地址弹层 -->
+					<div id="qzblog_copyurl_tip" class="bor2 bg3 panel_copy qzblog_copyurl_class none">
+						<p>
+							<label for="copyUrlInput">日志地址:</label>
+							<input type="text" checked="checked" readonly="readonly" class="bor textinput mod_copyaddress_txt" value="" id="copyUrlInput"> 
+						</p>
+						<p class="tips">请用Ctrl+C复制后贴给好友。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//统计用
+	if((/\/blog/i).test(parent.location.href)) {
+		try {
+			parent.QZONE.statistic.stepTime.genTime(13);
+		} catch (e) {}
+	}
+	//附件js url
+	var attachURL = (!!g_oBlogData.data.attach && g_oBlogData.data.attach.length > 0) ? ('<script type="text/javascript" charset="utf-8" src="/qzone/app/blog/'+jsPath+'content_attach.js"><\/script>') : "";
+	//魔方日志js url
+	var gridURL = (g_oBlogData.data.effect2 & (1 << (52 - 32))) ? ('<script type="text/javascript" charset="utf-8" src="/qzone/app/blog/'+jsPath+'content_gridsblog.js"><\/script>') : "";
+	//第二个测速点，显示完页面内容并开始拉取js 
+	//QZBlog.Util.Statistic.addSpeedPoint(2);
+	window.addSecondSpeedPoint = new Date();
+	document.write(([
+		'<script type="text/javascript" charset="utf-8" src="/qzone/newblog/v5/script/common.js"><\/script>',
+		'<script type="text/javascript" charset="utf-8" src="/qzone/newblog/v5/script/newubb.js"><\/script>',
+		'<script type="text/javascript" charset="utf-8" src="/qzone/app/blog/',jsPath,'blog_content.js"><\/script>', //新正文页
+		templateURL,//模板日志
+		gridURL,//魔方日志
+		attachURL//附件
+	]).join(''));
+</script>
+<script type="text/javascript">
+	QZBlog.Util.Statistic.addSpeedPoint(1,addFirstSpeedPoint);
+	QZBlog.Util.Statistic.addSpeedPoint(2,addSecondSpeedPoint);
+</script>
+</body>
+</html> 
