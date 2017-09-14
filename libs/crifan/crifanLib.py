@@ -1166,7 +1166,7 @@ def getUrlResponse(url, postDict={}, headerDict={}, timeout=0, useGzip=False, po
     #update cookies into local file
     if(gVal['cookieUseFile']):
         gVal['cj'].save();
-        logging.info("gVal['cj']=%s", gVal['cj']);
+        # logging.info("gVal['cj']=%s", gVal['cj']);
     
     return resp;
 

@@ -99,3 +99,8 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# current project
+localTempCookieFile.txt
+# some other blog dir
+daisy.cmh/
