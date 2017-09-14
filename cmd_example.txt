@@ -1,4 +1,10 @@
 
+
+[2017-09-14]
+in Mac:
+python BlogsToWordpress.py -s http://daisy.cmh.blog.163.com/
+
+[Old]
 BlogsToWordpress.py -s http://yangzaitime.blog.163.com -g no
 ./BlogsToWordpress.py -s http://yangzaitime.blog.163.com -g no
 python BlogsToWordpress.py -s http://yangzaitime.blog.163.com -g no
