@@ -194,7 +194,7 @@ import BlogDiandian;
 #Change Here If Add New Blog Provider Support
 
 #--------------------------------const values-----------------------------------
-__VERSION__ = "v18.4 TODO: find and merge v18.3";
+__VERSION__ = "v18.4";
 
 gConst = {
     'generator'         : "http://www.crifan.com/crifan_released_all/website/python/blogstowordpress/",
