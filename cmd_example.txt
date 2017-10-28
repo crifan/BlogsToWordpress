@@ -1,4 +1,10 @@
 
+[2017-10-28]
+in Mac:
+python BlogsToWordpress.py -s http://blog.csdn.net/chdhust
+python BlogsToWordpress.py -s http://blog.csdn.net/chdhust -g no
+python BlogsToWordpress.py -f http://blog.csdn.net/chdhust/article/details/72599096 -g no
+
 
 [2017-09-14]
 in Mac:

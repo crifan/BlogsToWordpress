@@ -3,7 +3,7 @@
 """
 -------------------------------------------------------------------------------
 【版本信息】
-版本：     v18.4
+版本：     v18.5
 作者：     crifan
 联系方式： http://www.crifan.com/crifan_released_all/website/python/blogstowordpress/
 
@@ -29,133 +29,8 @@ http://www.crifan.com/bbs/categories/blogstowordpress
 2.支持自定义导出特定类型的帖子为public和private。
 3.支持设置导出WXR帖子时的顺序：正序和倒序。
 
-【版本历史】
-[v18.4]
-[BlogNetease.py]
-1. update for find nex post link
-
-[v18.3]
-[BlogSina.py]
-1.fixbug -> support sub comments for some post:
-http://blog.sina.com.cn/s/blog_89445d4f0101jgen.html
-
-[v18.2]
-[BlogSina.py]
-1.fixbug -> support blog author reply comments
-
-[v18.1]
-[BlogDiandian.py]
-1. fix post content and next perma link for http://remixmusic.diandian.com
-2. fix title for post title:
-BlogsToWordpress.py -f http://remixmusic.diandian.com/?p=669 -l 1
-BlogsToWordpress.py -f http://remixmusic.diandian.com/?p=316 -l 1
-BlogsToWordpress.py -f http://remixmusic.diandian.com/?p=18117 -l 1
-BlogsToWordpress.py -f http://remixmusic.diandian.com/post/2013-05-13/40051897352 -l 1
-3. fix post content for:
-BlogsToWordpress.py -f http://remixmusic.diandian.com/post/2013-05-13/40051897352 -l 1
-
-[v17.7]
-1. add note when not designate -s or -f
-[BlogNetease.py]
-2. add emotion into post
-eg:
-http://blog.163.com/ni_chen/blog/#m=1
--> 心情随笔
-3. support direct input feeling card url:
-BlogsToWordpress.py -f http://green-waste.blog.163.com/blog/#m=1
-BlogsToWordpress.py -f http://blog.163.com/ni_chen/blog/#m=1
-[BlogSina.py]
-4. fix parse sina post comment response json string
-http://blog.sina.com.cn/s/blog_4701280b0101854o.html
-comment url:
-http://blog.sina.com.cn/s/comment_4701280b0101854o_1.html
-[BlogDiandian.py]
-5. fix bug now support http://googleyixia.com/ to find first perma link, next perma link, extract title, tags
-
-[v17.2]
-1. [BlogNetease] update to fix bug: can not find first permanent link
-
-[v17.1]
-1.fix error for extract post title  and nex link for:
-http://78391997.qzone.qq.com/
-
-[v17.0]
-1.fix csdn pic download
-
-[v16.9]
-1.update for only support baidu new space
-
-[v16.8]
-1. [BlogBaidu] fix bug for catetory extract, provided by Zhenyu Jiang
-2. add template BlogXXX.py for add support for more new blog type
-
-[v16.6]
-1. [BlogBlogbus] fix bugs for extract title and date time string
-2. [BlogQQ] add support for http://84896189.qzone.qq.com, which contain special content & comments & subComments
-
-[v16.2]
-1. csdn: Can not find the first link for http://blog.csdn.net/v_JULY_v, error=Unknown error!
-2. fix bug: on ubuntu, AttributeError: ‘module’ object has no attribute ‘getwindowsversion’
-
-[v16.0]
-1. add BlogTianya support
-2. add BlogDiandian support
-3. fix path combile bug in mac, add logRuntimeInfo
-
-[v13.9]
-1. BlogRenren add captcha for login
-
-[v13.8]
-1. do release include chardet 1.0.1
-
-[v12.8]
-1. BlogBaidu update for support new space
-
-[v11.7]
-1.move blog modules into sub dir
-2.change pic search pattern to support non-capture match
-
-[v11.5]
-1. support Blogbus
-2. add unified downloadFile and isFileValid during process pic
-3. fix pic filter regular pattern to support more type picture, include 3 fields, https, upper suffix
-4. support use default pic setting
-5. support new baidu space
-6. support many template for new baidu space, include:
-时间旅程,平行线,边走边看,窗外风景,雕刻时光,粉色佳人,理性格调,清心雅筑,低调优雅,蜕变新生,质感酷黑,经典简洁
-7. support non-title post for new baidu space
-
-[v9.2]
-1. support modify 163 post via manually input verify code.
-
-[v9.1]
-1. export WXR during processing => whole process speed become a little bit faster !
-2. change default pic prefix path to http://localhost/wp-content/uploads/pic
-
-[v8.7]
-1. support all type of other site pic for BlogSina
-
-[v8.6]
-1. support other site pic for BlogSina
-2. support quoted filename check for crifanLib
-
-[v8.4]
-1. support more type pic for BlogQQ
-
-[v8.3]
-1. add Sohu blog support.
-2. add auto omit invalid/hidden post which returned by extractTitle.
-3. add remove control char for comment author and content
-
-[v7.0]
-1. add CSDN blog support.
-
-[v6.2]
-1. add RenRen Blog support.
-2. For title and category, move repUniNumEntToChar and saxutils.escape from different blog providers into main function
-
-[v5.6]
-1. （当评论数据超多的时候，比如sina韩寒博客帖子评论，很多都是2,3万个的）添加日志信息，显示当前已处理多少个评论。
+【更新日志】
+已移至：Changelog.md
 
 -------------------------------------------------------------------------------
 """
@@ -288,7 +163,9 @@ gVal = {
     'processedUrlList'      : [],
     'processedStUrlList'    : [],
     'replacedUrlDict'       : {},
-    'outputFileName'        : '',
+    'outputFolder'          : 'output',
+    'userFullOutputPath'    : '',
+    'curFullOutputFileName' : '',
     'fullHeadInfo'          : '', #  include : header + category + generator
     'statInfoDict'          : {}, # store statistic info
     'errorUrlList'          : [], # store the (pic) url, which error while open
@@ -379,7 +256,7 @@ def openOutputFile():
     global gVal;
     # 'a+': read,write,append
     # 'w' : clear before, then write
-    return codecs.open(gVal['outputFileName'], 'a+', 'utf-8');
+    return codecs.open(gVal['curFullOutputFileName'], 'a+', 'utf-8');
 
 #------------------------------------------------------------------------------
 # init for output file
@@ -387,23 +264,32 @@ def initForOutputFile():
     global gVal;
     gVal['curOutputFileIdx'] = 0;
     gVal['outputFileCreateTime'] = datetime.now().strftime('%Y%m%d_%H%M');
+    gVal['userFullOutputPath'] = os.path.join(os.getcwd(), gVal['outputFolder'], gVal['blogUser']);
+    logging.debug("gVal['userFullOutputPath']=%s", gVal['userFullOutputPath']);
+    # gVal['userFullOutputPath']=/Users/crifan/dev/dev_root/crifan/BlogsToWordpress/BlogsToWordpress/output/chdhust
+    if not os.path.exists(gVal['userFullOutputPath']):
+        os.makedirs(gVal['userFullOutputPath']);
+    logging.info("Current output folder: %s", gVal['userFullOutputPath'])
     return;
 
 #------------------------------------------------------------------------------
 # just create new output file
 def createNewOutputFile():
     global gVal;
-    gVal['outputFileName'] = "WXR_" + gVal['blogProvider'] + '_[' + gVal['blogUser'] + "]_" + gVal['outputFileCreateTime'] + '-' + str(gVal['curOutputFileIdx']) + '.xml';
-    expFile = codecs.open(gVal['outputFileName'], 'w', 'utf-8');
+    curOutputFileName = "WXR_" + gVal['blogProvider'] + '_[' + gVal['blogUser'] + "]_" + gVal['outputFileCreateTime'] + '-' + str(gVal['curOutputFileIdx']) + '.xml';
+    gVal['curFullOutputFileName'] = os.path.join(gVal["userFullOutputPath"], curOutputFileName);
+    logging.debug("gVal['curFullOutputFileName']=%s", gVal['curFullOutputFileName']);
+    # gVal['curFullOutputFileName']=/Users/crifan/dev/dev_root/crifan/BlogsToWordpress/BlogsToWordpress/output/chdhust/WXR_Csdn_[chdhust]_20171028_1134-0.xml
+    expFile = codecs.open(gVal['curFullOutputFileName'], 'w', 'utf-8');
     if expFile:
-        logging.info('Created export WXR file: %s', gVal['outputFileName']);
+        logging.debug('Created export WXR file: %s', gVal['curFullOutputFileName']);
         expFile.close();
 
         # update
         gVal['curOutputFileIdx'] += 1;
         logging.debug("gVal['curOutputFileIdx']=%d", gVal['curOutputFileIdx']);
     else:
-        logging.error("Can not open writable exported WXR file: %s", gVal['outputFileName']);
+        logging.error("Can not open writable exported WXR file: %s", gVal['curFullOutputFileName']);
         sys.exit(2);
     return;
 
@@ -646,9 +532,13 @@ def processPhotos(blogContent):
                                     # 1. prepare info
                                     dstPicFile = ''
                                     nameWithSuf = filename + '.' + suffix;
-                                    curPath = os.getcwd();
+                                    # curPath = os.getcwd();
                                     #dstPathOwnPicOld = curPath + '\\' + gVal['blogUser'] + '\\pic';
-                                    dstPathOwnPic = os.path.join(curPath, gVal['blogUser'], 'pic');
+                                    # dstPathOwnPic = os.path.join(curPath, gVal['blogUser'], 'pic');
+                                    logging.debug("gVal['userFullOutputPath']=%s", gVal['userFullOutputPath']);
+                                    dstPathOwnPic = os.path.join(gVal['userFullOutputPath'], 'pic');
+                                    logging.debug("dstPathOwnPic=%s", dstPathOwnPic);
+                                    # dstPathOwnPic=/Users/crifan/dev/dev_root/crifan/BlogsToWordpress/BlogsToWordpress/output/chdhust/pic
 
                                     # 2. create dir for save pic
                                     if (os.path.isdir(dstPathOwnPic) == False) :

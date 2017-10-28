@@ -101,6 +101,9 @@ ENV/
 .mypy_cache/
 
 # current project
+*.pyc
 localTempCookieFile.txt
+BlogsToWordpress.log
+
 # some other blog dir
-daisy.cmh/
+output/

@@ -5,6 +5,9 @@
 For BlogsToWordpress, this file contains the functions for Csdn Blog.
 
 【版本历史】
+[v1.3]
+1.fixbug: Can not find the first link for http://blog.csdn.net/chdhust
+
 [v1.2]
 1.update for download csdn pic.
 
@@ -161,34 +164,50 @@ def find1stPermalink():
     (isFound, retInfo) = (False, "Unknown error!");
     
     try:
-        #http://blog.csdn.net/v_JULY_v/article/list/7
-        #pageNum = 7;
-        pageNum = 10000;
-        getPostUrl = gVal['blogEntryUrl'] + "/article/list/" + str(pageNum);
-        respHtml = crifanLib.getUrlRespHtml(getPostUrl);
-        #logging.debug("ret html for %s, is:\n%s", getPostUrl, respHtml);
-        soup = htmlToSoup(respHtml);
-        # <span class="link_title"><a href="/v_july_v/article/details/5934051">
-        # 算法面试：精选微软经典的算法面试100题（第1-20题）
-        # </a></span>
-        foundTitLink = soup.findAll(attrs={"class":"link_title"});
-        #logging.debug("found articles=%s", foundTitLink);
-        
-        articleNum = len(foundTitLink);
-        #print "articleNum=",articleNum;
-        
-        if(foundTitLink) :
-            lastArticle = foundTitLink[-1];
-            #print "lastArticle=",lastArticle;
-            aVal = lastArticle.a;
-            #print "aVal=",aVal;
-            href = aVal['href'];
-            #print "href=",href;
+        #http://blog.csdn.net/chdhust
+        # try find last page
+        homeUrl = gVal['blogEntryUrl']
+        homeRespHtml = crifanLib.getUrlRespHtml(homeUrl);
+        logging.debug("homeRespHtml for %s, is:\n%s", homeUrl, homeRespHtml);
+        # <a href="/chenglinhust/article/list/22">尾页</a>
+        # <span> 1079条  共54页</span><strong>1</strong> <a href="/chenglinhust/article/list/2">2</a> <a href="/chenglinhust/article/list/3">3</a> <a href="/chenglinhust/article/list/4">4</a> <a href="/chenglinhust/article/list/5">5</a> <a href="/chenglinhust/article/list/6">...</a> <a href="/chenglinhust/article/list/2">下一页</a> <a href="/chenglinhust/article/list/54">尾页</a> 
+
+        foundLastListPageUrl = re.search('<a\s+?href="(?P<lastListPageUrl>/\w+?/article/list/\d+)">尾页</a>', homeRespHtml, re.I);
+        logging.debug("foundLastListPageUrl=%s", foundLastListPageUrl);
+
+        if(foundLastListPageUrl):
+            lastListPageUrl = foundLastListPageUrl.group("lastListPageUrl");
+            lastListPageUrl = gConst['spaceDomain'] + lastListPageUrl
+            logging.debug("lastListPageUrl=%s", lastListPageUrl);
+            # pageNum = 10000;
+            # pageNum = lastPageNum;
+            # getPostUrl = gVal['blogEntryUrl'] + "/article/list/" + str(pageNum);
+            # http://blog.csdn.net/chenglinhust/article/list/54
+            respHtml = crifanLib.getUrlRespHtml(lastListPageUrl);
+            logging.debug("ret html for %s, is:\n%s", lastListPageUrl, respHtml);
+            soup = htmlToSoup(respHtml);
+            # <span class="link_title"><a href="/v_july_v/article/details/5934051">
+            # 算法面试：精选微软经典的算法面试100题（第1-20题）
+            # </a></span>
+            foundTitLink = soup.findAll(attrs={"class":"link_title"});
+            # logging.debug("found articles=%s", foundTitLink);
+            articleNum = len(foundTitLink);
+            logging.debug("articleNum=%s", articleNum);
             
-            fristLink = gConst['spaceDomain'] + href;
-            #print "fristLink=",fristLink;
-            retInfo = fristLink;
-            isFound = True;
+            if(foundTitLink) :
+                lastArticle = foundTitLink[-1];
+                # print "lastArticle=",lastArticle;
+                aVal = lastArticle.a;
+                # print "aVal=",aVal;
+                href = aVal['href'];
+                # print "href=",href;
+                
+                fristLink = gConst['spaceDomain'] + href;
+                # print "fristLink=",fristLink;
+                retInfo = fristLink;
+                isFound = True;
+
+                logging.debug("retInfo=%s,isFound=%s", retInfo, isFound);
     except:
         (isFound, retInfo) = (False, "Unknown error!");
     
@@ -205,15 +224,23 @@ def extractTitle(url, html):
         # 程序员面试、算法研究、编程艺术、红黑树4大系列集锦与总结
         # </a></span>
 
-        foundTitle = re.search('<span class="link_title"><a href="[\w/]+?">\s*(<font color="red">\[置顶\]</font>)?\s*(?P<titleHtml>.+?)\s*</a></span>', html, re.S);
-        #print "foundTitle=",foundTitle;
+        # <span class="link_title"><a href="/chdhust/article/details/7252155">
+        #         windows编程中wParam和lParam消息        
+                
+        #         </a>
+        #         </span>
+
+        foundTitle = re.search('<span class="link_title"><a href="[\w/]+?">\s*(<font color="red">\[置顶\]</font>)?\s*(?P<titleHtml>.+?)\s*</a>\s*</span>', html, re.S);
+        logging.debug("foundTitle=%s", foundTitle);
+
         if(foundTitle):
             titleHtml = foundTitle.group("titleHtml");
-            #print "titleHtml=",titleHtml;
+            logging.debug("titleHtml=%s", titleHtml);
             
             #titleUni = titleHtml.decode("UTF-8");
             titleUni = titleHtml.decode("UTF-8", 'ignore');
-            
+            logging.debug("titleUni=%s", titleUni);
+
             # for http://blog.csdn.net/hfahe/article/details/5494895
             #print "titleUni=",titleUni;
             # will cause error: 
@@ -229,6 +256,8 @@ def extractTitle(url, html):
             # use follow can make print work well
             gbkTypeStr = titleUni.encode("GBK", 'ignore');
             titleUni = gbkTypeStr.decode("GBK");
+            logging.debug("gbkTypeStr=%s", gbkTypeStr);
+            logging.debug("titleUni=%s", titleUni);
 
         #------------------
         # following parsed soup has some bug, can not get proper value
@@ -295,7 +324,7 @@ def extractTitle(url, html):
 
 #------------------------------------------------------------------------------
 # fetch url list in article list page, eg:
-#http://blog.csdn.net/wclxyn/article/list/3
+# http://blog.csdn.net/wclxyn/article/list/3
 def fetchUrlList(pageNum):
     (totalUrlNum, totalPageNum, urlList) = (0, 0, []);
     
@@ -307,14 +336,17 @@ def fetchUrlList(pageNum):
     # <div id="papelist" class="pagelist">
     # <span> 106条数据  共3页</span><strong>1</strong> <a href="/aomandeshangxiao/article/list/2">2</a> <a href="/aomandeshangxiao/article/list/3">3</a> <a href="/aomandeshangxiao/article/list/2">下一页</a> <a href="/aomandeshangxiao/article/list/3">尾页</a> 
     # </div>
-    foundPageNum = re.search("<span>\s*?(?P<totalUrlNum>\d+)条数据\s+?共(?P<totalPageNum>\d+)页</span>", respHtml);
+
+    # http://blog.csdn.net/chenglinhust/article/list/54
+    # <span> 1079条  共54页</span>
+    foundPageNum = re.search("<span>\s*?(?P<totalUrlNum>\d+)条(数据)?\s+?共(?P<totalPageNum>\d+)页</span>", respHtml);
     logging.debug("foundPageNum=%s", foundPageNum);
     if(foundPageNum):
         totalUrlNum = foundPageNum.group("totalUrlNum");
         totalUrlNum = int(totalUrlNum);
         totalPageNum = foundPageNum.group("totalPageNum");
         totalPageNum = int(totalPageNum);
-        #print "totalUrlNum=",totalUrlNum,"totalPageNum=",totalPageNum;
+        logging.debug("totalUrlNum=%s, totalPageNum=%s", totalUrlNum, totalPageNum);
                 
         # extrat url list
         #<span class="link_title"><a href="/v_july_v/article/details/7382693">
@@ -406,7 +438,7 @@ def findNextPermaLink(url, html) :
             pageNum = 1;
             (totalUrlNum, totalPageNum, urlList) = fetchUrlList(pageNum);
             allPageUrlList.extend(urlList);
-            #print "len(allPageUrlList)=",len(allPageUrlList);
+            logging.debug("len(allPageUrlList)=%s", len(allPageUrlList));
 
             if(totalPageNum > 1):
                 # fetch remain page
