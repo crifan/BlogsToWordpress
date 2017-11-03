@@ -1,3 +1,7 @@
+[2017-10-31]
+in Mac:
+python BlogsToWordpress.py -f http://blog.csdn.net/chdhust/article/details/78311494
+python BlogsToWordpress.py -f http://daisy.cmh.blog.163.com/blog/static/12883732320119981241465/
 
 [2017-10-28]
 in Mac:

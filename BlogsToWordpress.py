@@ -959,14 +959,16 @@ def fetchSinglePost(url):
 # remove invalid character in url(blog's post name and category's nice name)
 def removeInvalidCharInUrl(inputString):
     filterd_str = '';
-    charNumerP = re.compile(r"[\w|-]");
+    # charNumerP = re.compile(r"[\w\|\-]");
+    charNumerP = re.compile(r"[\w]");
     for c in inputString :
-        if c == ' ' :
-            # replace blanksplace with '_'
-            filterd_str += '_';
-        elif charNumerP.match(c) :
+        if charNumerP.match(c):
             # retain this char if is a-z,A-Z,0-9,_
             filterd_str += c;
+        else:
+            # replace blanksplace with '_'
+            filterd_str += '_';
+
     return filterd_str;
 
 #------------------------------------------------------------------------------
@@ -1492,9 +1494,10 @@ def main():
     parser.add_option("-o","--processOtherPic",action="store",type="string",default="yes",dest="processOtherPic",help=u"是否处理（帖子内容中）其他（网站的）图片：yes或no。默认为yes。即，下载并替换对应原图片地址为参数wpOtherPicPath所设置的前缀加上原文件名。注意：此选项只有在processPic='yes'的情况下才有效");
     parser.add_option("-r","--wpOtherPicPath",action="store",type="string",dest="wpOtherPicPath",help=u"wordpress中（其他网站的）图片的（即，原其他网站的图片所被替换的）新地址的前缀。默认为 ${wpPicPath}/other_site。此选项只有在processOtherPic='yes'的情况下才有效");
     parser.add_option("-n","--omitSimErrUrl",action="store",type="string",default="yes",dest="omitSimErrUrl",help=u"是否自动忽略处理那些和之前处理过程中出错的图片地址类似的图片：yes或no。默认为yes。即，自动跳过那些图片，其中该图片的地址和之前某些已经在下载过程中出错（比如HTTP Error）的图片地址很类似。注意：此选项只有在processPic='yes'的情况下才有效");
-    parser.add_option("-g","--googleTrans",action="store",type="string",default="yes",dest="googleTrans",help=u"是否执行google翻译：yes或no。通过网络调用google的api，将对应的中文翻译为英文。包括：将帖子的标题翻译为英文，用于发布帖子时的固定链接（permanent link）；将帖子的分类，标签等翻译为对应的英文，用于导出到WXR文件中");
+    parser.add_option("-g","--googleTrans",action="store",type="string",default="yes",dest="googleTrans",help=u"是否执行(之前用google翻译，现在换用有道翻译）：yes或no。通过网络调用api，将对应的中文翻译为英文。包括：将帖子的标题翻译为英文，用于发布帖子时的固定链接（permanent link）；将帖子的分类，标签等翻译为对应的英文，用于导出到WXR文件中");
     parser.add_option("-a","--postPrefAddr",action="store",type="string",default="http://localhost/?p=",dest="postPrefAddr",help=u"帖子导出到WXR时候的前缀，默认为http://localhost/?p=，例如可设置为：http://www.crifan.com/?p=");
-    parser.add_option("-x","--maxXmlSize",action="store",type="int",default=2*1024*1024,dest="maxXmlSize",help=u"导出的单个WXR文件大小的最大值。超出此大小，则会自动分割出对应的多个WXR文件。默认为2097152（2MB=2*1024*1024）。如果设置为0，则表示无限制。");
+    #parser.add_option("-x","--maxXmlSize",action="store",type="int",default=2*1024*1024,dest="maxXmlSize",help=u"导出的单个WXR文件大小的最大值。超出此大小，则会自动分割出对应的多个WXR文件。默认为2097152（2MB=2*1024*1024）。如果设置为0，则表示无限制。");
+    parser.add_option("-x","--maxXmlSize",action="store",type="int",default=2*1024,dest="maxXmlSize",help=u"导出的单个WXR文件大小的最大值。超出此大小，则会自动分割出对应的多个WXR文件。默认为2097152（2MB=2*1024*1024）。如果设置为0，则表示无限制。");
     parser.add_option("-y","--maxFailRetryNum",action="store",type="int",default=3,dest="maxFailRetryNum",help=u"当获取网页等操作失败时的重试次数。默认为3。设置为0表示当发生错误时，不再重试。");
     parser.add_option("-v","--postTypeToProcess",action="store",type="string",default='publicOnly',dest="postTypeToProcess",help=u"要处理哪些类型的帖子：publicOnly，privateOnly，privateAndPublic。注意：当设置为非publicOnly的时候，是需要提供对应的用户名和密码的，登陆对应的博客才可以执行对应的操作，即获取对应的private等类型帖子的。");
     parser.add_option("-t","--processType",action="store",type="string",default='exportToWxr',dest="processType",help=u"对于相应类型类型的帖子，具体如何处理，即处理的类型：exportToWxr和modifyPost。exportToWxr是将帖子内容导出为WXR；modifyPost是修改帖子内容（并提交，以达到更新帖子的目的），注意需要设置相关的参数：username，password，modifyPostPatFile.");
