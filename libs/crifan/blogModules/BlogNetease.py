@@ -1771,12 +1771,45 @@ def find1stPermalink():
     firstPermaLink = '';
     try :
         # 1. generate and open main blog url
-        logging.debug("Begin to find the first permanent link from %s", blogEntryUrl);
-        logging.debug("Begin to open %s", blogEntryUrl);
+        # blogEntryUrl = blogEntryUrl + "/blog"
+        logging.debug("Begin to find the first permanent link from %s", blogEntryUrl)
+        logging.debug("Begin to open %s", blogEntryUrl)
 
-        respHtml = crifanLib.getUrlRespHtml(blogEntryUrl);
+        respHtml = crifanLib.getUrlRespHtml(blogEntryUrl)
 
-        logging.debug("Connect successfully, now begin to find the first blog item");
+        logging.debug("Connect successfully, now begin to find the first blog item")
+
+        # # 1. extract last page number
+        # """
+        # <div class="ui-1582983425 noselect js-zfrg-6541" style="display: block;">
+        #   <span class="pgi pgb iblock fc03 bgc9 bdc0 js-znpg-097">上一页</span>
+        #   <span class="pgi zpg1 iblock fc03 bgc9 bdc0 js-zslt-987 fc05">1</span>
+        #   <span class="frg fgp fc06">...</span>
+        #   <span class="pgi zpg2 iblock fc03 bgc9 bdc0">2</span>
+        #   <span class="pgi zpg3 iblock fc03 bgc9 bdc0">3</span>
+        #   <span class="pgi zpg4 iblock fc03 bgc9 bdc0">4</span>
+        #   <span class="pgi zpg5 iblock fc03 bgc9 bdc0">5</span>
+        #   <span class="pgi zpg6 iblock fc03 bgc9 bdc0">6</span>
+        #   <span class="pgi zpg7 iblock fc03 bgc9 bdc0">7</span>
+        #   <span class="pgi zpg8 iblock fc03 bgc9 bdc0">8</span>
+        #   <span class="frg fgn fc06">...</span>
+        #   <span class="pgi zpg9 iblock fc03 bgc9 bdc0">58</span>
+        #   <span class="pgi pgb iblock fc03 bgc9 bdc0">下一页</span>
+        # </div>
+        # """
+        # soup = htmlToSoup(respHtml)
+        # pageClassPattern = re.compile("pgi zpg\d+ iblock fc03 bgc9 bdc0")
+        # logging.debug("pageClassPattern=%s", pageClassPattern)
+        # allPageNodeList = soup.findAll(attrs={"class" : pageClassPattern})
+        # logging.debug("allPageNodeList=%s", allPageNodeList)
+        # if allPageNodeList :
+        #     lastPageNumNode = allPageNodeList[-1]
+        #     logging.debug("lastPageNumNode=%s", lastPageNumNode)
+        #     lastPageNumStr = lastPageNumNode.string.strip()
+        #     logging.debug("lastPageNumStr=%s", lastPageNumStr)
+        #     lastPageNum = int(lastPageNumStr)
+        #     logging.debug("lastPageNum=%s", lastPageNum)
+
 
         # 2. init
 
@@ -1843,18 +1876,19 @@ def find1stPermalink():
                 needGetMoreBlogs = False;
         # out of while loop, set value
         if lastFoundPermaSerial :
-            firstPermaLink = findRealFirstPermaLink(blogEntryUrl, lastFoundPermaSerial);
-            isFound = True;
+            firstPermaLink = findRealFirstPermaLink(blogEntryUrl, lastFoundPermaSerial)
+            isFound = True
         else :
-            errInfo = "Can not extract real first permanent link !";
-            isFound = False;
+            errInfo = "Can not extract real first permanent link !"
+            isFound = False
+
     except :
-        isFound = False;
+        isFound = False
 
     if(isFound) :
-        return (isFound, firstPermaLink);
+        return (isFound, firstPermaLink)
     else :
-        return (isFound, errInfo);
+        return (isFound, errInfo)
 
 ####### Login Mode ######
 

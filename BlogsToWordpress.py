@@ -1443,7 +1443,7 @@ def generateWxrValidUsername():
 #------------------------------------------------------------------------------
 def logRuntimeInfo():
     logging.info("Current runtime info:");
-    logging.info("Paramenters       : %s", sys.argv);
+    logging.info("Parameters       : %s", sys.argv);
     logging.info("Python version    : %s", sys.version_info);
 
     # ouput system type and version info
@@ -1874,26 +1874,29 @@ def modifySinglePost(newPostContentUni, infoDict, inputCfg):
 
 ###############################################################################
 if __name__=="__main__":
-    # for : python xxx.py -s yyy    # -> sys.argv[0]=xxx.py
-    # for : xxx.py -s yyy           # -> sys.argv[0]=D:\yyy\zzz\xxx.py
-    scriptSelfName = crifanLib.extractFilename(sys.argv[0]);
+    # # for : python xxx.py -s yyy    # -> sys.argv[0]=xxx.py
+    # # for : xxx.py -s yyy           # -> sys.argv[0]=D:\yyy\zzz\xxx.py
+    # scriptSelfName = crifanLib.extractFilename(sys.argv[0]);
+    #
+    # logging.basicConfig(
+    #                 level    = logging.DEBUG,
+    #                 format   = 'LINE %(lineno)-4d  %(levelname)-8s %(message)s',
+    #                 datefmt  = '%m-%d %H:%M',
+    #                 filename = scriptSelfName + ".log",
+    #                 filemode = 'w');
+    # # define a Handler which writes INFO messages or higher to the sys.stderr
+    # console = logging.StreamHandler();
+    # console.setLevel(logging.INFO);
+    # # set a format which is simpler for console use
+    # formatter = logging.Formatter('LINE %(lineno)-4d : %(levelname)-8s %(message)s');
+    # # tell the handler to use this format
+    # console.setFormatter(formatter);
+    # logging.getLogger('').addHandler(console);
 
-    logging.basicConfig(
-                    level    = logging.DEBUG,
-                    format   = 'LINE %(lineno)-4d  %(levelname)-8s %(message)s',
-                    datefmt  = '%m-%d %H:%M',
-                    filename = scriptSelfName + ".log",
-                    filemode = 'w');
-    # define a Handler which writes INFO messages or higher to the sys.stderr
-    console = logging.StreamHandler();
-    console.setLevel(logging.INFO);
-    # set a format which is simpler for console use
-    formatter = logging.Formatter('LINE %(lineno)-4d : %(levelname)-8s %(message)s');
-    # tell the handler to use this format
-    console.setFormatter(formatter);
-    logging.getLogger('').addHandler(console);
+    crifanLib.loggingInit()
+
     try:
-        main();
+        main()
     except:
-        logging.exception("Unknown Error !");
-        raise;
+        logging.exception("Unknown Error !")
+        raise Exception("Unknown Error !")
